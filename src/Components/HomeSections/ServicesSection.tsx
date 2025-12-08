@@ -456,7 +456,9 @@ const serviceData: ServiceItem[] = [
 // 2. COMPONENT LOGIC
 // -----------------------------------------------------------------------
 const ServiceProjects = () => {
-    const swiperRef = React.useRef<SwiperCore>();
+    // const swiperRef = React.useRef<SwiperCore>();
+    const swiperRef = React.useRef<SwiperCore | null>(null);
+
     const totalSlides = serviceData.length;
 
     return (
