@@ -46,7 +46,7 @@ import ServicesTemplate, { ServiceContent } from './ServicesTemplate';
 import contentData from '../../Data/BRICentreData.json';
 
 // Define the exact route path for sidebar highlighting
-const ACTIVE_PATH = '/bri-centre'; 
+const ACTIVE_PATH = '/services/bri-centre'; 
 
 const Bricentre = () => {
     

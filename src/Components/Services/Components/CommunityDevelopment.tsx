@@ -50,7 +50,7 @@ import ServicesTemplate, { ServiceContent } from './ServicesTemplate';
 import contentData from '../../Data/CapacityBuildingResearchData.json';
 
 // Define the exact route path for sidebar highlighting
-const ACTIVE_PATH = '/community-development'; 
+const ACTIVE_PATH = '/services/community-development'; 
 
 const  CommunityDevelopment = () => {
     

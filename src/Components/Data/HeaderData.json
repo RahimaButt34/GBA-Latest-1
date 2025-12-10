@@ -48,10 +48,10 @@
         "left": "244px"
       },
       "dropdownItems": [
-        { "title": "Gujranwala", "href": "/Gujranwala" },
-        { "title": "GBA", "href": "/GBA" },
-        { "title": "Our Team", "href": "/OurTeam" },
-        { "title": "Our Focus", "href": "/OurFocus" }
+        { "title": "Gujranwala", "href": "/about/Gujranwala" },
+        { "title": "GBA", "href": "/about/GBA" },
+        { "title": "Our Team", "href": "/about/OurTeam" },
+        { "title": "Our Focus", "href": "/about/OurFocus" }
       ]
     },
     {
@@ -60,26 +60,26 @@
       "type": "mega-menu-multi-column",
       "columns": [
         [
-          { "title": "Global Reach", "href": "/service-details" },
-          { "title": "Business Delegations", "href": "/business-deligation" },
-          { "title": "Pakistan Products House", "href": "/pakistan-products" },
-          { "title": "Trade Shows & Expos", "href": "/trade-shows" }
+          { "title": "Global Reach", "href": "/services/service-details" },
+          { "title": "Business Delegations", "href": "/services/business-deligation" },
+          { "title": "Pakistan Products House", "href": "/services/pakistan-products" },
+          { "title": "Trade Shows & Expos", "href": "/services/trade-shows" }
         ],
         [
-          { "title": "Industry Academia Linkages", "href": "/industry-academia" },
-          { "title": "Global Growth Windows", "href": "/global-growth" },
-          { "title": "International Tech Gateways", "href": "/international-tech" },
-          { "title": "Leadership Incubation & Mentorship", "href": "/leadership-incubation" }
+          { "title": "Industry Academia Linkages", "href": "/services/industry-academia" },
+          { "title": "Global Growth Windows", "href": "/services/global-growth" },
+          { "title": "International Tech Gateways", "href": "/services/international-tech" },
+          { "title": "Leadership Incubation & Mentorship", "href": "/services/leadership-incubation" }
         ],
         [
-          { "title": "Business Events", "href": "/business-events" },
-          { "title": "Women Empowerment", "href": "/women-empowerment" },
-          { "title": "BRI Centre", "href": "/bri-centre" },
-          { "title": "Capacity Building & Research", "href": "/capacity-building" }
+          { "title": "Business Events", "href": "/services/business-events" },
+          { "title": "Women Empowerment", "href": "/services/women-empowerment" },
+          { "title": "BRI Centre", "href": "/services/bri-centre" },
+          { "title": "Capacity Building & Research", "href": "/services/capacity-building" }
         ],
         [
-          { "title": "Global Trade Facilitation Desks", "href": "/global-trade" },
-          { "title": "Community Development", "href": "/community-development" }
+          { "title": "Global Trade Facilitation Desks", "href": "/services/global-trade" },
+          { "title": "Community Development", "href": "/services/community-development" }
         ]
       ]
     },
@@ -92,9 +92,9 @@
         "left": "450px"
       },
       "dropdownItems": [
-        { "title": "Our Partners", "href": "/partners2" },
-        { "title": "Our Member", "href": "/our-member" },
-        { "title": "Flagship", "href": "/Flagship" }
+        { "title": "Our Partners", "href": "/members/partners2" },
+        { "title": "Our Member", "href": "/members/our-member" },
+        { "title": "Flagship", "href": "/members/Flagship" }
       ]
     },
     { "title": "Resources", "href": "#", "type": "link", "strong": true },

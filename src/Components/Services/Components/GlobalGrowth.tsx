@@ -44,7 +44,7 @@ import ServicesTemplate, { ServiceContent } from './ServicesTemplate';
 import contentData from '../../Data/GlobalGrowthData.json';
 
 // Define the exact route path for sidebar highlighting
-const ACTIVE_PATH = '/global-growth'; 
+const ACTIVE_PATH = '/services/global-growth'; 
 
 const GlobalGrowth = () => {
     

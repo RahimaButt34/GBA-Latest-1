@@ -44,7 +44,7 @@ import ServicesTemplate, { ServiceContent } from './ServicesTemplate';
 import contentData from '../../Data/PakistanProductData.json';
 
 // Define the exact route path for sidebar highlighting
-const ACTIVE_PATH = '/pakistan-products'; 
+const ACTIVE_PATH = '/services/pakistan-products'; 
 
 const PakistanProducts = () => {
     

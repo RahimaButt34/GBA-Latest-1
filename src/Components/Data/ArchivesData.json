@@ -15,8 +15,8 @@
       "date": "15 Jan, 2023",
       "category": "Business Solution",
       "title": "Profitable business makes your profit",
-      "description": "Collaboratively pontificate bleeding edge resources with inexpensive methodologies globally initiate multidisciplinary compatible architectures pidiously repurpose leading edge growth strategies with just in time web readiness communicate timely meta services",
-      "link": "blog-details.html",
+      "description": "Collaboratively pontificate bleeding edge resources...",
+      "link": "/blog-details",
       "delay": 0.2
     },
     {
@@ -24,8 +24,8 @@
       "date": "15 Jan, 2023",
       "category": "Business Solution",
       "title": "Best Solution business makes your profit",
-      "description": "Collaboratively pontificate bleeding edge resources with inexpensive methodologies globally initiate multidisciplinary compatible architectures pidiously repurpose leading edge growth strategies with just in time web readiness communicate timely meta services",
-      "link": "blog-details.html",
+      "description": "Collaboratively pontificate bleeding edge resources...",
+      "link": "/blog-details",
       "delay": 0.3
     },
     {
@@ -33,8 +33,8 @@
       "date": "15 Jan, 2023",
       "category": "Business Solution",
       "title": "Marketing business makes your profit",
-      "description": "Collaboratively pontificate bleeding edge resources with inexpensive methodologies globally initiate multidisciplinary compatible architectures pidiously repurpose leading edge growth strategies with just in time web readiness communicate timely meta services",
-      "link": "blog-details.html",
+      "description": "Collaboratively pontificate bleeding edge resources...",
+      "link": "/blog-details",
       "delay": 0.4
     },
     {
@@ -42,8 +42,8 @@
       "date": "15 Jan, 2023",
       "category": "Business Solution",
       "title": "Advantages Of business makes your profit",
-      "description": "Collaboratively pontificate bleeding edge resources with inexpensive methodologies globally initiate multidisciplinary compatible architectures pidiously repurpose leading edge growth strategies with just in time web readiness communicate timely meta services",
-      "link": "blog-details.html",
+      "description": "Collaboratively pontificate bleeding edge resources...",
+      "link": "/blog-details",
       "delay": 0.2
     }
   ],
@@ -91,7 +91,7 @@
       "logo": "images/logo/logo-2.svg",
       "title": "Need Help? We Are Here To Help You",
       "buttonText": "Contact Us",
-      "link": "contact.html"
+      "link": "/contact"
     }
   }
 }

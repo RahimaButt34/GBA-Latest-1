@@ -496,7 +496,7 @@ const ServiceProjects = () => {
         fontWeight: '900', 
         color: 'transparent', 
         WebkitTextFillColor: 'transparent', 
-        WebkitTextStroke: '3px rgb(238, 235, 235);', 
+        WebkitTextStroke: '3px rgb(238, 235, 235)', 
         
         opacity: 1, 
         zIndex: 0, 

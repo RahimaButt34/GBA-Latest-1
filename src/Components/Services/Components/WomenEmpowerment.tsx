@@ -47,7 +47,7 @@ import ServicesTemplate, { ServiceContent } from './ServicesTemplate';
 import contentData from '../../Data/WomenEmpowermentData.json';
 
 // Define the exact route path for sidebar highlighting
-const ACTIVE_PATH = '/women-empowerment'; 
+const ACTIVE_PATH = '/services/women-empowerment'; 
 
 const  WomenEmpowerment = () => {
     

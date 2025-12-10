@@ -49,7 +49,7 @@ import ServicesTemplate, { ServiceContent } from './ServicesTemplate';
 import contentData from '../../Data/CapacityBuildingResearchData.json';
 
 // Define the exact route path for sidebar highlighting
-const ACTIVE_PATH = '/capacity-building'; 
+const ACTIVE_PATH = '/services/capacity-building'; 
 
 const CapacityBuilding = () => {
     

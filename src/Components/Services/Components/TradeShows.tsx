@@ -44,7 +44,7 @@ import ServicesTemplate, { ServiceContent } from './ServicesTemplate';
 import contentData from '../../Data/TradeShowsData.json';
 
 // Define the exact route path for sidebar highlighting
-const ACTIVE_PATH = '/trade-shows'; 
+const ACTIVE_PATH = '/services/trade-shows'; 
 
 const BusinessDeligation = () => {
     

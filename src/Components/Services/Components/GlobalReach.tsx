@@ -39,7 +39,7 @@ import ServicesTemplate, { ServiceContent } from './ServicesTemplate';
 import contentData from '../../Data/GlobalReachData.json';
 
 // Define the exact route path for sidebar highlighting
-const ACTIVE_PATH = '/service-details'; 
+const ACTIVE_PATH = '/services/service-details';
 
 const GlobalReach = () => {
     

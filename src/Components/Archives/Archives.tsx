@@ -267,7 +267,15 @@ const BlogArchive = () => {
                       <h3 className="title animated fadeIn">{post.title}</h3>
                     </a>
                     <p className="disc animated fadeIn">{post.description}</p>
-                    <a className="rts-btn btn-primary animated fadeIn" href={post.link}>Read Details</a>
+                <a
+  className="rts-btn btn-primary animated fadeIn"
+  href={post.link}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Read Details
+</a>
+
                   </div>
                 </div>
               ))}

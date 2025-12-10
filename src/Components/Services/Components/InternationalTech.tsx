@@ -43,7 +43,7 @@ import ServicesTemplate, { ServiceContent } from './ServicesTemplate';
 import contentData from '../../Data/InternationalTechGatewaysData.json';
 
 // Define the exact route path for sidebar highlighting
-const ACTIVE_PATH = '/international-tech'; 
+const ACTIVE_PATH = '/services/international-tech'; 
 
 const InternationalTech = () => {
     

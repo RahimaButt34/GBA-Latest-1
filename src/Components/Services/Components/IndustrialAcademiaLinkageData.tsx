@@ -44,7 +44,7 @@ import ServicesTemplate, { ServiceContent } from './ServicesTemplate';
 import contentData from '../../Data/IndustryAcademiaLinkagesData.json';
 
 // Define the exact route path for sidebar highlighting
-const ACTIVE_PATH = '/industry-academia'; 
+const ACTIVE_PATH = '/services/industry-academia'; 
 
 const IndustrialAcademiaLinkage = () => {
     
