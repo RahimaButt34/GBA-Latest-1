@@ -60,7 +60,7 @@
       "type": "mega-menu-multi-column",
       "columns": [
         [
-          { "title": "Global Reach", "href": "/services/service-details" },
+          { "title": "Global Reach", "href": "/services/global-reach" },
           { "title": "Business Delegations", "href": "/services/business-deligation" },
           { "title": "Pakistan Products House", "href": "/services/pakistan-products" },
           { "title": "Trade Shows & Expos", "href": "/services/trade-shows" }
