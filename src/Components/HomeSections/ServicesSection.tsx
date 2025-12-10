@@ -293,22 +293,21 @@ interface ServiceItem {
 }
 
 const serviceData: ServiceItem[] = [
-    { id: 1, title: 'Global Reach', imagePath: '/images/about/Global Reach.jpg', href: 'service-details.html' },
-    { id: 2, title: 'Business Delegations', imagePath: '/images/about/Business Delegations.jpg', href: 'business-deligation.html' },
-    { id: 3, title: 'Pakistan Products House', imagePath: '/images/about/Pakistan Products House.jpg', href: 'pakistan-products.html' },
-    { id: 4, title: 'Trade Shows & Expos', imagePath: '/images/about/Trade Shows & Expos.jpg', href: 'trade-shows.html' },
-    { id: 5, title: 'Industry Academia Linkages', imagePath: '/images/about/Industry Academia.jpg', href: 'industry-academia.html' },
-    { id: 6, title: 'Global Growth Windows', imagePath: '/images/about/Global Growth Windows.jpg', href: 'global-growth.html' },
-    { id: 7, title: 'International Tech Gateways', imagePath: '/images/about/International Tech.jpg', href: 'international-tech.html' },
-    { id: 8, title: 'Leadership Incubation & Mentorship', imagePath: '/images/about/Leadership Incubation.jpg', href: 'leadership-incubation.html' },
-    { id: 9, title: 'Business Events', imagePath: '/images/about/Business Events.jpg', href: 'business-events.html' },
-    { id: 10, title: 'Women Empowerment', imagePath: '/images/about/Women Empowerment.jpg', href: 'women-empowerment.html' },
-    { id: 11, title: 'BRI Centre', imagePath: '/images/about/BRI Centre.jpg', href: 'bRI-centre.html' },
-    { id: 12, title: 'Capacity Building & Research', imagePath: '/images/about/Capacity Building.jpg', href: 'capacity-building.html' },
-    { id: 13, title: 'Global Trade Facilitation Desks', imagePath: '/images/about/Global Trade Facilitation.jpg', href: 'global-trade.html' },
-    { id: 14, title: 'Community Development', imagePath: '/images/about/Community Development.jpg', href: 'community-development.html' },
+    { id: 1, title: 'Global Reach', imagePath: '/images/about/Global Reach.jpg', href: '/services/global-reach' },
+    { id: 2, title: 'Business Delegations', imagePath: '/images/about/Business Delegations.jpg', href: '/services/business-deligation' },
+    { id: 3, title: 'Pakistan Products House', imagePath: '/images/about/Pakistan Products House.jpg', href: '/services/pakistan-products' },
+    { id: 4, title: 'Trade Shows & Expos', imagePath: '/images/about/Trade Shows & Expos.jpg', href: '/services/trade-shows' },
+    { id: 5, title: 'Industry Academia Linkages', imagePath: '/images/about/Industry Academia.jpg', href: '/services/industry-academia' },
+    { id: 6, title: 'Global Growth Windows', imagePath: '/images/about/Global Growth Windows.jpg', href: '/services/global-growth' },
+    { id: 7, title: 'International Tech Gateways', imagePath: '/images/about/International Tech.jpg', href: '/services/international-tech' },
+    { id: 8, title: 'Leadership Incubation & Mentorship', imagePath: '/images/about/Leadership Incubation.jpg', href: '/services/leadership-incubation' },
+    { id: 9, title: 'Business Events', imagePath: '/images/about/Business Events.jpg', href: '/services/business-events' },
+    { id: 10, title: 'Women Empowerment', imagePath: '/images/about/Women Empowerment.jpg', href: '/services/women-empowerment' },
+    { id: 11, title: 'BRI Centre', imagePath: '/images/about/BRI Centre.jpg', href: '/services/bri-centre' },
+    { id: 12, title: 'Capacity Building & Research', imagePath: '/images/about/Capacity Building.jpg', href: '/services/capacity-building' },
+    { id: 13, title: 'Global Trade Facilitation Desks', imagePath: '/images/about/Global Trade Facilitation.jpg', href: '/services/global-trade' },
+    { id: 14, title: 'Community Development', imagePath: '/images/about/Community Development.jpg', href: '/services/community-development' },
 ];
-
 // -----------------------------------------------------------------------
 // 2. COMPONENT LOGIC
 // -----------------------------------------------------------------------
