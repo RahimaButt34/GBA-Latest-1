@@ -19237,8 +19237,8 @@ body.with-sticky-item {
   height: 60px;
 }
 .rts-working-process-1.process-lg .inner .icon {
-  width: 65px;
-  height: 65px;
+  width: 200px;
+  height: 200px;
 }
 .rts-working-process-1:hover .inner {
   border: 2px dashed var(--color-primary);

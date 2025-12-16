@@ -1,38 +1,5 @@
 
 
-
-
-// 'use client'
-// import React from 'react';
-
-
-// import ServicesTemplate, { ServiceContent } from './ServicesTemplate'; 
-// //import contentData from '../../Data/BusinessDeligationData.json';
-
-
-// //import businessData from '../../Data/BusinessDeligationData.json';
-// import contentData from '../../Data/BusinessDeligationData.json';
-
-// // Define the exact route path for sidebar highlighting
-// // This corresponds to the 'business-deligation.html' href path in the sidebar
-// const ACTIVE_PATH = '/business-deligation'; 
-
-// const BusinessDeligation = () => {
-    
-//     // Type assert the imported data
-//     const data: ServiceContent = contentData as ServiceContent;
-
-//     return (
-//         // 3. Render the template and pass the UNIQUE data and ACTIVE_PATH via props
-//         <ServicesTemplate 
-//             data={data} 
-//             activePath={ACTIVE_PATH}
-//         />
-//     );
-// };
-
-// export default BusinessDeligation;
-
 'use client'
 import React from 'react';
 

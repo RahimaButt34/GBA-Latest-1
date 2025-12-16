@@ -38,7 +38,10 @@
     "width": 24,
     "height": 24
   },
+   
   "mainNav": [
+
+    
     {
       "title": "About",
       "href": "#",
@@ -54,6 +57,7 @@
         { "title": "Our Focus", "href": "/about/OurFocus" }
       ]
     },
+    
     {
       "title": "Services",
       "href": "#",
@@ -97,9 +101,11 @@
         { "title": "Flagship", "href": "/members/Flagship" }
       ]
     },
+    
     { "title": "Resources", "href": "#", "type": "link", "strong": true },
     { "title": "Archives", "href": "/archive", "type": "link", "strong": true },
     { "title": "Contact", "href": "/contact-2", "type": "link", "strong": true },
-    { "title": "Home", "href": "/", "type": "link", "strong": true }
+     { "title": "Home", "href": "/", "type": "link", "strong": true }
+   
   ]
 }
