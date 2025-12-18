@@ -73,8 +73,3 @@ const JoinGBASection: React.FC = () => {
 
 export default JoinGBASection;
 
-<style> 
-
-
-    
-</style>

@@ -255,8 +255,122 @@
 // export default OurFocusSection;
 
 
+// 'use client'
+// // src/app/focus/page.tsx (or similar file)
+
+// import React from 'react';
+// import Image from 'next/image';
+
+// const FocusPage = () => {
+//     return (
+//         <React.Fragment>
+//             {/* about us area wrapper main */}
+//             <div className="rts-breadcrumb-area top-300">
+//                 <div className="container">
+//                     <div className="row">
+//                         <div className="col-lg-12">
+//                             <div className="title-area-left" style={{ textAlign: 'left' }}>
+//                                 {/* Note: Paths for background images (if any) are often handled by CSS */}
+//                                 <span className="bg-title" style={{ fontSize: '150px', marginLeft: '100px' }}>
+//                                     Our Focus
+//                                 </span>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 <div className="shape-area">
+//                     {/* Paths changed from assets/images/... to /images/... */}
+//                     <Image src="/images/about/shape/01.png" alt="shape" className="one" width={100} height={100} priority={false} />
+//                     <Image src="/images/about/shape/02.png" alt="shape" className="two" width={100} height={100} priority={false} />
+//                     <Image src="/images/about/shape/03.png" alt="shape" className="three" width={100} height={100} priority={false} />
+//                 </div>
+//             </div>
+
+//             {/* rts about area start */}
+//             <div className="rts-about-area rts-section-gap">
+//                 {/* Adjustments for the layout and container:
+//                     1. The negative margin on the container is a bit unusual. 
+//                        It's converted to camelCase for the style object.
+//                     2. The inner div also uses negative margin.
+//                 */}
+//                 <div className="container pt--10" style={{ marginTop: '-300px' }}>
+//                     <div style={{ marginTop: '-80px',  marginLeft: '-50px' }}>
+//                         <p style={{ fontSize: '16px', marginTop: '-90px', marginLeft: '100px' }}> 
+//                             Enabling Growth
+//                         </p>
+//                         <h1 style={{ fontWeight: 800, fontSize: '48px', marginLeft: '100px', marginTop: '-10px' }}>
+//                             Our Focus
+//                         </h1>
+//                     </div>
+
+//                     {/* 1 */}
+//                     <div className="rts-about-area rts-section-gap ">
+//                         <div className="container pt--10">
+//                             <div className="row align-items-center g-5">
+
+//                                 {/* IMAGE LEFT */}
+//                                 <div className="col-lg-5 col-md-12 order-lg-1 order-1 text-center">
+//                                     <div className="main-thumnal-inner-about-three">
+//                                         <div className="thumbnail">
+//                                             {/* Use next/image for optimized images. Path changed from assets/images/... to /images/... 
+//                                                 Added 'width' and 'height' for Image component, essential for optimization.
+//                                                 You need to adjust these to the actual dimensions of the image. 
+//                                                 I've set arbitrary large values for example.
+//                                             */}
+//                                             <Image 
+//                                                 src="/images/Focus2/Made In Gujranwala.png" 
+//                                                 alt="Made In Gujranwala"
+//                                                 width={500} // Example width
+//                                                 height={400} // Example height
+//                                                 style={{ width: '90%', borderRadius: '10px',marginTop: '-100px'  }}
+//                                                 priority={false}
+//                                             />
+//                                         </div>
+//                                     </div>
+//                                 </div>
+
+//                                 {/* TEXT RIGHT */}
+//                                 <div className="col-lg-7 col-md-12 order-lg-2 order-2">
+//                                     <div className="about-content-right-three">
+//                                         <div className="title-style-three left" style={{ fontSize: '48px' }}>
+//                                             <h2>
+//                                                 Made In Gujranwala <br /> Promotion
+//                                             </h2>
+//                                             <p style={{ fontWeight: 900, color: 'black', fontSize: '14px' }}>
+//                                                 Building Global Pathways For Gujranwala’s Industrial Growth
+//                                             </p>
+//                                         </div>
+//                                         <br />
+//                                         <p className="disc" style={{ fontSize: '15px'  , marginTop :  '20px' }}>
+//                                             Gujranwala is home to a diverse range of industries that make a significant contribution
+//                                             to Pakistan’s national economy. One of GBA’s foremost priorities is to enhance the global
+//                                             visibility of Gujranwala’s industrial base and promote the **Made in Gujranwala** brand across
+//                                             international markets. Through strategic initiatives and collaborations, GBA highlights the
+//                                             city’s manufacturing excellence, product diversity, and export potential on global platforms.
+//                                             The Alliance works closely with international trade bodies, chambers of commerce, and
+//                                             business councils to foster partnerships, facilitate B2B linkages, and create sustainable
+//                                             export opportunities. By promoting industrial clusters, encouraging cross-border cooperation,
+//                                             and showcasing innovation-driven enterprises, GBA continues to strengthen Gujranwala’s
+//                                             reputation as a key hub of industrial and trade excellence.
+//                                         </p>
+//                                     </div>
+//                                 </div>
+
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </React.Fragment>
+//     );
+// }
+
+// export default FocusPage;
+
+
+
+
 'use client'
-// src/app/focus/page.tsx (or similar file)
 
 import React from 'react';
 import Image from 'next/image';
@@ -264,14 +378,13 @@ import Image from 'next/image';
 const FocusPage = () => {
     return (
         <React.Fragment>
-            {/* about us area wrapper main */}
+            {/* --- SECTION 1: BREADCRUMB --- */}
             <div className="rts-breadcrumb-area top-300">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="title-area-left" style={{ textAlign: 'left' }}>
-                                {/* Note: Paths for background images (if any) are often handled by CSS */}
-                                <span className="bg-title" style={{ fontSize: '150px', marginLeft: '100px' }}>
+                                <span className="bg-title watermark-focus">
                                     Our Focus
                                 </span>
                             </div>
@@ -279,32 +392,23 @@ const FocusPage = () => {
                     </div>
                 </div>
                 <div className="shape-area">
-                    {/* Paths changed from assets/images/... to /images/... */}
                     <Image src="/images/about/shape/01.png" alt="shape" className="one" width={100} height={100} priority={false} />
                     <Image src="/images/about/shape/02.png" alt="shape" className="two" width={100} height={100} priority={false} />
                     <Image src="/images/about/shape/03.png" alt="shape" className="three" width={100} height={100} priority={false} />
                 </div>
             </div>
 
-            {/* rts about area start */}
+            {/* --- SECTION 2: CONTENT AREA --- */}
             <div className="rts-about-area rts-section-gap">
-                {/* Adjustments for the layout and container:
-                    1. The negative margin on the container is a bit unusual. 
-                       It's converted to camelCase for the style object.
-                    2. The inner div also uses negative margin.
-                */}
-                <div className="container pt--10" style={{ marginTop: '-300px' }}>
-                    <div style={{ marginTop: '-80px' }}>
-                        <p style={{ fontSize: '16px', marginTop: '50px', marginLeft: '100px' }}> 
-                            Enabling Growth
-                        </p>
-                        <h1 style={{ fontWeight: 800, fontSize: '48px', marginLeft: '100px', marginTop: '-10px' }}>
-                            Our Focus
-                        </h1>
+                <div className="container pt--10 focus-main-overlap">
+                    
+                    {/* Heading Block */}
+                    <div className="focus-heading-wrapper">
+                        <p className="focus-sub-label">Enabling Growth</p>
+                        <h1 className="focus-main-title">Our Focus</h1>
                     </div>
 
-                    {/* 1 */}
-                    <div className="rts-about-area rts-section-gap">
+                    <div className="rts-about-area rts-section-gap focus-content-section">
                         <div className="container pt--10">
                             <div className="row align-items-center g-5">
 
@@ -312,17 +416,12 @@ const FocusPage = () => {
                                 <div className="col-lg-5 col-md-12 order-lg-1 order-1 text-center">
                                     <div className="main-thumnal-inner-about-three">
                                         <div className="thumbnail">
-                                            {/* Use next/image for optimized images. Path changed from assets/images/... to /images/... 
-                                                Added 'width' and 'height' for Image component, essential for optimization.
-                                                You need to adjust these to the actual dimensions of the image. 
-                                                I've set arbitrary large values for example.
-                                            */}
                                             <Image 
                                                 src="/images/Focus2/Made In Gujranwala.png" 
                                                 alt="Made In Gujranwala"
-                                                width={500} // Example width
-                                                height={400} // Example height
-                                                style={{ width: '90%', borderRadius: '10px' }}
+                                                width={500} 
+                                                height={400} 
+                                                className="focus-hero-image"
                                                 priority={false}
                                             />
                                         </div>
@@ -332,16 +431,16 @@ const FocusPage = () => {
                                 {/* TEXT RIGHT */}
                                 <div className="col-lg-7 col-md-12 order-lg-2 order-2">
                                     <div className="about-content-right-three">
-                                        <div className="title-style-three left" style={{ fontSize: '48px' }}>
+                                        <div className="title-style-three left focus-text-heading">
                                             <h2>
                                                 Made In Gujranwala <br /> Promotion
                                             </h2>
-                                            <p style={{ fontWeight: 900, color: 'black', fontSize: '14px' }}>
+                                            <p className="focus-accent-text">
                                                 Building Global Pathways For Gujranwala’s Industrial Growth
                                             </p>
                                         </div>
                                         <br />
-                                        <p className="disc" style={{ fontSize: '15px'  , marginTop :  '20px' }}>
+                                        <p className="disc focus-description">
                                             Gujranwala is home to a diverse range of industries that make a significant contribution
                                             to Pakistan’s national economy. One of GBA’s foremost priorities is to enhance the global
                                             visibility of Gujranwala’s industrial base and promote the **Made in Gujranwala** brand across
@@ -361,6 +460,110 @@ const FocusPage = () => {
                     </div>
                 </div>
             </div>
+
+            {/* --- CONSOLIDATED STYLING --- */}
+            <style jsx global>{`
+                /* DESKTOP STYLES - Matches your original output exactly */
+                .watermark-focus {
+                    font-size: 150px;
+                    margin-left: 100px;
+                }
+
+                .focus-main-overlap {
+                    margin-top: -300px !important;
+                }
+
+                .focus-heading-wrapper {
+                    margin-top: -80px;
+                    margin-left: -50px;
+                }
+
+                .focus-sub-label {
+                    font-size: 16px;
+                    margin-top: -90px;
+                    margin-left: 100px;
+                }
+
+                .focus-main-title {
+                    font-weight: 800;
+                    font-size: 48px;
+                    margin-left: 100px;
+                    margin-top: -10px;
+                }
+
+                .focus-content-section {
+                    margin-top: 50px; /* Increased gap so heading doesn't touch image */
+                }
+
+                .focus-hero-image {
+                    width: 90%;
+                    border-radius: 10px;
+                    margin-top: -100px;
+                    height: auto;
+                }
+
+                .focus-text-heading h2 {
+                    font-size: 48px;
+                }
+
+                .focus-accent-text {
+                    font-weight: 900;
+                    color: black;
+                    font-size: 14px;
+                }
+
+                .focus-description {
+                    font-size: 15px;
+                    margin-top: 20px;
+                }
+
+                /* MOBILE RESPONSIVE STYLES */
+                @media (max-width: 768px) {
+                    .focus-main-overlap {
+                        margin-top: 0 !important;
+                        padding-left: 15px !important;
+                        padding-right: 15px !important;
+                    }
+
+                    .focus-heading-wrapper,
+                    .focus-sub-label,
+                    .focus-main-title {
+                        margin-left: 0 !important;
+                        margin-top: 0 !important;
+                        text-align: left;
+                    }
+
+                    .watermark-focus {
+                        font-size: 50px !important;
+                        margin-left: 15px !important;
+                        opacity: 0.15;
+                    }
+
+                    .focus-main-title {
+                        font-size: 34px !important;
+                        margin-bottom: 20px;
+                    }
+
+                    .focus-hero-image {
+                        margin-top: 20px !important; /* Fixed: No longer overlaps heading */
+                        width: 100% !important;
+                    }
+
+                    .focus-text-heading h2 {
+                        font-size: 30px !important;
+                    }
+
+                    .focus-content-section {
+                        margin-top: 20px !important;
+                        padding-top: 0 !important;
+                    }
+
+                    .rts-breadcrumb-area.top-300 {
+                        padding-top: 60px !important;
+                        height: auto !important;
+                    }
+                }
+            `}</style>
         </React.Fragment>
     );
 }

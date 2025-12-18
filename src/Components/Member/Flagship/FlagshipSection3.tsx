@@ -6,9 +6,20 @@
 export default function FlagshipList() {
   return (
     <div className="working-process-area-three rts-section-gap working-process-bg"
-         style={{ alignItems: "center" }}>
+        style={{ 
+                    alignItems: 'center', 
+                    marginTop: '120px', 
+                    
+                    marginBottom: '120px', 
+                   
+                    marginLeft: '60px', 
+                    marginRight: '60px',
+                    alignItems: 'center', 
+                    
+                }}>
 
       <style>
+       
         {`
           .industry-list { list-style: none; padding: 0; margin: 0; }
           .industry-list li { align-items: center; gap: 10px; margin-bottom: 10px; font-size: 16px; }
@@ -22,12 +33,20 @@ export default function FlagshipList() {
             margin-left: 10px;
           }
           .title-style-three.center { text-align: center; }
+          .working-process-bg {
+                    background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 100% 100%; /* This is the key part */
+}
+                       
+                
         `}
       </style>
 
-      <div className="container">
+      <div className="container "
+      >
         <div className="row mt--40">
-          <div className="title-style-three center">
+          <div className="title-style-three center" >
 
             <h2 className="title" style={{ marginBottom: "20px" }}>
               <span className="solid-text">Flagship</span>

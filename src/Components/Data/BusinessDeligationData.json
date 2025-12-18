@@ -15,28 +15,28 @@
   },
   "shortServices": [
     {
-      "iconSrc": "images/service/05.svg",
+      "iconSrc": "/images/service/05.svg",
       "title": "Market Exploration",
       "description": "Firsthand exposure to global markets, trends, and opportunities",
       "iconStyle": { "marginLeft": "-10px" },
       "descWidthStyle": { "fontSize": "15px", "width": "250px" }
     },
     {
-      "iconSrc": "images/service/06.svg",
+      "iconSrc": "/images/service/06.svg",
       "title": "Business Promotion",
       "description": "High-impact meetings that unlock export deals and joint ventures",
       "iconStyle": { "marginLeft": "40px" },
       "descWidthStyle": { "fontSize": "15px", "width": "250px" }
     },
     {
-      "iconSrc": "images/service/07.svg",
+      "iconSrc": "/images/service/07.svg",
       "title": "Cross-Border Partnerships",
       "description": "Building trusted connections with global chambers and trade bodies",
       "iconStyle": { "marginLeft": "-10px" },
       "descWidthStyle": { "fontSize": "15px", "width": "250px" }
     },
     {
-      "iconSrc": "images/service/08.svg",
+      "iconSrc": "/images/service/08.svg",
       "title": "Multi-Regional Outreach",
       "description": "Delegations across Asia, Africa, the Middle East, and Europe",
       "iconStyle": { "marginLeft": "40px" },

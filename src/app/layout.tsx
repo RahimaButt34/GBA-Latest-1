@@ -154,8 +154,8 @@ const themeStyles: string[] = [
 
 // --- 2. Update Metadata ---
 export const metadata: Metadata = {
-title: "Invena Business Consulting HTML Template",
- description: "A modern and responsive HTML template for consulting businesses.",
+title: "GBA",
+ description: "Gujranwala Business Alliances.",
 };
 
 export default function RootLayout({

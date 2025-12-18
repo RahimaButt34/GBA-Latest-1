@@ -1557,3 +1557,121 @@ const BlogArchive = () => {
 };
 
 export default BlogArchive;
+
+
+
+
+// 'use client';
+// import React from 'react';
+
+// export default function SubscribeCTA() {
+//   return (
+//     <>
+//       <style jsx global>{`
+//         /* 1. THE BREAKOUT FIX: This ensures the 'ends' are not cut off */
+//         .shiny-breakout-section {
+//           /* Force the section to be exactly as wide as the screen */
+//           width: 100vw !important;
+//           position: relative;
+//           left: 50%;
+//           right: 50%;
+//           margin-left: -50vw;
+//           margin-right: -50vw;
+          
+//           /* Background settings for clarity */
+//           background-image: url('/images/cta/09.webp');
+//           background-size: 100% 100%; /* Forces the whole image to fit exactly */
+//           background-position: center;
+//           background-repeat: no-repeat;
+//           padding: 100px 0;
+          
+//           /* SHINY ENDING POINTS: Bright, visible lines at the top and bottom */
+//           border-top: 4px solid #00d4ff; 
+//           border-bottom: 4px solid #00d4ff;
+          
+//           /* Glow effect that reaches the absolute edges of the page */
+//           box-shadow: 
+//             inset 0 20px 40px rgba(0, 212, 255, 0.3),
+//             inset 0 -20px 40px rgba(0, 212, 255, 0.3),
+//             0 0 50px rgba(0, 212, 255, 0.2);
+//         }
+
+//         /* 2. ENSURING IMAGE CLARITY */
+//         .overlay-layer {
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           width: 100%;
+//           height: 100%;
+//           background: rgba(0, 0, 0, 0.4); /* Darkens slightly so text is clear */
+//           z-index: 1;
+//         }
+
+//         /* 3. RESPONSIVE TEXT */
+//         .cta-content {
+//           position: relative;
+//           z-index: 2;
+//           display: flex;
+//           justify-content: space-between;
+//           align-items: center;
+//           flex-wrap: wrap;
+//           gap: 20px;
+//         }
+
+//         @media (max-width: 991px) {
+//           .cta-content {
+//             flex-direction: column;
+//             text-align: center;
+//           }
+//         }
+//       `}</style>
+
+//       <div className="shiny-breakout-section">
+//         <div className="overlay-layer"></div>
+        
+//         <div className="container">
+//           <div className="cta-content">
+            
+//             <div className="left-side">
+//               <span style={{ color: '#00d4ff', fontWeight: 'bold', letterSpacing: '2px' }}>
+//                 SUBSCRIBE NEWSLETTER
+//               </span>
+//               <h2 style={{ color: '#fff', fontSize: '40px', margin: '10px 0' }}>
+//                 Stay Updated with <br /> the Latest News!
+//               </h2>
+//             </div>
+
+//             <form style={{ 
+//               display: 'flex', 
+//               background: 'rgba(255,255,255,0.1)', 
+//               padding: '10px', 
+//               borderRadius: '50px',
+//               border: '1px solid rgba(0, 212, 255, 0.5)',
+//               backdropFilter: 'blur(10px)',
+//               width: '100%',
+//               maxWidth: '500px'
+//             }}>
+//               <input 
+//                 type="email" 
+//                 placeholder="Enter Email Address" 
+//                 style={{ background: 'transparent', border: 'none', color: '#fff', padding: '0 20px', flex: 1, outline: 'none' }} 
+//               />
+//               <button style={{ 
+//                 background: '#00d4ff', 
+//                 border: 'none', 
+//                 padding: '15px 30px', 
+//                 borderRadius: '50px', 
+//                 fontWeight: 'bold',
+//                 cursor: 'pointer',
+//                 boxShadow: '0 0 15px rgba(0, 212, 255, 0.5)'
+//               }}>
+//                 Subscribe Now
+//               </button>
+//             </form>
+
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }

@@ -119,10 +119,6 @@ const FocusArea: React.FC<FocusAreaProps> = ({
     
     // Set the rendering order based on textLeft
     const content = textLeft ? [textBlock, imageBlock] : [imageBlock, textBlock];
-    // NOTE: The original HTML had inconsistent order-lg-* assignments. 
-    // I've adjusted the order-lg-* classes within the blocks to match the textLeft logic, 
-    // ensuring the text always comes first on mobile (order-2) and the image on top (order-1).
-
     return (
         <div className="rts-about-area rts-section-gap">
             <div className="container pt--40" style={containerOverlapStyle}>

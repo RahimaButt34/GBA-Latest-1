@@ -227,7 +227,7 @@ const Events = () => {
                     
                 }
                 .rts-read-more i {
-                    margin-left: 8px;
+                    margin-left: -20px;
                     transition: margin-left 0.3s;
                 }
                 .rts-read-more:hover i {

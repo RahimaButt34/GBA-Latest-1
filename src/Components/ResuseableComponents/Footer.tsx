@@ -455,7 +455,7 @@ const FooterData: FooterDataType = {
             }
         ]
     },
-    "copyrightText": "Invena - Copyright",
+    "copyrightText": "GBA - Copyright",
     "policyLinks": [
         {"text": "Privacy Policy", "href": "/privacy-policy.html"},
         {"text": "Terms & Condition", "href": "/terms-of-condition.html"}
