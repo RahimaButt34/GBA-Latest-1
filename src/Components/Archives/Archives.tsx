@@ -2110,7 +2110,7 @@ const BlogArchive = () => {
         logo: "/images/logo/logo-2.svg",       
         title: "Need Help?",
         buttonText: "Contact Us",
-        link: "/contact",
+        link: "/contact-2",
       },
     },
   };
