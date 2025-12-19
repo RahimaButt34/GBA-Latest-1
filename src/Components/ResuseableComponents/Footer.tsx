@@ -603,7 +603,7 @@ const Footer: React.FC = () => {
                     line-height: 1.45 !important;
                 }
                 .quick-link-inner .signle-footer-contact-8:last-child {
-                    margin-top: -2px !important; 
+                    margin-top: -10px !important; 
                 }
 
                 /* Copyright Area */

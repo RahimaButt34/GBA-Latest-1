@@ -748,6 +748,199 @@
 // export default GlobalReachPage;
 
 
+// 'use client'
+// import React from 'react';
+// import Image from 'next/image';
+// import Link from 'next/link';
+
+// // --- Interface Definitions (Exported for Container use) ---
+
+// interface ShortServiceData {
+//     iconSrc: string;
+//     title: string;
+//     description: string;
+//     iconStyle: React.CSSProperties;
+//     descWidthStyle: React.CSSProperties;
+// }
+
+// interface CategoryData {
+//     href: string;
+//     text: string;
+// }
+
+// // Exported interface for the JSON structure
+// export interface ServiceContent {
+//     pageTitle: string;
+//     banner: {
+//         bgTitle: string;
+//         title: string;
+//         description: string;
+//         titleFontSize: string;
+//         descriptionFontSize: string;
+//     };
+//     mainContent: {
+//         imageSrc: string;
+//         altText: string;
+//         description: string;
+//         descriptionFontSize: string;
+//     };
+//     shortServices: ShortServiceData[];
+//     sidebarCategories: CategoryData[];
+//     sidebarTitle: string;
+// }
+
+// // Props for the template component
+// interface ServicesTemplateProps {
+//     data: ServiceContent; // The unique content data for the current page
+//     activePath: string; // The path used for sidebar highlighting
+// }
+
+// // --- Helper Components with Structure and Styling ---
+
+// // Component for the short service items
+// const ShortServiceItem = ({ service }: { service: ShortServiceData }) => (
+//     <div className="single-short-service">
+//         <div className="icon" style={service.iconStyle}>
+//             {/* ✅ FIX 1: Removed redundant leading slash (e.g., stops //images) */}
+//             <Image 
+//                 src={service.iconSrc} 
+//                 alt={service.title} 
+//                 width={30} 
+//                 height={30} 
+//             />
+//         </div>
+//         <div className="inner-content">
+//             <h5 className="title-sm" style={{ fontSize: '18px' }}>
+//                 {service.title}
+//             </h5>
+//             <p className="disc" style={service.descWidthStyle}>
+//                 {service.description}
+//             </p>
+//         </div>
+//     </div>
+// );
+
+// // Component for the sidebar categories
+// const CategoryLink = ({ category, activePath }: { category: CategoryData, activePath: string }) => {
+    
+//     // Logic to check if the current link is active
+//     const nextPath = `/${category.href.replace('.html', '')}`;
+//     const isActive = nextPath === activePath;
+    
+//     // Conditional styling
+//     const linkStyle: React.CSSProperties = isActive ? { backgroundColor: '#f0f0f0', borderLeft: '3px solid #0056b3' } : {};
+    
+//     return (
+//         <ul className="single-categories" style={linkStyle}>
+//             <li>
+//                 <Link href={nextPath}>
+//                     {category.text} <i className="far fa-long-arrow-right"></i>
+//                 </Link>
+//             </li>
+//         </ul>
+//     );
+// };
+
+
+// // --- Main Template Component (Exported) ---
+
+// // ✅ FIX 2: Component is correctly named ServicesTemplate
+// const ServicesTemplate: React.FC<ServicesTemplateProps> = ({ data, activePath }) => {
+    
+//     // Destructure content from the 'data' prop (NOT imported JSON)
+//     const { banner, mainContent, shortServices, sidebarCategories, sidebarTitle } = data;
+
+//     return (
+//         <>
+//             {/* Breadcrumb/Banner Area */}
+//             <div className="breadcrumb-service-detals-one">
+//                 <div className="container-1754">
+//                     <div className="row">
+//                         <div className="col-lg-12">
+//                             <div className="banner-inner-service-details-1 bg_image">
+//                                 <div className="container">
+//                                     <div className="row">
+//                                         <div className="col-lg-12">
+//                                             <div className="title-area-left">
+//                                                 <span className="bg-title">{banner.bgTitle}</span>
+//                                                 <h1 className="title rts-text-anime-style-1" style={{ fontSize: banner.titleFontSize }}>
+//                                                     {banner.title}
+//                                                 </h1>
+//                                                 <p className="disc" style={{ fontSize: banner.descriptionFontSize }}>
+//                                                     {banner.description}
+//                                                 </p>
+//                                             </div>
+//                                         </div>
+//                                     </div>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+
+//             {/* Service Details Main Area */}
+//             <div className="rts-service-details-area-main-bottom">
+//                 <div className="container">
+//                     <div className="row">
+//                         {/* Main Content Column */}
+//                         <div className="col-xl-8 px-5">
+//                             <div className="service-details-left-area">
+//                                 <div className="thumbnail">
+//                                     {/* ✅ FIX 1: Use the path directly */}
+//                                     <Image 
+//                                         src={mainContent.imageSrc}
+//                                         alt={mainContent.altText} 
+//                                         width={800} 
+//                                         height={500} 
+//                                         layout="responsive" 
+//                                     />
+//                                 </div>
+//                                 <p style={{ fontSize: mainContent.descriptionFontSize }}>
+//                                     {mainContent.description}
+//                                 </p>
+
+//                                 {/* Service Short Main Wrapper */}
+//                                 <div className="service-short-main-wrapper">
+//                                     {shortServices.map((service, index) => (
+//                                         <ShortServiceItem key={index} service={service} />
+//                                     ))}
+//                                 </div>
+//                             </div>
+//                         </div>
+
+//                         {/* Sidebar Column */}
+//                         <div className="col-xl-4 px-5 col-md-12 col-sm-12 col-12 mt_lg--60 blog-list-style mt-service-shorter">
+//                             <div className="rts-single-wized Categories">
+//                                 <div className="wized-header">
+//                                     <h5 className="title">
+//                                         {sidebarTitle}
+//                                     </h5>
+//                                 </div>
+//                                 <div className="wized-body">
+//                                     {/* Categories Populated from the prop data, passing activePath */}
+//                                     {sidebarCategories.map((category, index) => (
+//                                         <CategoryLink 
+//                                             key={index} 
+//                                             category={category}
+//                                             activePath={activePath} 
+//                                         />
+//                                     ))}
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </>
+//     );
+// };
+
+// export default ServicesTemplate;
+
+
+
+//just remove container radius 
 'use client'
 import React from 'react';
 import Image from 'next/image';
@@ -911,8 +1104,9 @@ const ServicesTemplate: React.FC<ServicesTemplateProps> = ({ data, activePath })
 
                         {/* Sidebar Column */}
                         <div className="col-xl-4 px-5 col-md-12 col-sm-12 col-12 mt_lg--60 blog-list-style mt-service-shorter">
-                            <div className="rts-single-wized Categories">
-                                <div className="wized-header">
+                            {/* Added style here to remove rounding */}
+                            <div className="rts-single-wized Categories" style={{ borderRadius: '0px' }}>
+                                <div className="wized-header" style={{ borderRadius: '0px' }}>
                                     <h5 className="title">
                                         {sidebarTitle}
                                     </h5>

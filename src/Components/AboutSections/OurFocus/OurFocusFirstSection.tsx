@@ -423,6 +423,8 @@ const FocusPage = () => {
                                                 height={400} 
                                                 className="focus-hero-image"
                                                 priority={false}
+                                                style={{marginTop:'-10px'}}
+
                                             />
                                         </div>
                                     </div>
@@ -496,10 +498,10 @@ const FocusPage = () => {
                 }
 
                 .focus-hero-image {
-                    width: 90%;
+                    width: 100%;
                     border-radius: 10px;
                     margin-top: -100px;
-                    height: auto;
+                    height: 120%;
                 }
 
                 .focus-text-heading h2 {
@@ -509,7 +511,7 @@ const FocusPage = () => {
                 .focus-accent-text {
                     font-weight: 900;
                     color: black;
-                    font-size: 14px;
+                    font-size: 12px;
                 }
 
                 .focus-description {

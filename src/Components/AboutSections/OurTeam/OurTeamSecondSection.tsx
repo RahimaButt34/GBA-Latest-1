@@ -259,7 +259,6 @@
 // export default OurTeamSection;
 
 
-
 'use client'
 import React from 'react';
 
@@ -448,7 +447,7 @@ const OurTeamSection: React.FC = () => {
         <div className="container pb--80">
           <div className="col-lg-12">
             <div className="title-area-left center" style={{ textAlign: 'center' }}>
-              <p className="title" style={{ marginBottom: '-3px', fontSize: '16px' }}>
+              <p className="title" style={{ marginBottom: '-3px', fontSize: '14px' }}>
                 Building Success Together
               </p>
               <h1 className="title" style={{ fontWeight: 900, fontSize: '48px', marginBottom: '20px' }}>
@@ -466,10 +465,15 @@ const OurTeamSection: React.FC = () => {
                 maxWidth: '900px', 
                 margin: '0 auto 40px auto', 
                 lineHeight: '1.6',
-                fontSize: '15px',
+                fontSize: '12px',
                 color: '#666'
               }}>
-                At the heart of the Gujranwala Business Alliance (GBA) is a team of dedicated professionals and business leaders who share a common vision to drive industrial growth, strengthen international partnerships, and empower the business community of Gujranwala. Their expertise, leadership, and commitment to excellence ensure that GBA continues to evolve as a dynamic platform for collaboration, innovation, and global engagement.
+                At the heart of the Gujranwala Business Alliance (GBA) is a team of 
+                dedicated professionals and business leaders who share a common vision to
+                 drive industrial growth, strengthen international partnerships, and empower
+                  the business community of Gujranwala. Their expertise, leadership, and 
+                  commitment to excellence ensure that GBA continues to evolve as a dynamic
+                   platform for collaboration, innovation, and global engagement.
               </p>
             </div>
           </div>

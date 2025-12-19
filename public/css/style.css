@@ -5503,7 +5503,8 @@ Copyright (c) 2015 Daniel Eden
 
 .header-top-cta-bar {
   background: #11161F;
-  border-top: 3px solid #0B7CFF;
+  /* border-top: 3px solid #09090a; */
+  border-top: 3px solid #11161F;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .header-top-cta-bar .header-top-one-wrapper {
@@ -5550,7 +5551,7 @@ Copyright (c) 2015 Daniel Eden
 .header-top-cta-bar .top-cta-contact .divider {
   width: 1px;
   height: 18px;
-  background: rgba(255, 255, 255, 0.25);
+  background: #fff;
   display: inline-block;
 }
 .header-top-cta-bar .social-wrapper-one {

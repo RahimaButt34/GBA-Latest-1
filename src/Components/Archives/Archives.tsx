@@ -1682,6 +1682,319 @@
 
 
 
+// "use client";
+// import React from "react";
+// import useSWR from "swr";
+// import Link from "next/link";
+
+// interface Breadcrumb {
+//   bgTitle: string;
+//   title: string;
+//   description: string;
+//   shapes: string[];
+// }
+
+// interface Post {
+//   thumbnail: string;
+//   date: string;
+//   category: string;
+//   title: string;
+//   description: string;
+//   link: string;
+//   delay: number;
+// }
+
+// interface RecentPost {
+//   thumbnail: string;
+//   date: string;
+//   title: string;
+//   link: string;
+// }
+
+// interface Widgets {
+//   categories: string[];
+//   recentPosts: RecentPost[];
+//   tags: string[];
+//   contactWidget: {
+//     logo: string;
+//     title: string;
+//     buttonText: string;
+//     link: string;
+//   };
+// }
+
+// interface BlogContent {
+//   breadcrumb: Breadcrumb;
+//   posts: Post[];
+//   pagination: string[];
+//   widgets: Widgets;
+// }
+
+// // ---------------- FETCHER ----------------
+// const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+// // ---------------- COMPONENT ---------------
+// const BlogArchive = () => {
+//   const { data, error } = useSWR(
+//     "https://gba.mig.org.pk/api/news",
+//     fetcher
+//   );
+
+//   if (error) return <p>Failed to load data</p>;
+//   if (!data) return <p>Loading...</p>;
+
+//   const apiPosts: any[] = Array.isArray(data?.data) ? data.data : [];
+
+//   const mappedData: BlogContent = {
+//     breadcrumb: {
+//       bgTitle: "News",
+//       title: "Latest Updates",
+//       description: "GBC official announcements & activities",
+//       shapes: [
+//         "images/about/shape/01.png",
+//         "images/about/shape/02.png",
+//         "images/about/shape/03.png",
+//       ],
+//     },
+
+//     posts: apiPosts.map((item: any, index: number) => ({
+//       thumbnail: item?.image || "/images/placeholder.jpg",
+//       date: item?.created_at || "",
+//       category: String(item?.category || ""),
+//       title: item?.title || "",
+//       description: item?.description
+//         ? item.description.substring(0, 250) + "..."
+//         : "",
+//       link: `/blog-details/${item?.id}`,
+//       delay: 0.2 * index,
+//     })),
+
+//     pagination: [
+//       String(data?.pagination?.current_page ?? 1),
+//       String((data?.pagination?.current_page ?? 1) + 1),
+//     ],
+
+//     widgets: {
+//       categories: Array.from(
+//         new Set(
+//           apiPosts
+//             .map((item: any) => item?.category)
+//             .filter(Boolean)
+//             .map((cat: any) => String(cat))
+//         )
+//       ),
+
+//       recentPosts: apiPosts.slice(0, 4).map((item: any) => ({
+//         thumbnail: item?.image || "/images/placeholder.jpg",
+//         date: item?.created_at || "",
+//         title: item?.title || "",
+//         link: `/blog-details/${item?.id}`,
+//       })),
+
+//       tags: ["Business", "Trade", "GBC", "Asia", "Africa"],
+
+//       contactWidget: {
+//         logo: "/images/logo/logo-2.svg",       
+//         title: "Need Help?",
+//         buttonText: "Contact Us",
+//         link: "/contact",
+//       },
+//     },
+//   };
+
+//   const content = mappedData;
+
+//   return (
+//     <>
+//       {/* Breadcrumb */}
+//       <div className="rts-breadcrumb-area">
+//         <div className="container">
+//           <div className="row">
+//             <div className="col-lg-12">
+//               <div className="title-area-left center mt-dec-blog-bread">
+//                 <span className="bg-title">{content.breadcrumb.bgTitle}</span>
+//                 <h1 className="title rts-text-anime-style-1">
+//                   {content.breadcrumb.title}
+//                 </h1>
+//                 <p className="disc">{content.breadcrumb.description}</p>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="shape-area">
+//           {content.breadcrumb.shapes.map((shape, i) => (
+//             <img
+//               key={i}
+//               src={shape}
+//               alt="shape"
+//               className={["one", "two", "three"][i]}
+//             />
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* Blog Posts */}
+//       <div className="rts-blog-list-area rts-section-gapBottom mt-dec-blog-list">
+//         <div className="container">
+//           <div className="row g-5">
+//             <div className="col-xl-8 col-md-12 col-sm-12 col-12">
+//               {content.posts.map((post, i) => (
+//                 <div
+//                   key={i}
+//                   className="blog-single-post-listing"
+//                   data-animation="fadeInUp"
+//                   data-delay={post.delay}
+//                 >
+//                   <div className="thumbnail">
+//                     <img src={post.thumbnail} alt="Business-Blog" />
+//                   </div>
+
+//                   <div className="blog-listing-content">
+//                     <div className="user-info">
+//                       <div className="single">
+//                         <i className="far fa-clock"></i>
+//                         <span>{post.date}</span>
+//                       </div>
+//                       <div className="single">
+//                         <i className="far fa-tags"></i>
+//                         <span>{post.category}</span>
+//                       </div>
+//                     </div>
+
+//                     <Link className="blog-title" href={post.link}>
+//                       <h3 className="title">{post.title}</h3>
+//                     </Link>
+
+//                     <p className="disc">{post.description}</p>
+
+//                     <Link className="rts-btn btn-primary" href={post.link}>
+//                       Read Details
+//                     </Link>
+//                   </div>
+//                 </div>
+//               ))}
+
+//               {/* Pagination */}
+//               <div className="row">
+//                 <div className="col-12">
+//                   <div className="text-center">
+//                     <div className="pagination">
+//                       {content.pagination.map((page, idx) => (
+//                         <button
+//                           key={idx}
+//                           className={idx === 0 ? "active" : ""}
+//                         >
+//                           {page}
+//                         </button>
+//                       ))}
+//                       <button>
+//                         <i className="fal fa-angle-double-right"></i>
+//                       </button>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Widgets */}
+//             <div className="col-xl-4 col-md-12 col-sm-12 col-12 mt_lg--60 blog-list-style">
+//               {/* Categories */}
+//               <div className="rts-single-wized Categories">
+//                 <div className="wized-header">
+//                   <h5 className="title">Categories</h5>
+//                 </div>
+//                 <div className="wized-body">
+//                   {content.widgets.categories.map((cat, idx) => (
+//                     <ul key={idx} className="single-categories">
+//                       <li>
+//                         <a href="#">
+//                           {cat} <i className="far fa-long-arrow-right"></i>
+//                         </a>
+//                       </li>
+//                     </ul>
+//                   ))}
+//                 </div>
+//               </div>
+
+//               {/* Recent Posts */}
+//               <div className="rts-single-wized Recent-post">
+//                 <div className="wized-header">
+//                   <h5 className="title">Recent Posts</h5>
+//                 </div>
+//                 <div className="wized-body">
+//                   {content.widgets.recentPosts.map((post, idx) => (
+//                     <div key={idx} className="recent-post-single">
+//                       <div className="thumbnail">
+//                         <a href={post.link}>
+//                           <img src={post.thumbnail} alt="Blog_post" />
+//                         </a>
+//                       </div>
+//                       <div className="content-area">
+//                         <div className="user">
+//                           <i className="fal fa-clock"></i>
+//                           <span>{post.date}</span>
+//                         </div>
+//                         <a className="post-title" href={post.link}>
+//                           <h6 className="title">{post.title}</h6>
+//                         </a>
+//                       </div>
+//                     </div>
+//                   ))}
+//                 </div>
+//               </div>
+
+//               {/* Tags */}
+//               <div className="rts-single-wized tags">
+//                 <div className="wized-header">
+//                   <h5 className="title">Popular Tags</h5>
+//                 </div>
+//                 <div className="wized-body">
+//                   <div className="tags-wrapper">
+//                     {content.widgets.tags.map((tag, idx) => (
+//                       <a key={idx} href="#">
+//                         {tag}
+//                       </a>
+//                     ))}
+//                   </div>
+//                 </div>
+//               </div>
+
+//               {/* Contact Widget */}
+//               <div className="rts-single-wized contact">
+//                 <div className="wized-header">
+//                   <a href="#">
+//                     <img
+//                       src={content.widgets.contactWidget.logo}
+//                       alt="Business_logo"
+//                     />
+//                   </a>
+//                 </div>
+//                 <div className="wized-body">
+//                   <h5 className="title">
+//                     {content.widgets.contactWidget.title}
+//                   </h5>
+//                   <a
+//                     className="rts-btn btn-primary btn-white"
+//                     href={content.widgets.contactWidget.link}
+//                   >
+//                     {content.widgets.contactWidget.buttonText}
+//                   </a>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default BlogArchive;
+
+
+
+
 "use client";
 import React from "react";
 import useSWR from "swr";
@@ -1794,7 +2107,7 @@ const BlogArchive = () => {
       tags: ["Business", "Trade", "GBC", "Asia", "Africa"],
 
       contactWidget: {
-        logo: "/images/logo/01.svg",
+        logo: "/images/logo/logo-2.svg",       
         title: "Need Help?",
         buttonText: "Contact Us",
         link: "/contact",
@@ -1917,27 +2230,27 @@ const BlogArchive = () => {
                 </div>
               </div>
 
-              {/* Recent Posts */}
+              {/* Recent Posts - UPDATED FOR PIC 2 STYLE */}
               <div className="rts-single-wized Recent-post">
                 <div className="wized-header">
                   <h5 className="title">Recent Posts</h5>
                 </div>
                 <div className="wized-body">
                   {content.widgets.recentPosts.map((post, idx) => (
-                    <div key={idx} className="recent-post-single">
-                      <div className="thumbnail">
-                        <a href={post.link}>
-                          <img src={post.thumbnail} alt="Blog_post" />
-                        </a>
+                    <div key={idx} className="recent-post-single custom-recent-row">
+                      <div className="thumbnail recent-thumb-fixed">
+                        <Link href={post.link}>
+                          <img src={post.thumbnail} alt="Blog_post" className="pic2-img" />
+                        </Link>
                       </div>
                       <div className="content-area">
                         <div className="user">
                           <i className="fal fa-clock"></i>
                           <span>{post.date}</span>
                         </div>
-                        <a className="post-title" href={post.link}>
-                          <h6 className="title">{post.title}</h6>
-                        </a>
+                        <Link className="post-title" href={post.link}>
+                          <h6 className="title pic2-title-style">{post.title}</h6>
+                        </Link>
                       </div>
                     </div>
                   ))}
@@ -1986,6 +2299,58 @@ const BlogArchive = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        /* PIC 2 STYLE IMPLEMENTATION */
+        .custom-recent-row {
+          display: flex !important;
+          align-items: flex-start !important;
+          gap: 15px;
+          margin-bottom: 20px;
+          border-bottom: none !important;
+        }
+
+        .recent-thumb-fixed {
+          width: 80px !important;
+          height: 80px !important;
+          min-width: 80px !important;
+          overflow: hidden;
+          border-radius: 6px;
+        }
+
+        .pic2-img {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover !important;
+          display: block;
+        }
+
+        .pic2-title-style {
+          font-size: 15px !important;
+          line-height: 1.4 !important;
+          font-weight: 600 !important;
+          margin-top: 5px !important;
+          color: #1c1c1c;
+          /* Line clamping to keep height same */
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .content-area .user {
+          font-size: 13px;
+          color: #666;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          margin-bottom: 2px;
+        }
+
+        .wized-body {
+          padding-top: 15px !important;
+        }
+      `}</style>
     </>
   );
 };

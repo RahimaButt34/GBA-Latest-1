@@ -1617,9 +1617,11 @@ const ServiceProjects = () => {
                     /* Hiding default Swiper arrow icons */
                     .swiper-button-next-custom:after,
                     .swiper-button-prev-custom:after {
-                        content: '';
+                        color: transparent !important;
+    
                     }
 
+                    
                     /* Pagination Fraction Styling (Kept) */
                     .swiper-pagination-fraction-custom {
                         color: #0d1c2e;
