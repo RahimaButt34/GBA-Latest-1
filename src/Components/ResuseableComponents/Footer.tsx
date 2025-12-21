@@ -434,7 +434,7 @@ const FooterData: FooterDataType = {
                 "title": "Call Us 24/7",
                 "lines": [
                     {"text": "+92 333 8207872", "href": "tel:+923338207872"},
-                    {"text": "+92 333 8207872", "href": "tel:+923338207872"}
+                    {"text": "+92 333 8207872", "href": "tel:+923444844448"}
                 ]
             },
             {
