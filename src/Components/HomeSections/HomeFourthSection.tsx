@@ -963,7 +963,7 @@ const Events = () => {
                 }
 
                 @media (max-width: 768px) {
-                    .rts-blog-area .rts-watermark-05 { font-size: 100px !important; opacity: 0.6 !important; }
+                    .rts-blog-area .rts-watermark-05 { font-size: 80px !important; opacity: 0.6 !important; }
                     .rts-blog-area .title-style-three .title { font-size: 36px !important; }
                 }
             `}</style>

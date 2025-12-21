@@ -85,7 +85,7 @@ const HomeSections = () => {
                                 <p className="disc" style={{ fontSize: '15px' }}>
                                     The Gujranwala Business Alliance (GBA) is a dynamic and forward-thinking business association representing the collective strength of over 500 member companies from across Gujranwala’s diverse industrial sectors. Dedicated to promoting international trade, fostering partnerships, and driving industrial advancement, GBA serves as a central platform for collaboration, policy dialogue, and global engagement. Representing Pakistan’s third-largest industrial city, home to more than 21,000 SMEs and industrial units, GBA works to strengthen Gujranwala’s position as a powerhouse of manufacturing, innovation, and export excellence. By connecting local enterprises with international markets, investors, and trade bodies, the Alliance plays a pivotal role in expanding Gujranwala’s economic footprint worldwide.
                                 </p>
-                                <a href="/gba.html" className="rts-btn btn-primary">Explore</a>
+                                <a href="/about/GBA" className="rts-btn btn-primary">Explore</a>
                             </div>
                         </div>
                     </div>
@@ -283,7 +283,7 @@ const HomeSections = () => {
                             padding-right: 15px;
                         }
                         .working-process-area-three .rts-watermark-02 {
-                            font-size: 100px !important; /* Reduced size */
+                            font-size: 80px !important; /* Reduced size */
                             opacity: 0.6 !important;
                             -webkit-text-stroke: 2px #dad7d7ff !important; /* Slightly thinner stroke for small screens */
                             /* Position/transform can remain as they are centered relative to the container */
