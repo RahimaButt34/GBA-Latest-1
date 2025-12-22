@@ -2450,16 +2450,18 @@ const services = [
   { title: 'Pakistan Products House', img: '/images/about/Pakistan Products House.jpg', link: '/services/pakistan-products' },
   { title: 'Trade Shows & Expos', img: '/images/about/Trade Shows & Expos.jpg', link: '/services/trade-shows' },
   { title: 'Industry Academia Linkages', img: '/images/about/Industry Academia.jpg', link: '/services/industry-academia' },
-  { title: 'Global Growth Windows', img: '/images/about/Global Growth Windows.jpg', link: '/services/global-growth' },
-  { title: 'International Tech Gateways', img: '/images/about/International Tech.jpg', link: '/services/international-tech' },
-  { title: 'Leadership Incubation & Mentorship', img: '/images/about/Leadership Incubation.jpg', link: '/services/leadership-incubation' },
-  { title: 'Business Events', img: '/images/about/Business Events.jpg', link: '/services/business-events' },
-  { title: 'Women Empowerment', img: '/images/about/Women Empowerment.jpg', link: '/services/women-empowerment' },
-  { title: 'BRI Centre', img: '/images/about/BRI Centre.jpg', link: '/services/bri-centre' },
-  { title: 'Capacity Building & Research', img: '/images/about/Capacity Building.jpg', link: '/services/capacity-building' },
-  { title: 'Global Trade Facilitation Desks', img: '/images/about/Global Trade Facilitation.jpg', link: '/services/global-trade' },
-  { title: 'Community Development', img: '/images/about/Community Development.jpg', link: '/services/community-development' },
+  {  title: 'Global Growth Windows', img: '/images/about/Global Growth Windows.jpg', link: '/services/global-growth' },
+    { title: 'International Tech Gateways', img: '/images/about/International Tech.jpg', link: '/services/international-tech' },
+    { title: 'Leadership Incubation & Mentorship', img: '/images/about/Leadership Incubation.jpg', link: '/services/leadership-incubation' },
+    {  title: 'Business Events', img: '/images/about/Business Events.jpg', link: '/services/business-events' },
+    {  title: 'Women Empowerment', img: '/images/about/Women Empowerment.jpg', link: '/services/women-empowerment' },
+    { title: 'BRI Centre', img: '/images/about/BRI Centre.jpg', link: '/services/bri-centre' },
+    {  title: 'Capacity Building & Research', img: '/images/about/Capacity Building.jpg', link: '/services/capacity-building' },
+    {  title: 'Global Trade Facilitation Desks', img: '/images/about/Global Trade Facilitation.jpg', link: '/services/global-trade' },
+    {  title: 'Community Development', img: '/images/about/Community Development.jpg', link: '/services/community-development' },
 ];
+
+
 
 const ServiceProjects = () => {
   return (
@@ -2681,3 +2683,10 @@ const ServiceProjects = () => {
 };
 
 export default ServiceProjects;
+
+
+
+
+
+
+
