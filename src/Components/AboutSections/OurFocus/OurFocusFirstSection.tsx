@@ -538,7 +538,7 @@ const FocusPage = () => {
                     .watermark-focus {
                         font-size: 50px !important;
                         margin-left: 15px !important;
-                        opacity: 0.15;
+                        opacity: 0.80;
                     }
 
                     .focus-main-title {

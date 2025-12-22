@@ -638,7 +638,7 @@ const AboutSection: React.FC = () => {
                     .watermark-about {
                         font-size: 60px !important;
                         top: -20px !important;
-                        opacity: 0.2;
+                        opacity: 0.80;
                     }
 
                     .about-main-title {

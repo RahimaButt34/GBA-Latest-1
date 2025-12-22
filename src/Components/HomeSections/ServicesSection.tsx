@@ -2629,8 +2629,10 @@ const ServiceProjects = () => {
           }
 
           .swiper-controls-container {
-            gap: 15px;
-            margin-top: 20px !important; 
+            margin-top: 5px !important; 
+      margin-bottom: 15px !important; /* REDUCED GAP from buttons to images */
+      padding-bottom: 20px;           /* ADDED PADDING at bottom for cleaner look */
+      gap: 10px;
           }
 
           .swiper-button-prev-custom,

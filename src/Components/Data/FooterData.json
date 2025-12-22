@@ -12,17 +12,17 @@
     "title": "Quick Links",
     "columns": [
       [
-        {"text": "About Us", "href": "/gba.html"},
-        {"text": "Gujranwala", "href": "/gujranwala.html"},
-        {"text": "Our Team", "href": "/our-team.html"},
-        {"text": "Partners", "href": "/partners2.html"},
-        {"text": "Flagships", "href": "/Flagship.html"}
+        {"text": "About Us", "href": "/about/GBA"},
+        {"text": "Gujranwala", "href": "/about/Gujranwala"},
+        {"text": "Our Team", "href": "/about/OurTeam"},
+        {"text": "Partners", "href": "/members/partners2"},
+        {"text": "Flagships", "href": "/members/Flagship"}
       ],
       [
-        {"text": "Services", "href": "/service-details.html"},
+        {"text": "Services", "href": "/services/global-reach"},
         {"text": "Resources", "href": "#"},
-        {"text": "Archives", "href": "/archive.html"},
-        {"text": "Contact Us", "href": "/contact-2.html"}
+        {"text": "Archives", "href": "/archive"},
+        {"text": "Contact Us", "href": "/contact-2"}
       ]
     ]
   },

@@ -766,7 +766,7 @@ const MessageSection: React.FC = () => {
                         padding-left: 15px !important; padding-right: 15px !important;
                     }
                     .main-container-overlap { margin-top: 0 !important; padding-top: 40px !important; }
-                    .watermark-style { font-size: 55px !important; margin-left: 15px !important; top: -15px !important; opacity: 0.12; }
+                    .watermark-style { font-size: 55px !important; margin-left: 15px !important; top: -15px !important; opacity: 0.80; }
                     .main-title-h1 { font-size: 32px !important; margin-top: 5px !important; }
                     .content-row-spacing { margin-top: 30px !important; }
                     .chairman-name-text { font-size: 34px !important; margin-top: 20px !important; padding-left: 15px; }
