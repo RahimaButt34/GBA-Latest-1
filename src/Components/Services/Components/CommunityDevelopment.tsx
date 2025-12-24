@@ -47,7 +47,7 @@ import ServicesTemplate, { ServiceContent } from './ServicesTemplate';
 
 // 2. Import the UNIQUE JSON data file.
 // Path: from src/Components/Services/Components/ to src/Components/Data/
-import contentData from '../../Data/CapacityBuildingResearchData.json';
+import contentData from '../../Data/CommunityDevelopmentData.json';
 
 // Define the exact route path for sidebar highlighting
 const ACTIVE_PATH = '/services/community-development'; 
