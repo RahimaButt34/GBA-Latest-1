@@ -630,7 +630,7 @@ const Contact = () => {
                       />
                     )
                   )}
-                  <button className="rts-btn btn-primary animated fadeIn" type="submit">
+                  <button className="rts-btn btn-primary animated fadeIn" type="submit" disabled >
                     {data.contactForm.buttonText}
                   </button>
                 </form>
@@ -665,6 +665,11 @@ const Contact = () => {
       {/* STYLES */}
       <style jsx>{`
         /* Forces both cards to fill the height of the row */
+        .rts-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
         .equal-height-card {
           height: 100%;
           display: flex;
@@ -684,6 +689,7 @@ const Contact = () => {
             height: auto; /* Allow cards to stack on mobile */
           }
         }
+
 
         .single-contact-info {
           display: flex;
