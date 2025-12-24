@@ -317,7 +317,72 @@ const HomeSections = () => {
                 background-repeat: no-repeat;
                 background-size: 100% 100%; /* This is the key part */
 }
-                       
+           
+/* ===== WATERMARK 01 - ABOUT GBA ===== */
+.rts-about-area .rts-watermark-01 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(5%, -50%);
+    font-size: 180px;       /* Desktop size */
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px #f5f0f0ff; /* Hollow light gray */
+    opacity: 0.3;
+    z-index: 0;
+    line-height: 1;
+    padding: 5px 0;
+    display: block;
+}
+
+/* ===== WATERMARK 02 - OUR FOCUS ===== */
+.working-process-area-three .rts-watermark-02 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150px;       /* Desktop size */
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px #dad7d7ff; /* Hollow light gray */
+    opacity: 0.3;
+    z-index: 0;
+    line-height: 1;
+    padding: 5px 0;
+    display: block;
+}
+
+/* ===== MOBILE OVERRIDES ===== */
+@media (max-width: 768px) {
+    /* Watermark 01 */
+    .rts-about-area .rts-watermark-01 {
+        font-size: 80px !important;
+        top: 5% !important;
+        left: 5% !important;
+        transform: translate(0%, 0%) !important;
+        opacity: 0.6 !important;
+        -webkit-text-stroke: 2px #f5f0f0ff !important;
+    }
+
+    /* Watermark 02 */
+    .working-process-area-three .rts-watermark-02 {
+        font-size: 80px !important;
+        opacity: 0.6 !important;
+        -webkit-text-stroke: 2px #dad7d7ff !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .rts-about-area .rts-watermark-01 {
+        font-size: 60px !important;
+    }
+    .working-process-area-three .rts-watermark-02 {
+        font-size: 80px !important;
+    }
+}
+
                 `}
             </style>
         </>

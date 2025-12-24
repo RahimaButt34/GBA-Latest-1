@@ -7,15 +7,16 @@
     "bgTitle": "Business",
     "title": "Leadership Incubation & Mentorship",
     "description": "Transforming Potential into Global Leadership.",
-    "titleFontSize": "48px",
+    "titleFontSize": "46px",
     "descriptionFontSize": "20px"
   },
   "mainContent": {
-    "imageSrc": "/images/about/Leadership Incubation & Mentorship1.jpg",
-    "altText": "Leadership Incubation & Mentorship",
-    "description": "GBA is committed to nurturing the next generation of visionary business leaders through its leadership incubation and mentorship programs. These initiatives focus on developing the entrepreneurial mindset, strategic thinking, and global exposure required to lead in today’s competitive economy. By providing guidance, training, and international engagement opportunities, GBA empowers emerging entrepreneurs to become catalysts of growth and innovation within Gujranwala’s industrial landscape. Through strategic partnerships with international business councils, trade bodies, and leadership networks, GBA has enabled young professionals from Gujranwala to represent Pakistan on prestigious global platforms. Many of these leaders now hold key positions in prominent international business forums, reflecting the city’s growing influence in global trade and diplomacy. By cultivating knowledge, confidence, and global competitiveness, GBA’s leadership development programs continue to shape a new generation of business ambassadors - individuals equipped to elevate Gujranwala’s presence in international commerce and contribute meaningfully to Pakistan’s economic progress.",
-    "descriptionFontSize": "15px"
-  },
+  "imageSrc": "/images/about/Leadership Incubation & Mentorship1.jpg",
+  "altText": "Leadership Incubation & Mentorship",
+  "description": "GBA is committed to nurturing ...",
+  "descriptionFontSize": "15px"
+},
+
   "shortServices": [
     {
       "iconSrc": "/images/service/05.svg",

@@ -25,6 +25,7 @@
 // pages/index.tsx or app/page.tsx
 
 import HomeSecondSection from "../Components/HomeSections/HomeSecondSection";
+import HomeThirdSection from "../Components/HomeSections/HomeThirdSection";
 import HomeFourthSection from "../Components/HomeSections/HomeFourthSection";
 import HomeFifthSection from "../Components/HomeSections/HomeFifthSection";
 import ServicesSection from "../Components/HomeSections/ServicesSection";
@@ -46,6 +47,10 @@ export default function Home() {
         <ServicesSection />
       </div>
 
+
+       <div style={sectionStyle}>
+        <HomeThirdSection />
+      </div>
       <div style={sectionStyle}>
         <HomeFourthSection />
       </div>
