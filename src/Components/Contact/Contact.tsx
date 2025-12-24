@@ -562,17 +562,38 @@ const Contact = () => {
                     </div>
                     <div className="info-wrapper animated fadeIn">
                       <span>{item.label}</span>
-                      {item.values.map((val, i) =>
-                        item.type === "location" ? (
-                          <p key={i} style={{ color: "#fff" }}>
-                            {val}
-                          </p>
-                        ) : (
+                      {item.values.map((val, i) => {
+                        if (item.type === "location") {
+                          return (
+                            <p key={i} style={{ color: "#fff" }}>
+                              {val}
+                            </p>
+                          );
+                        }
+
+                        if (item.type === "email") {
+                          return (
+                            <a key={i} href={`mailto:${val}`}>
+                              {val}
+                            </a>
+                          );
+                        }
+
+                        if (item.type === "phone") {
+                          return (
+                            <a key={i} href={`tel:${val.replace(/\s+/g, "")}`}>
+                              {val}
+                            </a>
+                          );
+                        }
+
+                        return (
                           <a key={i} href="#">
                             {val}
                           </a>
-                        )
-                      )}
+                        );
+                      })}
+
                     </div>
                   </div>
                 ))}

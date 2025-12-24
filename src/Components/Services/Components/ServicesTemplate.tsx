@@ -1013,25 +1013,51 @@ const ShortServiceItem = ({ service }: { service: ShortServiceData }) => (
     </div>
 );
 
-// Component for the sidebar categories
-const CategoryLink = ({ category, activePath }: { category: CategoryData, activePath: string }) => {
+// // Component for the sidebar categories
+// const CategoryLink = ({ category, activePath }: { category: CategoryData, activePath: string }) => {
     
-    // Logic to check if the current link is active
-    const nextPath = `/${category.href.replace('.html', '')}`;
-    const isActive = nextPath === activePath;
+//     // Logic to check if the current link is active
+//     const nextPath = `/${category.href.replace('.html', '')}`;
+//     const isActive = nextPath === activePath;
     
-    // Conditional styling
-    const linkStyle: React.CSSProperties = isActive ? { backgroundColor: '#f0f0f0', borderLeft: '3px solid #0056b3' } : {};
+//     // Conditional styling
+//     const linkStyle: React.CSSProperties = isActive ? { backgroundColor: '#f0f0f0', borderLeft: '3px solid #0056b3' } : {};
     
-    return (
-        <ul className="single-categories" style={linkStyle}>
-            <li>
-                <Link href={nextPath}>
-                    {category.text} <i className="far fa-long-arrow-right"></i>
-                </Link>
-            </li>
-        </ul>
-    );
+//     return (
+//         <ul className="single-categories" style={linkStyle}>
+//             <li>
+//                 <Link href={nextPath}>
+//                     {category.text} <i className="far fa-long-arrow-right"></i>
+//                 </Link>
+//             </li>
+//         </ul>
+//     );
+// };
+
+const CategoryLink = ({
+  category,
+  activePath,
+}: {
+  category: CategoryData;
+  activePath: string;
+}) => {
+  const nextPath = category.href; // ✅ USE AS-IS
+
+  const isActive = nextPath === activePath;
+
+  const linkStyle: React.CSSProperties = isActive
+    ? { backgroundColor: '#f0f0f0', borderLeft: '3px solid #0056b3' }
+    : {};
+
+  return (
+    <ul className="single-categories" style={linkStyle}>
+      <li>
+        <Link href={nextPath}>
+          {category.text} <i className="far fa-long-arrow-right"></i>
+        </Link>
+      </li>
+    </ul>
+  );
 };
 
 

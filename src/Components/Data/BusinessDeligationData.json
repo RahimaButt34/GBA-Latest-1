@@ -44,20 +44,20 @@
     }
   ],
   "sidebarCategories": [
-    { "href": "service-details.html", "text": "Global Reach" },
-    { "href": "business-deligation.html", "text": "Business Delegations" },
-    { "href": "pakistan-products.html", "text": "Pakistan Products House" },
-    { "href": "trade-shows.html", "text": "Trade Shows & Expos" },
-    { "href": "industry-academia.html", "text": "Industry Academia Linkages" },
-    { "href": "global-growth.html", "text": "Global Growth Windows" },
-    { "href": "international-tech.html", "text": "International Tech Gateways" },
-    { "href": "leadership-incubation.html", "text": "Leadership Incubation & Mentorship" },
-    { "href": "business-events.html", "text": "Business Events" },
-    { "href": "women-empowerment.html", "text": "Women Empowerment" },
-    { "href": "bRI-centre.html", "text": "BRI Centre" },
-    { "href": "capacity-building.html", "text": "Capacity Building & Research" },
-    { "href": "global-trade.html", "text": "Global Trade Facilitation Desks" },
-    { "href": "community-development.html", "text": "Community Development" }
-  ],
+  { "href": "/services/global-reach", "text": "Global Reach" },
+  { "href": "/services/business-deligation", "text": "Business Delegations" },
+  { "href": "/services/pakistan-products", "text": "Pakistan Products House" },
+  { "href": "/services/trade-shows", "text": "Trade Shows & Expos" },
+  { "href": "/services/industry-academia", "text": "Industry Academia Linkages" },
+  { "href": "/services/global-growth", "text": "Global Growth Windows" },
+  { "href": "/services/international-tech", "text": "International Tech Gateways" },
+  { "href": "/services/leadership-incubation", "text": "Leadership Incubation & Mentorship" },
+  { "href": "/services/business-events", "text": "Business Events" },
+  { "href": "/services/women-empowerment", "text": "Women Empowerment" },
+  { "href": "/services/bri-centre", "text": "BRI Centre" },
+  { "href": "/services/capacity-building", "text": "Capacity Building & Research" },
+  { "href": "/services/global-trade", "text": "Global Trade Facilitation Desks" },
+  { "href": "/services/community-development", "text": "Community Development" }
+],
   "sidebarTitle": "Services"
 }
