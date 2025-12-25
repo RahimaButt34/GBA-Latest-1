@@ -120,7 +120,7 @@ const HomeSections = () => {
                                 style={{
                                     position: 'absolute',
                                     // Centered horizontally and vertically within the container
-                                    top: '50%',
+                                    top: '0%',
                                     left: '50%',
                                     transform: 'translate(-50%, -50%)',
 
@@ -306,7 +306,7 @@ const HomeSections = () => {
                     /* Further size reduction for very small screens (phones) */
                     @media (max-width: 480px) {
                         .rts-about-area .rts-watermark-01 {
-                            font-size: 60px !important; /* Even smaller watermark 01 */
+                            font-size: 80px !important; /* Even smaller watermark 01 */
                         }
                         .working-process-area-three .rts-watermark-02 {
                             font-size: 80px !important; /* Even smaller watermark 02 */
@@ -338,15 +338,20 @@ const HomeSections = () => {
 
 /* ===== WATERMARK 02 - OUR FOCUS ===== */
 .working-process-area-three .rts-watermark-02 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 150px;       /* Desktop size */
+   
+
+
+
+
+     position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(55%, -50%);
+    font-size: 180px;       /* Desktop size */
     font-weight: 900;
     color: transparent;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 3px #dad7d7ff; /* Hollow light gray */
+    -webkit-text-stroke: 3px #f5f0f0ff; /* Hollow light gray */
     opacity: 0.3;
     z-index: 0;
     line-height: 1;
@@ -369,6 +374,8 @@ const HomeSections = () => {
     /* Watermark 02 */
     .working-process-area-three .rts-watermark-02 {
         font-size: 80px !important;
+        
+        
         opacity: 0.6 !important;
         -webkit-text-stroke: 2px #dad7d7ff !important;
     }
