@@ -3025,6 +3025,7 @@ const ServiceProjects = () => {
     gap: 8px;
     line-height: 1;           /* Ensures text doesn't jump up */
     margin: 0;
+    margin-top:10px;
   }
 
   .swiper-pagination-fraction-custom .swiper-pagination-current {
@@ -3061,6 +3062,7 @@ const ServiceProjects = () => {
 
     .swiper-pagination-fraction-custom {
       font-size: 16px;
+      margin-top:10px;
     }
 
     .rts-section-gap {
@@ -3073,3 +3075,11 @@ const ServiceProjects = () => {
 };
 
 export default ServiceProjects;
+
+
+
+
+
+
+
+
