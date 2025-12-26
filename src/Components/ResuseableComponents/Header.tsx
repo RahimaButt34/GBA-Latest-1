@@ -122,10 +122,26 @@ export default function Header() {
                                             <i className="fal fa-envelope" /> {topBar.email}
                                         </a>
                                         <span className="divider" />
-                                        <ul className="social-wrapper-one">
+                                        {/* <ul className="social-wrapper-one">
                                             {topBar.socialLinks.map((social, idx) => (
                                                 <li key={idx}>
                                                     <a href={social.href} aria-label={social.ariaLabel} className={social.className}>
+                                                        <i className={social.iconClass} />
+                                                    </a>
+                                                </li>
+                                            ))}
+                                        </ul> */}
+                                        <ul className="social-wrapper-one">
+                                            {topBar.socialLinks.map((social, idx) => (
+                                                <li key={idx}>
+                                                    {/* Added target and rel below */}
+                                                    <a
+                                                        href={social.href}
+                                                        aria-label={social.ariaLabel}
+                                                        className={social.className}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
                                                         <i className={social.iconClass} />
                                                     </a>
                                                 </li>
@@ -161,7 +177,7 @@ export default function Header() {
 
                                         {/* Mobile Menu Button */}
                                         <div className="button-area d-lg-none">
-                                            
+
                                             <button
                                                 onClick={toggleSidebar}
                                                 className="menu menu-btn ml--20 ml_sm--5"
