@@ -371,14 +371,21 @@ const HomeSections = () => {
         -webkit-text-stroke: 2px #f5f0f0ff !important;
     }
 
-    /* Watermark 02 */
+    /* Watermark 02 for Mobile */
+@media (max-width: 768px) {
     .working-process-area-three .rts-watermark-02 {
         font-size: 80px !important;
-        
-        
         opacity: 0.6 !important;
         -webkit-text-stroke: 2px #dad7d7ff !important;
+        
+        /* Neeche laane ke liye ye lines add karein */
+        position: absolute;
+        top: 0px !important; /* Is value ko barha dein (e.g., 30px or 40px) agar mazeed neeche lana ho */
+        left: 50% !important;
+        transform: translateX(-50%) !important; 
+        display: block;
     }
+}
 }
 
 @media (max-width: 480px) {
