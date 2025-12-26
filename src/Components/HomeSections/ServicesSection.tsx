@@ -59,14 +59,14 @@
 // // // // // //             <div className="container">
 // // // // // //                 <div className="row">
 // // // // // //                     <div className="col-lg-12">
-                        
+
 // // // // // //                         {/* Title Section with Watermark logic */}
 // // // // // //                         <div 
 // // // // // //                             className="title-style-three center" 
 // // // // // //                             // 💡 STEP 1: Set position: relative on the container
 // // // // // //                             style={{ position: 'relative', overflow: 'hidden' }}
 // // // // // //                         >
-                            
+
 // // // // // //                             {/* 💡 WATERMARK 03 DIV (Applying light gray hollow style) */}
 // // // // // //                             <div 
 // // // // // //                                 className="rts-watermark-03"
@@ -76,28 +76,28 @@
 // // // // // //                                     left: '50%',
 // // // // // //                                     // Center the element
 // // // // // //                                     transform: 'translate(-50%, -50%)', 
-                                    
+
 // // // // // //                                     // 1. **CRITICAL FIX**: Reduced Font Size for better fit
 // // // // // //                                     fontSize: '150px', 
-                                    
+
 // // // // // //                                     // 2. Ensuring the container size is minimized but not clipping
 // // // // // //                                     lineHeight: 0.9, 
 // // // // // //                                     padding: '5px 0', 
 // // // // // //                                     display: 'block', 
-                                    
+
 // // // // // //                                     // --- Styling (Kept bold/hollow) ---
 // // // // // //                                     fontWeight: '900', 
 // // // // // //                                     color: 'transparent', 
 // // // // // //                                     WebkitTextFillColor: 'transparent', 
 // // // // // //                                     WebkitTextStroke: '3px rgb(238, 235, 235)', // Adjusted to match HomeSections light gray
-                                    
+
 // // // // // //                                     opacity: 1, 
 // // // // // //                                     zIndex: 0, 
 // // // // // //                                 }}
 // // // // // //                             >
 // // // // // //                                 03
 // // // // // //                             </div>
-                            
+
 // // // // // //                             {/* Pre-title text (Needs zIndex: 1 to sit above the watermark) */}
 // // // // // //                             <span 
 // // // // // //                                 className="pre" 
@@ -105,7 +105,7 @@
 // // // // // //                             >
 // // // // // //                                 Shaping a Global Future
 // // // // // //                             </span>
-                            
+
 // // // // // //                             {/* Main title text (Needs zIndex: 1 to sit above the watermark) */}
 // // // // // //                             <h2 
 // // // // // //                                 className="title" 
@@ -124,13 +124,13 @@
 // // // // // //                     <div className="col-lg-12">
 // // // // // //                         {/* THE MAIN SLIDER WRAPPER */}
 // // // // // //                         <div className="case-studies-wrapper-main-5">
-                            
+
 // // // // // //                             <Swiper
 // // // // // //                                 dir="ltr"
 // // // // // //                                 onSwiper={(swiper) => (swiperRef.current = swiper)}
 // // // // // //                                 className="mySwiper-case-studies-5"
 // // // // // //                                 modules={[Navigation, Pagination]}
-                                
+
 // // // // // //                                 // Navigation config: Connects to your custom buttons
 // // // // // //                                 navigation={{
 // // // // // //                                     prevEl: '.swiper-button-prev-custom',
@@ -177,7 +177,7 @@
 // // // // // //                                 ))}
 
 // // // // // //                             </Swiper>
-                            
+
 // // // // // //                             {/* CUSTOM PAGINATION AND NAVIGATION CONTROLS */}
 // // // // // //                             <div className="navigation-custom-wrap">
 // // // // // //                                 {/* The pagination fraction element */}
@@ -185,7 +185,7 @@
 // // // // // //                                 style={{ textAlign: 'center' }}>
 // // // // // //                                     {`1 / ${totalSlides}`} 
 // // // // // //                                 </div>
-                                
+
 // // // // // //                                 {/* The Previous Button */}
 // // // // // //                                 <div className="swiper-button-prev swiper-button-prev-custom">
 // // // // // //                                     <i className="fa-sharp fa-regular fa-arrow-left"></i>
@@ -200,7 +200,7 @@
 // // // // // //                     </div>
 // // // // // //                 </div>
 // // // // // //             </div>
-            
+
 // // // // // //             {/* 🛑 ADDED RESPONSIVE STYLES HERE */}
 // // // // // //             <style jsx global>
 // // // // // //                 {`
@@ -323,14 +323,14 @@
 // // // // // //             <div className="container">
 // // // // // //                 <div className="row">
 // // // // // //                     <div className="col-lg-12">
-                        
+
 // // // // // //                         {/* Title Section with Watermark logic */}
 // // // // // //                         <div 
 // // // // // //                             className="title-style-three center" 
 // // // // // //                             // 💡 STEP 1: Set position: relative on the container
 // // // // // //                             style={{ position: 'relative' }}
 // // // // // //                         >
-                            
+
 // // // // // //                             {/* 💡 WATERMARK 03 DIV (Applying light gray hollow style) */}
 // // // // // //                             <div 
 // // // // // //                                 className="rts-watermark-03"
@@ -340,28 +340,28 @@
 // // // // // //                                     left: '50%',
 // // // // // //                                     // Center the element
 // // // // // //                                     transform: 'translate(-50%, -50%)', 
-                                    
+
 // // // // // //                                     // 1. **CRITICAL FIX**: Reduced Font Size for better fit
 // // // // // //                                     fontSize: '150px', 
-                                    
+
 // // // // // //                                     // 2. Ensuring the container size is minimized but not clipping
 // // // // // //                                     lineHeight: 0.9, 
 // // // // // //                                     padding: '5px 0', 
 // // // // // //                                     display: 'block', 
-                                    
+
 // // // // // //                                     // --- Styling (Kept bold/hollow) ---
 // // // // // //                                     fontWeight: '900', 
 // // // // // //                                     color: 'transparent', 
 // // // // // //                                     WebkitTextFillColor: 'transparent', 
 // // // // // //                                     WebkitTextStroke: '3px rgb(238, 235, 235)', // Adjusted to match HomeSections light gray
-                                    
+
 // // // // // //                                     opacity: 0.3, 
 // // // // // //                                     zIndex: 0, 
 // // // // // //                                 }}
 // // // // // //                             >
 // // // // // //                                 03
 // // // // // //                             </div>
-                            
+
 // // // // // //                             {/* Pre-title text (Needs zIndex: 1 to sit above the watermark) */}
 // // // // // //                             <span 
 // // // // // //                                 className="pre" 
@@ -369,7 +369,7 @@
 // // // // // //                             >
 // // // // // //                                 Shaping a Global Future
 // // // // // //                             </span>
-                            
+
 // // // // // //                             {/* Main title text (Needs zIndex: 1 to sit above the watermark) */}
 // // // // // //                             <h2 
 // // // // // //                                 className="title" 
@@ -389,13 +389,13 @@
 // // // // // //                         {/* THE MAIN SLIDER WRAPPER */}
 // // // // // //                         {/* 💡 CRITICAL: Added position: relative here for arrow positioning */}
 // // // // // //                         <div className="case-studies-wrapper-main-5" style={{ position: 'relative' }}>
-                            
+
 // // // // // //                             <Swiper
 // // // // // //                                 dir="ltr"
 // // // // // //                                 onSwiper={(swiper) => (swiperRef.current = swiper)}
 // // // // // //                                 className="mySwiper-case-studies-5"
 // // // // // //                                 modules={[Navigation, Pagination]}
-                                
+
 // // // // // //                                 // Navigation config: Connects to your custom buttons
 // // // // // //                                 navigation={{
 // // // // // //                                     prevEl: '.swiper-button-prev-custom',
@@ -443,7 +443,7 @@
 // // // // // //                                 ))}
 
 // // // // // //                             </Swiper>
-                            
+
 // // // // // //                             {/* CUSTOM PAGINATION AND NAVIGATION CONTROLS */}
 // // // // // //                             <div className="navigation-custom-wrap">
 // // // // // //                                 {/* The pagination fraction element (Hidden on mobile via CSS below) */}
@@ -451,7 +451,7 @@
 // // // // // //                                 style={{ textAlign: 'center' }}>
 // // // // // //                                     {`1 / ${totalSlides}`} 
 // // // // // //                                 </div>
-                                
+
 // // // // // //                                 {/* The Previous Button */}
 // // // // // //                                 <div className="swiper-button-prev swiper-button-prev-custom">
 // // // // // //                                     <i className="fa-sharp fa-regular fa-arrow-left"></i>
@@ -466,7 +466,7 @@
 // // // // // //                     </div>
 // // // // // //                 </div>
 // // // // // //             </div>
-            
+
 // // // // // //             {/* 🛑 ADDED RESPONSIVE STYLES HERE */}
 // // // // // //             <style jsx global>
 // // // // // //                 {`
@@ -497,7 +497,7 @@
 // // // // // //                     .title-style-three.center {
 // // // // // //                         text-align: center;
 // // // // // //                     }
-                    
+
 // // // // // //                     /* --- SWIPER ARROW BASE STYLES (REQUIRED FOR ABSOLUTE POSITIONING) --- */
 // // // // // //                     .case-studies-wrapper-main-5 .swiper-button-prev-custom,
 // // // // // //                     .case-studies-wrapper-main-5 .swiper-button-next-custom {
@@ -517,16 +517,16 @@
 // // // // // //                         background: #fff;
 // // // // // //                         transition: all 0.3s;
 // // // // // //                     }
-                    
+
 // // // // // //                     /* Specific positioning */
 // // // // // //                     .case-studies-wrapper-main-5 .swiper-button-prev-custom {
 // // // // // //                         left: -60px; /* Outside the main content area */
 // // // // // //                     }
-                    
+
 // // // // // //                     .case-studies-wrapper-main-5 .swiper-button-next-custom {
 // // // // // //                         right: -60px; /* Outside the main content area */
 // // // // // //                     }
-                    
+
 // // // // // //                     /* Hide pagination fraction on desktop (if you don't want it) or style it */
 // // // // // //                     .navigation-custom-wrap {
 // // // // // //                         display: flex;
@@ -534,7 +534,7 @@
 // // // // // //                         justify-content: center;
 // // // // // //                         /* Optional: margin-top: 20px; */
 // // // // // //                     }
-                    
+
 // // // // // //                     .swiper-pagination-fraction-custom {
 // // // // // //                         // FIX: Changed from multiline CSS comment to // comment
 // // // // // //                         display: block; /* Default visible on desktop */
@@ -570,7 +570,7 @@
 // // // // // //                             display: none !important;
 // // // // // //                         }
 // // // // // //                     }
-                    
+
 // // // // // //                     /* --- Further size reduction for very small screens (phones) --- */
 // // // // // //                     @media (max-width: 768px) {
 // // // // // //                         /* --- SECTION 3: OUR SERVICES WATERMARK 03 FIX --- */
@@ -587,7 +587,7 @@
 // // // // // //                             font-size: 36px !important; /* Match HomeSections heading size for mobile */
 // // // // // //                         }
 // // // // // //                     }
-                    
+
 // // // // // //                     @media (max-width: 480px) {
 // // // // // //                         .rts-projects-area .rts-watermark-03 {
 // // // // // //                             font-size: 80px !important; 
@@ -660,14 +660,14 @@
 // // // // //             <div className="container">
 // // // // //                 <div className="row">
 // // // // //                     <div className="col-lg-12">
-                        
+
 // // // // //                         {/* Title Section with Watermark logic */}
 // // // // //                         <div 
 // // // // //                             className="title-style-three center" 
 // // // // //                             // 💡 STEP 1: Set position: relative on the container
 // // // // //                             style={{ position: 'relative' }}
 // // // // //                         >
-                            
+
 // // // // //                             {/* 💡 WATERMARK 03 DIV (Applying light gray hollow style) */}
 // // // // //                             <div 
 // // // // //                                 className="rts-watermark-03"
@@ -677,28 +677,28 @@
 // // // // //                                     left: '50%',
 // // // // //                                     // Center the element
 // // // // //                                     transform: 'translate(-50%, -50%)', 
-                                    
+
 // // // // //                                     // 1. **CRITICAL FIX**: Reduced Font Size for better fit
 // // // // //                                     fontSize: '150px', 
-                                    
+
 // // // // //                                     // 2. Ensuring the container size is minimized but not clipping
 // // // // //                                     lineHeight: 0.9, 
 // // // // //                                     padding: '5px 0', 
 // // // // //                                     display: 'block', 
-                                    
+
 // // // // //                                     // --- Styling (Kept bold/hollow) ---
 // // // // //                                     fontWeight: '900', 
 // // // // //                                     color: 'transparent', 
 // // // // //                                     WebkitTextFillColor: 'transparent', 
 // // // // //                                     WebkitTextStroke: '3px rgb(238, 235, 235)', // Adjusted to match HomeSections light gray
-                                    
+
 // // // // //                                     opacity: 0.3, 
 // // // // //                                     zIndex: 0, 
 // // // // //                                 }}
 // // // // //                             >
 // // // // //                                 03
 // // // // //                             </div>
-                            
+
 // // // // //                             {/* Pre-title text (Needs zIndex: 1 to sit above the watermark) */}
 // // // // //                             <span 
 // // // // //                                 className="pre" 
@@ -706,7 +706,7 @@
 // // // // //                             >
 // // // // //                                 Shaping a Global Future
 // // // // //                             </span>
-                            
+
 // // // // //                             {/* Main title text (Needs zIndex: 1 to sit above the watermark) */}
 // // // // //                             <h2 
 // // // // //                                 className="title" 
@@ -726,14 +726,14 @@
 // // // // //                         {/* THE MAIN SLIDER WRAPPER */}
 // // // // //                         {/* 💡 CRITICAL: Added position: relative here for arrow positioning */}
 // // // // //                         <div className="case-studies-wrapper-main-5" style={{ position: 'relative' }}>
-                            
+
 // // // // //                             <Swiper
 // // // // //                                 dir="ltr"
 // // // // //                                 onSwiper={(swiper) => (swiperRef.current = swiper)}
 // // // // //                                 className="mySwiper-case-studies-5"
 // // // // //                                 // RESTORED: Pagination module
 // // // // //                                 modules={[Navigation, Pagination]}
-                                
+
 // // // // //                                 // Navigation config: Connects to your custom buttons
 // // // // //                                 navigation={{
 // // // // //                                     prevEl: '.swiper-button-prev-custom',
@@ -781,10 +781,10 @@
 // // // // //                                 ))}
 
 // // // // //                             </Swiper>
-                            
+
 // // // // //                             {/* CUSTOM NAVIGATION CONTROLS AND COUNTER */}
 // // // // //                             <div className="navigation-custom-wrap">
-                                
+
 // // // // //                                 {/* The Previous Button */}
 // // // // //                                 <div className="swiper-button-prev swiper-button-prev-custom">
 // // // // //                                     <i className="fa-sharp fa-regular fa-arrow-left"></i>
@@ -796,7 +796,7 @@
 // // // // //                                     {/* Swiper replaces this with the actual current/total count */}
 // // // // //                                     {`1 / ${totalSlides}`} 
 // // // // //                                 </div>
-                                
+
 // // // // //                                 {/* The Next Button */}
 // // // // //                                 <div className="swiper-button-next swiper-button-next-custom">
 // // // // //                                     <i className="fa-sharp fa-regular fa-arrow-right"></i>
@@ -806,7 +806,7 @@
 // // // // //                     </div>
 // // // // //                 </div>
 // // // // //             </div>
-            
+
 // // // // //             {/* 🛑 UPDATED STYLES */}
 // // // // //             <style jsx global>
 // // // // //                 {`
@@ -837,13 +837,13 @@
 // // // // //                     .title-style-three.center {
 // // // // //                         text-align: center;
 // // // // //                     }
-                    
+
 // // // // //                     /* --- SWIPER ARROW BASE STYLES (REQUIRED FOR ABSOLUTE POSITIONING) --- */
 // // // // //                     /* Note: Arrows are positioned relative to their parent (.case-studies-wrapper-main-5) */
 // // // // //                     .case-studies-wrapper-main-5 {
 // // // // //                         padding-bottom: 60px; /* Added space for the pagination/navigation wrapper below the slides */
 // // // // //                     }
-                    
+
 // // // // //                     .case-studies-wrapper-main-5 .swiper-button-prev-custom,
 // // // // //                     .case-studies-wrapper-main-5 .swiper-button-next-custom {
 // // // // //                         position: absolute;
@@ -862,7 +862,7 @@
 // // // // //                         background: #fff;
 // // // // //                         transition: all 0.3s;
 // // // // //                     }
-                    
+
 // // // // //                     /* Navigation Wrapper (For the arrows and the counter) */
 // // // // //                     .navigation-custom-wrap {
 // // // // //                         /* Position the wrapper below the slides, relative to the main component's content flow */
@@ -870,14 +870,14 @@
 // // // // //                         bottom: 0; /* Align to the bottom of the content area */
 // // // // //                         left: 50%;
 // // // // //                         transform: translateX(-50%);
-                        
+
 // // // // //                         display: flex;
 // // // // //                         align-items: center;
 // // // // //                         justify-content: space-between; /* Space out the arrow, counter, and arrow */
 // // // // //                         width: 250px; /* Fixed width to contain the elements cleanly */
 // // // // //                         z-index: 10;
 // // // // //                     }
-                    
+
 // // // // //                     /* Specific positioning for Arrows inside the bottom wrapper */
 // // // // //                     .navigation-custom-wrap .swiper-button-prev-custom {
 // // // // //                         position: relative; /* Change from absolute to relative to flow inside the wrapper */
@@ -913,16 +913,16 @@
 // // // // //                     @media (max-width: 991px) {
 // // // // //                         /* 💡 CRITICAL FIX: Reposition arrows back INSIDE the slide view for mobile */
 // // // // //                         /* The bottom counter setup usually looks bad on mobile, so we move them to the sides of the slider area */
-                        
+
 // // // // //                         .case-studies-wrapper-main-5 {
 // // // // //                             padding-bottom: 0; /* Remove padding if arrows move back up */
 // // // // //                         }
-                        
+
 // // // // //                         .navigation-custom-wrap {
 // // // // //                             /* Hide the entire bottom wrapper as we move the arrows to the side */
 // // // // //                             display: none; 
 // // // // //                         }
-                        
+
 // // // // //                         /* Re-apply absolute positioning for arrows relative to the slide container */
 // // // // //                         .case-studies-wrapper-main-5 .swiper-button-prev-custom,
 // // // // //                         .case-studies-wrapper-main-5 .swiper-button-next-custom {
@@ -944,7 +944,7 @@
 // // // // //                         .case-studies-wrapper-main-5 .swiper-button-next-custom {
 // // // // //                             right: 10px; /* Move inside the container */
 // // // // //                         }
-                        
+
 // // // // //                         /* --- SECTION 3: MOBILE HEADING/WATERMARK FIXES --- */
 // // // // //                         .rts-projects-area .rts-watermark-03 {
 // // // // //                             font-size: 100px !important; 
@@ -957,7 +957,7 @@
 // // // // //                             font-size: 36px !important; 
 // // // // //                         }
 // // // // //                     }
-                    
+
 // // // // //                     @media (max-width: 480px) {
 // // // // //                         .rts-projects-area .rts-watermark-03 {
 // // // // //                             font-size: 80px !important; 
@@ -1026,13 +1026,13 @@
 // // // //             <div className="container">
 // // // //                 <div className="row">
 // // // //                     <div className="col-lg-12">
-                        
+
 // // // //                         {/* Title Section with Watermark logic (No change here) */}
 // // // //                         <div 
 // // // //                             className="title-style-three center" 
 // // // //                             style={{ position: 'relative' }}
 // // // //                         >
-                            
+
 // // // //                             {/* Watermark 03 DIV (No change here) */}
 // // // //                             <div 
 // // // //                                 className="rts-watermark-03"
@@ -1055,7 +1055,7 @@
 // // // //                             >
 // // // //                                 03
 // // // //                             </div>
-                            
+
 // // // //                             {/* Pre-title text (No change here) */}
 // // // //                             <span 
 // // // //                                 className="pre" 
@@ -1063,7 +1063,7 @@
 // // // //                             >
 // // // //                                 Shaping a Global Future
 // // // //                             </span>
-                            
+
 // // // //                             {/* Main title text (No change here) */}
 // // // //                             <h2 
 // // // //                                 className="title" 
@@ -1081,13 +1081,13 @@
 // // // //                 <div className="row">
 // // // //                     <div className="col-lg-12">
 // // // //                         <div className="case-studies-wrapper-main-5" style={{ position: 'relative' }}>
-                            
+
 // // // //                             <Swiper
 // // // //                                 dir="ltr"
 // // // //                                 onSwiper={(swiper) => (swiperRef.current = swiper)}
 // // // //                                 className="mySwiper-case-studies-5"
 // // // //                                 modules={[Navigation, Pagination]}
-                                
+
 // // // //                                 navigation={{
 // // // //                                     prevEl: '.swiper-button-prev-custom',
 // // // //                                     nextEl: '.swiper-button-next-custom',
@@ -1130,10 +1130,10 @@
 // // // //                                 ))}
 
 // // // //                             </Swiper>
-                            
+
 // // // //                             {/* CUSTOM NAVIGATION CONTROLS AND COUNTER (No change in HTML) */}
 // // // //                             <div className="navigation-custom-wrap">
-                                
+
 // // // //                                 <div className="swiper-button-prev swiper-button-prev-custom">
 // // // //                                     <i className="fa-sharp fa-regular fa-arrow-left"></i>
 // // // //                                 </div>
@@ -1142,7 +1142,7 @@
 // // // //                                 style={{ textAlign: 'center' }}>
 // // // //                                     {`1 / ${totalSlides}`} 
 // // // //                                 </div>
-                                
+
 // // // //                                 <div className="swiper-button-next swiper-button-next-custom">
 // // // //                                     <i className="fa-sharp fa-regular fa-arrow-right"></i>
 // // // //                                 </div>
@@ -1151,7 +1151,7 @@
 // // // //                     </div>
 // // // //                 </div>
 // // // //             </div>
-            
+
 // // // //             {/* 🛑 CRITICAL STYLING UPDATE: Changing the Arrow Button Look */}
 // // // //             <style jsx global>
 // // // //                 {`
@@ -1182,12 +1182,12 @@
 // // // //                     .title-style-three.center {
 // // // //                         text-align: center;
 // // // //                     }
-                    
+
 // // // //                     /* --- SWIPER ARROW BASE STYLES (MODIFIED FOR READ MORE LOOK) --- */
 // // // //                     .case-studies-wrapper-main-5 {
 // // // //                         padding-bottom: 60px; 
 // // // //                     }
-                    
+
 // // // //                     /* --- Desktop/Base Arrow Styling --- */
 // // // //                     .case-studies-wrapper-main-5 .swiper-button-prev-custom,
 // // // //                     .case-studies-wrapper-main-5 .swiper-button-next-custom {
@@ -1200,7 +1200,7 @@
 // // // //                         display: flex;
 // // // //                         align-items: center;
 // // // //                         justify-content: center;
-                        
+
 // // // //                         /* 💡 REMOVING CIRCULAR STYLING */
 // // // //                         width: 40px; /* Smaller footprint */
 // // // //                         height: 40px; /* Smaller footprint */
@@ -1218,14 +1218,14 @@
 // // // //                         bottom: 0; 
 // // // //                         left: 50%;
 // // // //                         transform: translateX(-50%);
-                        
+
 // // // //                         display: flex;
 // // // //                         align-items: center;
 // // // //                         justify-content: space-between; 
 // // // //                         width: 180px; /* Adjusted width to look cleaner with smaller arrows */
 // // // //                         z-index: 10;
 // // // //                     }
-                    
+
 // // // //                     /* Specific positioning for Arrows inside the bottom wrapper */
 // // // //                     .navigation-custom-wrap .swiper-button-prev-custom,
 // // // //                     .navigation-custom-wrap .swiper-button-next-custom {
@@ -1233,7 +1233,7 @@
 // // // //                         left: auto;
 // // // //                         top: auto;
 // // // //                         transform: none;
-                        
+
 // // // //                         /* Adding the hover/active style similar to read more buttons */
 // // // //                         /* Example: When hovered, slightly darken or change color */
 // // // //                         &:hover {
@@ -1261,22 +1261,22 @@
 // // // //                     /* ==================================== */
 // // // //                     @media (max-width: 991px) {
 // // // //                         /* Arrows are hidden from the bottom bar and moved back to the side of the slide area */
-                        
+
 // // // //                         .case-studies-wrapper-main-5 {
 // // // //                             padding-bottom: 0; 
 // // // //                         }
-                        
+
 // // // //                         .navigation-custom-wrap {
 // // // //                             display: none; 
 // // // //                         }
-                        
+
 // // // //                         /* Re-apply absolute positioning for arrows relative to the slide container (Styled like the new desktop version) */
 // // // //                         .case-studies-wrapper-main-5 .swiper-button-prev-custom,
 // // // //                         .case-studies-wrapper-main-5 .swiper-button-next-custom {
 // // // //                             position: absolute;
 // // // //                             top: 40%; 
 // // // //                             transform: translateY(-50%);
-                            
+
 // // // //                             /* Clean mobile arrow style (no dark circle) */
 // // // //                             width: 35px; 
 // // // //                             height: 35px; 
@@ -1293,7 +1293,7 @@
 // // // //                         .case-studies-wrapper-main-5 .swiper-button-next-custom {
 // // // //                             right: 10px; 
 // // // //                         }
-                        
+
 // // // //                         /* --- SECTION 3: MOBILE HEADING/WATERMARK FIXES (Kept) --- */
 // // // //                         .rts-projects-area .rts-watermark-03 {
 // // // //                             font-size: 100px !important; 
@@ -1306,7 +1306,7 @@
 // // // //                             font-size: 36px !important; 
 // // // //                         }
 // // // //                     }
-                    
+
 // // // //                     @media (max-width: 480px) {
 // // // //                         .rts-projects-area .rts-watermark-03 {
 // // // //                             font-size: 80px !important; 
@@ -1376,13 +1376,13 @@
 // // //             <div className="container">
 // // //                 <div className="row">
 // // //                     <div className="col-lg-12">
-                        
+
 // // //                         {/* Title Section with Watermark logic (No change here) */}
 // // //                         <div 
 // // //                             className="title-style-three center" 
 // // //                             style={{ position: 'relative' }}
 // // //                         >
-                            
+
 // // //                             {/* Watermark 03 DIV (No change here) */}
 // // //                             <div 
 // // //                                 className="rts-watermark-03"
@@ -1405,7 +1405,7 @@
 // // //                             >
 // // //                                 03
 // // //                             </div>
-                            
+
 // // //                             {/* Pre-title text (No change here) */}
 // // //                             <span 
 // // //                                 className="pre" 
@@ -1413,7 +1413,7 @@
 // // //                             >
 // // //                                 Shaping a Global Future
 // // //                             </span>
-                            
+
 // // //                             {/* Main title text (No change here) */}
 // // //                             <h2 
 // // //                                 className="title" 
@@ -1431,13 +1431,13 @@
 // // //                 <div className="row">
 // // //                     <div className="col-lg-12">
 // // //                         <div className="case-studies-wrapper-main-5" style={{ position: 'relative' }}>
-                            
+
 // // //                             <Swiper
 // // //                                 dir="ltr"
 // // //                                 onSwiper={(swiper) => (swiperRef.current = swiper)}
 // // //                                 className="mySwiper-case-studies-5"
 // // //                                 modules={[Navigation, Pagination]}
-                                
+
 // // //                                 navigation={{
 // // //                                     prevEl: '.swiper-button-prev-custom',
 // // //                                     nextEl: '.swiper-button-next-custom',
@@ -1480,10 +1480,10 @@
 // // //                                 ))}
 
 // // //                             </Swiper>
-                            
+
 // // //                             {/* CUSTOM NAVIGATION CONTROLS AND COUNTER (No change in HTML) */}
 // // //                             <div className="navigation-custom-wrap">
-                                
+
 // // //                                 <div className="swiper-button-prev swiper-button-prev-custom">
 // // //                                     <i className="fa-sharp fa-regular fa-arrow-left"></i>
 // // //                                 </div>
@@ -1492,7 +1492,7 @@
 // // //                                 style={{ textAlign: 'center' }}>
 // // //                                     {`1 / ${totalSlides}`} 
 // // //                                 </div>
-                                
+
 // // //                                 <div className="swiper-button-next swiper-button-next-custom">
 // // //                                     <i className="fa-sharp fa-regular fa-arrow-right"></i>
 // // //                                 </div>
@@ -1501,7 +1501,7 @@
 // // //                     </div>
 // // //                 </div>
 // // //             </div>
-            
+
 // // //             {/* 🛑 CRITICAL STYLING UPDATE: Applying .rts-read-more styles to the arrows */}
 // // //             <style jsx global>
 // // //                 {`
@@ -1532,12 +1532,12 @@
 // // //                     .title-style-three.center {
 // // //                         text-align: center;
 // // //                     }
-                    
+
 // // //                     /* --- NAVIGATION WRAPPER (Kept positioning logic) --- */
 // // //                     .case-studies-wrapper-main-5 {
 // // //                         padding-bottom: 60px; 
 // // //                     }
-                    
+
 // // //                     /* Resetting Swiper's default absolute positioning for the arrow elements */
 // // //                     .case-studies-wrapper-main-5 .swiper-button-prev-custom,
 // // //                     .case-studies-wrapper-main-5 .swiper-button-next-custom {
@@ -1550,19 +1550,19 @@
 // // //                         display: flex;
 // // //                         align-items: center;
 // // //                         justify-content: center;
-                        
+
 // // //                         /* Resetting visual styles (from previous circle style) */
 // // //                         width: auto;
 // // //                         height: auto;
 // // //                         border: none;
 // // //                         background: none;
-                        
+
 // // //                         /* 💡 Applying core text styles from .rts-read-more */
 // // //                         color: #130c08ff;
 // // //                         font-weight: 600;
 // // //                         text-transform: uppercase;
 // // //                         font-size: 14px;
-                        
+
 // // //                         /* Transition for the hover effect */
 // // //                         transition: all 0.3s;
 // // //                     }
@@ -1573,14 +1573,14 @@
 // // //                         bottom: 0; 
 // // //                         left: 50%;
 // // //                         transform: translateX(-50%);
-                        
+
 // // //                         display: flex;
 // // //                         align-items: center;
 // // //                         justify-content: space-between; 
 // // //                         width: 180px; 
 // // //                         z-index: 10;
 // // //                     }
-                    
+
 // // //                     /* Specific positioning for Arrows inside the bottom wrapper */
 // // //                     .navigation-custom-wrap .swiper-button-prev-custom,
 // // //                     .navigation-custom-wrap .swiper-button-next-custom {
@@ -1588,7 +1588,7 @@
 // // //                         left: auto;
 // // //                         top: auto;
 // // //                         transform: none;
-                        
+
 // // //                         /* NOTE: The 'margin-left: -20px;' from .rts-read-more is omitted here 
 // // //                                 as the wrapper controls the spacing. */
 // // //                     }
@@ -1602,7 +1602,7 @@
 // // //                     .navigation-custom-wrap .swiper-button-prev-custom:hover i {
 // // //                         margin-right: 12px; /* Moves left arrow further left */
 // // //                     }
-                    
+
 // // //                     /* Icon Spacing for Right Arrow */
 // // //                     .navigation-custom-wrap .swiper-button-next-custom i {
 // // //                         margin-left: 8px; /* Initial margin from the read-more style */
@@ -1618,10 +1618,10 @@
 // // //                     .swiper-button-next-custom:after,
 // // //                     .swiper-button-prev-custom:after {
 // // //                         color: transparent !important;
-    
+
 // // //                     }
 
-                    
+
 // // //                     /* Pagination Fraction Styling (Kept) */
 // // //                     .swiper-pagination-fraction-custom {
 // // //                         color: #0d1c2e;
@@ -1636,22 +1636,22 @@
 // // //                     /* ==================================== */
 // // //                     @media (max-width: 991px) {
 // // //                         /* Arrows are hidden from the bottom bar and moved back to the side of the slide area */
-                        
+
 // // //                         .case-studies-wrapper-main-5 {
 // // //                             padding-bottom: 0; 
 // // //                         }
-                        
+
 // // //                         .navigation-custom-wrap {
 // // //                             display: none; 
 // // //                         }
-                        
+
 // // //                         /* Re-apply absolute positioning for arrows relative to the slide container (Styled like the new desktop version) */
 // // //                         .case-studies-wrapper-main-5 .swiper-button-prev-custom,
 // // //                         .case-studies-wrapper-main-5 .swiper-button-next-custom {
 // // //                             position: absolute;
 // // //                             top: 40%; 
 // // //                             transform: translateY(-50%);
-                            
+
 // // //                             /* Clean mobile arrow style (matching read-more styling) */
 // // //                             width: 35px; 
 // // //                             height: 35px; 
@@ -1668,7 +1668,7 @@
 // // //                         .case-studies-wrapper-main-5 .swiper-button-next-custom {
 // // //                             right: 10px; 
 // // //                         }
-                        
+
 // // //                         /* --- SECTION 3: MOBILE HEADING/WATERMARK FIXES (Kept) --- */
 // // //                         .rts-projects-area .rts-watermark-03 {
 // // //                             font-size: 100px !important; 
@@ -1681,7 +1681,7 @@
 // // //                             font-size: 36px !important; 
 // // //                         }
 // // //                     }
-                    
+
 // // //                     @media (max-width: 480px) {
 // // //                         .rts-projects-area .rts-watermark-03 {
 // // //                             font-size: 80px !important; 
@@ -1826,7 +1826,7 @@
 // //                     <div className="swiper-button-prev-custom">
 // //                         <i className="far fa-arrow-left"></i>
 // //                     </div>
-                    
+
 // //                     <div className="swiper-pagination-fraction-custom"></div>
 
 // //                     <div className="swiper-button-next-custom">
@@ -2031,7 +2031,7 @@
 // //                     <div className="swiper-button-prev-custom">
 // //                         <i className="far fa-arrow-left"></i>
 // //                     </div>
-                    
+
 // //                     <div className="swiper-pagination-fraction-custom"></div>
 
 // //                     <div className="swiper-button-next-custom">
@@ -2280,7 +2280,7 @@
 // //                     <div className="swiper-button-prev-custom">
 // //                         <i className="far fa-arrow-left"></i>
 // //                     </div>
-                    
+
 // //                     <div className="swiper-pagination-fraction-custom"></div>
 
 // //                     <div className="swiper-button-next-custom">
@@ -2357,7 +2357,7 @@
 // //             font-size: 80px !important; /* Smaller Watermark */
 // //             top: 5px !important;
 // //             opacity: 0.8; /* Slightly fainter */
-             
+
 // //           }
 
 // //           .title-style-three .title {
@@ -2537,7 +2537,7 @@
 //                     <div className="swiper-button-prev-custom">
 //                         <i className="far fa-arrow-left"></i>
 //                     </div>
-                    
+
 //                     <div className="swiper-pagination-fraction-custom"></div>
 
 //                     <div className="swiper-button-next-custom">
@@ -2753,7 +2753,7 @@ const ServiceProjects = () => {
                     prevEl: '.swiper-button-prev-custom',
                     nextEl: '.swiper-button-next-custom',
                   }}
-                  pagination={{ 
+                  pagination={{
                     type: 'fraction',
                     el: '.swiper-pagination-fraction-custom',
                     formatFractionCurrent: (number) => number.toString().padStart(2, '0'),
@@ -2794,7 +2794,7 @@ const ServiceProjects = () => {
                   <div className="swiper-button-prev-custom">
                     <i className="far fa-arrow-left"></i>
                   </div>
-                  
+
                   <div className="swiper-pagination-fraction-custom"></div>
 
                   <div className="swiper-button-next-custom">
@@ -2963,8 +2963,111 @@ const ServiceProjects = () => {
   /* Layout thora saaf karne ke liye */
   .title-style-three .title { font-size: 28px !important; }
   .swiper-button-prev-custom, .swiper-button-next-custom { width: 45px; height: 45px; }
-}
+}t
       `}</style>
+     
+<style jsx global>{`
+  /* 1. Watermark Styling (Desktop & Mobile Fix) */
+  .bg-title.watermark-service {
+    position: absolute;
+    top: 5% !important; /* Desktop view */
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: 150px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px #f5f0f0ff;
+    opacity: 0.3;
+    z-index: 0;
+    line-height: 1;
+    display: block;
+  }
+
+  /* 2. Swiper Controls Container (The Flexbox Fix) */
+  .swiper-controls-container {
+    display: flex;
+    align-items: center;      /* Vertically aligns arrows and counter */
+    justify-content: center;   /* Horizontally centers everything */
+    gap: 30px;
+    margin-top: 50px;
+    height: 50px;             /* Match this with arrow height */
+  }
+
+  /* 3. Arrows Styling */
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    color: #0d1c2e;
+    font-size: 18px;
+    border: none;
+    z-index: 10;
+  }
+
+  /* 4. Counter / Pagination Styling (Equal Height Fix) */
+  .swiper-pagination-fraction-custom {
+    font-size: 20px;
+    font-weight: 500;
+    color: #0d1c2e;
+    width: auto !important;
+    position: relative !important;
+    display: flex;
+    align-items: center;      /* Centers text between arrows vertically */
+    gap: 8px;
+    line-height: 1;           /* Ensures text doesn't jump up */
+    margin: 0;
+  }
+
+  .swiper-pagination-fraction-custom .swiper-pagination-current {
+    font-weight: 800;
+    color: #0d1c2e;
+  }
+
+  .swiper-pagination-fraction-custom .swiper-pagination-total {
+    color: #6d767e;
+    font-weight: 400;
+  }
+
+  /* ======= RESPONSIVE / MOBILE VIEW ======= */
+  @media (max-width: 768px) {
+    /* Watermark ko mobile par thora neeche laane ke liye */
+    .bg-title.watermark-service {
+      font-size: 80px !important;
+      top: 15% !important;    /* Pehle 5px tha, ab thora neeche move kiya hai */
+      opacity: 0.6;
+    }
+
+    /* Counter alignment for mobile */
+    .swiper-controls-container {
+      margin-top: 20px !important; 
+      gap: 15px; 
+      height: 45px;
+    }
+
+    .swiper-button-prev-custom,
+    .swiper-button-next-custom {
+      width: 45px;
+      height: 45px;
+    }
+
+    .swiper-pagination-fraction-custom {
+      font-size: 16px;
+    }
+
+    .rts-section-gap {
+      padding-bottom: 80px !important;
+    }
+  }
+`}</style>
     </>
   );
 };
