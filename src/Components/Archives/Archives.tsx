@@ -5193,9 +5193,221 @@
 
 
 
-"use client";
-import React, { useState,useEffect } from "react"; 
+// "use client";
+// import React, { useState,useEffect } from "react"; 
 
+// import useSWR from "swr";
+// import Link from "next/link";
+// import { useSearchParams } from 'next/navigation';
+
+// /* 🔹 SLUG HELPER */
+// const makeSlug = (text: string) =>
+//   text
+//     .toLowerCase()
+//     .trim()
+//     .replace(/[^a-z0-9\s-]/g, "")
+//     .replace(/\s+/g, "-");
+
+// const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+// const BlogArchive = () => {
+//   // Pagination State
+//   const searchParams = useSearchParams();
+//     const categoryFromUrl = searchParams.get('category');
+
+//     // ... your existing state ...
+
+//     useEffect(() => {
+//         if (categoryFromUrl) {
+//             setSelectedCategory(categoryFromUrl);
+//             setCurrentPage(1);
+//         }
+//     }, [categoryFromUrl]);
+//   const [currentPage, setCurrentPage] = useState(1);
+//   const postsPerPage = 4; 
+
+//   const { data, error } = useSWR(
+//     "https://gba.mig.org.pk/api/news",
+//     fetcher
+//   );
+
+//   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+//   if (error) return <p>Failed to load data</p>;
+//   if (!data) return <p>Loading...</p>;
+
+//   const apiPosts: any[] = Array.isArray(data?.data) ? data.data : [];
+
+//   // 🔹 Filter posts by category first
+//   const filteredPosts = selectedCategory
+//     ? apiPosts.filter((p) => String(p.category) === selectedCategory)
+//     : apiPosts;
+
+//   // 🔹 Pagination Logic: Calculate total pages
+//   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+  
+//   // Logic to show only relevant posts for the current page
+//   const indexOfLastPost = currentPage * postsPerPage;
+//   const indexOfFirstPost = indexOfLastPost - postsPerPage;
+//   const currentDisplayedPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
+
+//   const categories = Array.from(
+//     new Set(apiPosts.map((item: any) => String(item?.category)).filter(Boolean))
+//   );
+
+//   return (
+//     <>
+//       <div className="rts-breadcrumb-area">
+//         <div className="container">
+//           <div className="row">
+//             <div className="col-lg-12">
+//               <div className="title-area-left center mt-dec-blog-bread">
+//                 <span className="bg-title">News</span>
+//                 <h1 className="title rts-text-anime-style-1">Latest Updates</h1>
+//                 <p className="disc">GBC official announcements & activities</p>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="rts-blog-list-area rts-section-gapBottom mt-dec-blog-list">
+//         <div className="container">
+//           <div className="row g-5">
+//             <div className="col-xl-8 col-md-12 col-sm-12 col-12">
+//               {currentDisplayedPosts.map((item, i) => {
+//                 const postLink = `/blog-details/${makeSlug(item?.title || "")}`;
+//                 return (
+//                   <div key={i} className="blog-single-post-listing">
+//                     <div className="thumbnail">
+//                       <img src={item?.image || "/images/placeholder.jpg"} alt="Blog" />
+//                     </div>
+//                     <div className="blog-listing-content">
+//                       <div className="user-info">
+//                         <div className="single"><i className="far fa-clock"></i><span>{item?.created_at}</span></div>
+//                         <div className="single"><i className="far fa-tags"></i><span>{item?.category}</span></div>
+//                       </div>
+//                       <Link className="blog-title" href={postLink}>
+//                         <h3 className="title">{item?.title}</h3>
+//                       </Link>
+//                       <p className="disc">{item?.description?.substring(0, 250)}...</p>
+                      
+//                       {item?.fb_post_url && item?.fb_post_url !== "" && item?.fb_post_url !== "-" && (
+//                         <Link className="rts-btn btn-primary" href={postLink}>
+//                           Read Details
+//                         </Link>
+//                       )}
+//                     </div>
+//                   </div>
+//                 );
+//               })}
+
+//               {/* 🔹 DYNAMIC PAGINATION BUTTONS */}
+//               {totalPages > 1 && (
+//                 <div className="row">
+//                   <div className="col-12">
+//                     <div className="text-center">
+//                       <div className="pagination">
+//                         {/* Page Numbers */}
+//                         {[...Array(totalPages)].map((_, idx) => (
+//                           <button 
+//                             key={idx} 
+//                             className={currentPage === idx + 1 ? "active" : ""}
+//                             onClick={() => setCurrentPage(idx + 1)}
+//                             type="button"
+//                           >
+//                             {String(idx + 1).padStart(2, '0')}
+//                           </button>
+//                         ))}
+                        
+//                         {/* Next Button */}
+//                         {currentPage < totalPages && (
+//                           <button 
+//                             onClick={() => setCurrentPage(prev => prev + 1)}
+//                             type="button"
+//                           >
+//                             <i className="fal fa-angle-double-right"></i>
+//                           </button>
+//                         )}
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </div>
+//               )}
+//             </div>
+
+//             {/* Sidebar */}
+//             <div className="col-xl-4 col-md-12 col-sm-12 col-12 mt_lg--60 blog-list-style">
+//               <div className="rts-single-wized Categories">
+//                 <div className="wized-header"><h5 className="title">Categories</h5></div>
+//                 <div className="wized-body">
+//                   {categories.map((cat, idx) => (
+//                     <ul key={idx} className="single-categories">
+//                       <li>
+//                         <a href="#" onClick={(e) => { e.preventDefault(); setSelectedCategory(cat); setCurrentPage(1); }}
+//                           style={{ color: selectedCategory === cat ? '#007bff' : 'inherit' }}>
+//                           {cat} <i className="far fa-long-arrow-right"></i>
+//                         </a>
+//                       </li>
+//                     </ul>
+//                   ))}
+//                 </div>
+//               </div>
+
+//               {/* <div className="rts-single-wized Recent-post">
+//                 <div className="wized-header"><h5 className="title">Recent Posts</h5></div>
+//                 <div className="wized-body">
+//                   {apiPosts.slice(0, 4).map((post, idx) => (
+//                     <div key={idx} className="recent-post-single custom-recent-row">
+//                       <div className="thumbnail recent-thumb-fixed">
+//                         <Link href={`/blog-details/${makeSlug(post?.title || "")}`}>
+//                           <img src={post?.image || "/images/placeholder.jpg"} alt="Recent" className="pic2-img" />
+//                         </Link>
+//                       </div>
+//                       <div className="content-area">
+//                         <div className="user"><i className="fal fa-clock"></i><span>{post?.created_at}</span></div>
+//                         <Link className="post-title" href={`/blog-details/${makeSlug(post?.title || "")}`}>
+//                           <p className="pic2-title-style">{post?.description?.substring(0, 60)}...</p>
+//                         </Link>
+//                       </div>
+//                     </div>
+//                   ))}
+//                 </div>
+//               </div> */}
+
+//               <div className="rts-single-wized contact">
+//                 <div className="wized-header" style={{ textAlign: 'center' }}>
+//                     <img src="/images/logo/Archive.png" alt="GBA" style={{ maxWidth: '100px', margin: '0 auto' }} />
+//                 </div>
+//                 <div className="wized-body">
+//                   <h5 className="title">Need Help?</h5>
+//                   <Link className="rts-btn btn-primary btn-white" href="/contact-2">Contact Us</Link>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <style jsx>{`
+//         .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 30px; }
+//         .pagination button { width: 45px; height: 45px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; background: #fff; font-weight: 600; }
+//         .pagination button.active { background: #1C2428; color: #fff; border-color: #1C2428; }
+//         .custom-recent-row { display: flex; gap: 15px; margin-bottom: 20px; }
+//         .recent-thumb-fixed { width: 80px; height: 80px; min-width: 80px; overflow: hidden; border-radius: 6px; }
+//         .pic2-img { width: 100%; height: 100%; object-fit: cover; }
+//         .pic2-title-style { font-size: 14px; line-height: 1.4; color: #666; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+//       `}</style>
+//     </>
+//   );
+// };
+
+// export default BlogArchive;
+
+
+
+"use client";
+import React, { useState, useEffect, Suspense } from "react"; 
 import useSWR from "swr";
 import Link from "next/link";
 import { useSearchParams } from 'next/navigation';
@@ -5210,43 +5422,33 @@ const makeSlug = (text: string) =>
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-const BlogArchive = () => {
-  // Pagination State
+// ✅ Keep all your original component code inside BlogArchiveContent
+const BlogArchiveContent = () => {
   const searchParams = useSearchParams();
-    const categoryFromUrl = searchParams.get('category');
+  const categoryFromUrl = searchParams.get('category');
 
-    // ... your existing state ...
-
-    useEffect(() => {
-        if (categoryFromUrl) {
-            setSelectedCategory(categoryFromUrl);
-            setCurrentPage(1);
-        }
-    }, [categoryFromUrl]);
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 4; 
-
-  const { data, error } = useSWR(
-    "https://gba.mig.org.pk/api/news",
-    fetcher
-  );
-
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const postsPerPage = 4;
+
+  const { data, error } = useSWR("https://gba.mig.org.pk/api/news", fetcher);
+
+  useEffect(() => {
+    if (categoryFromUrl) {
+      setSelectedCategory(categoryFromUrl);
+      setCurrentPage(1);
+    }
+  }, [categoryFromUrl]);
 
   if (error) return <p>Failed to load data</p>;
   if (!data) return <p>Loading...</p>;
 
   const apiPosts: any[] = Array.isArray(data?.data) ? data.data : [];
-
-  // 🔹 Filter posts by category first
   const filteredPosts = selectedCategory
     ? apiPosts.filter((p) => String(p.category) === selectedCategory)
     : apiPosts;
 
-  // 🔹 Pagination Logic: Calculate total pages
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
-  
-  // Logic to show only relevant posts for the current page
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentDisplayedPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
@@ -5257,6 +5459,7 @@ const BlogArchive = () => {
 
   return (
     <>
+      {/* 🔹 Keep all your original JSX unchanged */}
       <div className="rts-breadcrumb-area">
         <div className="container">
           <div className="row">
@@ -5308,7 +5511,6 @@ const BlogArchive = () => {
                   <div className="col-12">
                     <div className="text-center">
                       <div className="pagination">
-                        {/* Page Numbers */}
                         {[...Array(totalPages)].map((_, idx) => (
                           <button 
                             key={idx} 
@@ -5319,8 +5521,6 @@ const BlogArchive = () => {
                             {String(idx + 1).padStart(2, '0')}
                           </button>
                         ))}
-                        
-                        {/* Next Button */}
                         {currentPage < totalPages && (
                           <button 
                             onClick={() => setCurrentPage(prev => prev + 1)}
@@ -5354,27 +5554,6 @@ const BlogArchive = () => {
                 </div>
               </div>
 
-              {/* <div className="rts-single-wized Recent-post">
-                <div className="wized-header"><h5 className="title">Recent Posts</h5></div>
-                <div className="wized-body">
-                  {apiPosts.slice(0, 4).map((post, idx) => (
-                    <div key={idx} className="recent-post-single custom-recent-row">
-                      <div className="thumbnail recent-thumb-fixed">
-                        <Link href={`/blog-details/${makeSlug(post?.title || "")}`}>
-                          <img src={post?.image || "/images/placeholder.jpg"} alt="Recent" className="pic2-img" />
-                        </Link>
-                      </div>
-                      <div className="content-area">
-                        <div className="user"><i className="fal fa-clock"></i><span>{post?.created_at}</span></div>
-                        <Link className="post-title" href={`/blog-details/${makeSlug(post?.title || "")}`}>
-                          <p className="pic2-title-style">{post?.description?.substring(0, 60)}...</p>
-                        </Link>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div> */}
-
               <div className="rts-single-wized contact">
                 <div className="wized-header" style={{ textAlign: 'center' }}>
                     <img src="/images/logo/Archive.png" alt="GBA" style={{ maxWidth: '100px', margin: '0 auto' }} />
@@ -5402,4 +5581,11 @@ const BlogArchive = () => {
   );
 };
 
-export default BlogArchive;
+// ✅ Wrap the original component in Suspense to fix useSearchParams error
+export default function BlogArchive() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BlogArchiveContent />
+    </Suspense>
+  );
+}

@@ -2134,6 +2134,274 @@
 
 
  
+// 'use client'
+
+// import React, { Suspense } from 'react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Pagination } from 'swiper/modules';
+// import useSWR from 'swr';
+// import Link from 'next/link';
+
+// import 'swiper/css';
+// import 'swiper/css/pagination';
+
+// // --- TypeScript types ---
+// interface EventData {
+//   id: number;
+//   title: string;
+//   category: string;
+//   image?: string;
+// }
+
+// interface ApiResponse {
+//   data: EventData[];
+// }
+
+// // Fetcher (typed)
+// const fetcher = (url: string): Promise<ApiResponse> =>
+//   fetch(url).then((res) => {
+//     if (!res.ok) throw new Error('Failed to fetch');
+//     return res.json();
+//   });
+
+// const EventsContent = () => {
+//   const apiUrl = 'https://gba.mig.org.pk/api/news';
+
+//   const { data, error, isLoading } = useSWR<ApiResponse>(apiUrl, fetcher, {
+//     revalidateOnFocus: false,
+//     suspense: false,
+//   });
+
+//   if (error) return <div className="text-center p-5">Failed to load events</div>;
+//   if (isLoading) return <div className="text-center p-5">Loading Events...</div>;
+//   if (!data) return null;
+
+//   const eventsData = data.data || [];
+
+//   const truncateText = (str: string | undefined, num: number) => {
+//     if (!str) return '';
+//     return str.length <= num ? str : str.slice(0, num) + '...';
+//   };
+
+//   return (
+//     <div className="rts-blog-area rts-section-gapTop">
+//       <div className="container pt--40">
+//         <div className="row">
+//           <div className="col-lg-12">
+//             <div className="title-style-three center" style={{ position: 'relative' }}>
+//               <span className="pre" style={{ fontSize: '16px', zIndex: 1, position: 'relative' }}> Highlights </span>
+//               <div
+//                 className="rts-watermark-05"
+//                 style={{
+//                   position: 'absolute',
+//                   top: '0%',
+//                   left: '50%',
+//                   transform: 'translate(-50%, -50%)',
+//                   fontSize: '150px',
+//                   fontWeight: '900',
+//                   color: 'transparent',
+//                   WebkitTextFillColor: 'transparent',
+//                   WebkitTextStroke: '3px #f5f0f0ff',
+//                   opacity: 0.3,
+//                   zIndex: 0,
+//                   lineHeight: 1,
+//                   padding: '5px 0',
+//                 }}
+//               >
+//                 05
+//               </div>
+//               <h2 className="title rts-text-anime-style-1" style={{ fontSize: '48px', zIndex: 1, position: 'relative' }}>
+//                 Events
+//               </h2>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="mt--20" style={{ position: 'relative' }}>
+//           <Swiper
+//             modules={[Pagination]}
+//             spaceBetween={30}
+//             slidesPerView={1}
+//             pagination={{
+//               clickable: true,
+//               el: '.pagination-dots-wrapper',
+//               renderBullet: (index, className) => '<span class="' + className + '"></span>',
+//             }}
+//             breakpoints={{
+//               768: { slidesPerView: 2 },
+//               1200: { slidesPerView: 3 },
+//             }}
+//           >
+//             {eventsData.map((post) => (
+//               <SwiperSlide key={post.id}>
+//                 <div className="rts-blog-h-2-wrapper" style={{ margin: '15px 5px' }}>
+//                   <div className="thumbnail">
+//                     <img
+//                       src={post.image || '/placeholder.jpg'}
+//                       alt={post.title || 'Event'}
+//                       className="event-img"
+//                       loading="lazy"
+//                     />
+//                   </div>
+
+//                   <div className="body">
+//                     <span className="category-tag">
+//                       {post.category} / by GBA Official
+//                     </span>
+
+//                     <h4 className="title">{truncateText(post.title, 50)}</h4>
+
+//                     <Link
+//                       className="rts-read-more"
+//                       href={`/archive?category=${encodeURIComponent(String(post.category || ''))}`}
+//                     >
+//                       <div className="read-more-circle">
+//                         <i className="far fa-arrow-right"></i>
+//                       </div>
+//                       <span className="read-more-text">Read More</span>
+//                     </Link>
+//                   </div>
+//                 </div>
+//               </SwiperSlide>
+//             ))}
+//           </Swiper>
+//         </div>
+
+//         {/* Pagination Dots */}
+//         <div className="pagination-wrapper-center">
+//           <div className="pagination-dots-wrapper"></div>
+//         </div>
+//       </div>
+
+//       {/* Global CSS */}
+//       <style global jsx>{`
+//         .rts-blog-h-2-wrapper {
+//           border-radius: 15px;
+//           background: white;
+//           height: 540px;
+//           display: flex;
+//           flex-direction: column;
+//           border: 1px solid #f0f0f0;
+//           overflow: hidden;
+//         }
+//         .event-img {
+//           width: 100%;
+//           height: 280px;
+//           object-fit: cover;
+//         }
+//         .category-tag {
+//           display: block;
+//           font-size: 14px;
+//           color: #1C2428 !important;
+//           font-weight: 500;
+//           margin-bottom: 12px;
+//         }
+//         .rts-blog-h-2-wrapper .body .title {
+//           font-size: 22px;
+//           font-weight: 700;
+//           color: #1C2428;
+//           min-height: 90px;
+//           margin-bottom: auto;
+//         }
+//         .rts-read-more {
+//           display: flex;
+//           align-items: center;
+//           text-decoration: none !important;
+//           gap: 12px;
+//           width: fit-content;
+//         }
+//         .read-more-circle {
+//           width: 40px;
+//           height: 40px;
+//           background: #f8f9fa;
+//           border-radius: 50%;
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           transition: 0.3s;
+//         }
+//         .read-more-text {
+//           font-size: 15px;
+//           font-weight: 600;
+//           color: #1C2428;
+//         }
+//         .rts-read-more:hover .read-more-circle {
+//           background: #1C2428;
+//           color: white;
+//         }
+//         .rts-read-more:hover i {
+//           color: white;
+//         }
+//         .pagination-wrapper-center {
+//           display: flex;
+//           justify-content: center;
+//           margin-top: 40px;
+//           width: 100%;
+//         }
+//         .pagination-dots-wrapper {
+//           display: flex;
+//           gap: 8px;
+//           align-items: center;
+//         }
+//         .swiper-pagination-bullet {
+//           width: 10px;
+//           height: 10px;
+//           background: #d1d1d1 !important;
+//           opacity: 1 !important;
+//           margin: 0 !important;
+//           border-radius: 50%;
+//           cursor: pointer;
+//           transition: 0.3s;
+//         }
+//         .swiper-pagination-bullet-active {
+//           background: #1C2428 !important;
+//           transform: scale(1.2);
+//         }
+//           /* Center Swiper pagination dots */
+// .pagination-wrapper-center {
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 20px; /* adjust space above dots */
+//   width: 100%;
+// }
+
+// .pagination-dots-wrapper {
+//   display: flex !important;
+//   justify-content: center !important;
+//   gap: 8px;
+//   align-items: center;
+// }
+
+// /* Swiper default bullets */
+// .swiper-pagination-bullet {
+//   width: 10px;
+//   height: 10px;
+//   background: #d1d1d1 !important;
+//   opacity: 1 !important;
+//   border-radius: 50%;
+//   cursor: pointer;
+//   transition: 0.3s;
+// }
+
+// .swiper-pagination-bullet-active {
+//   background: #1C2428 !important;
+//   transform: scale(1.2);
+// }
+
+//       `}</style>
+//     </div>
+//   );
+// };
+
+// export default function Events() {
+//   return (
+//     <Suspense fallback={<div>Loading...</div>}>
+//       <EventsContent />
+//     </Suspense>
+//   );
+// }
+
+
 'use client'
 
 import React, { Suspense } from 'react';
@@ -2157,7 +2425,7 @@ interface ApiResponse {
   data: EventData[];
 }
 
-// Fetcher (typed)
+// ✅ Typed fetcher
 const fetcher = (url: string): Promise<ApiResponse> =>
   fetch(url).then((res) => {
     if (!res.ok) throw new Error('Failed to fetch');
@@ -2267,14 +2535,13 @@ const EventsContent = () => {
           </Swiper>
         </div>
 
-        {/* Pagination Dots */}
         <div className="pagination-wrapper-center">
           <div className="pagination-dots-wrapper"></div>
         </div>
       </div>
 
       {/* Global CSS */}
-      <style global jsx>{`
+           <style global jsx>{`
         .rts-blog-h-2-wrapper {
           border-radius: 15px;
           background: white;
@@ -2400,3 +2667,6 @@ export default function Events() {
     </Suspense>
   );
 }
+
+
+
