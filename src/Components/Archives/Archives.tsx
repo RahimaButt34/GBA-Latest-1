@@ -5194,9 +5194,11 @@
 
 
 "use client";
-import React, { useState } from "react"; 
+import React, { useState,useEffect } from "react"; 
+
 import useSWR from "swr";
 import Link from "next/link";
+import { useSearchParams } from 'next/navigation';
 
 /* 🔹 SLUG HELPER */
 const makeSlug = (text: string) =>
@@ -5210,6 +5212,17 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const BlogArchive = () => {
   // Pagination State
+  const searchParams = useSearchParams();
+    const categoryFromUrl = searchParams.get('category');
+
+    // ... your existing state ...
+
+    useEffect(() => {
+        if (categoryFromUrl) {
+            setSelectedCategory(categoryFromUrl);
+            setCurrentPage(1);
+        }
+    }, [categoryFromUrl]);
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 4; 
 
