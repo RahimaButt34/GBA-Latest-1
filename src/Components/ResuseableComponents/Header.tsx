@@ -161,11 +161,33 @@ export default function Header() {
                             <div className="col-lg-12">
                                 <div className="header-main-one-wrapper">
                                     {/* Logo */}
-                                    <div className="thumbnail">
+                                    {/* <div className="thumbnail">
                                         <Link href={logo.homeLink}>
                                             <Image src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} />
                                         </Link>
-                                    </div>
+                                    </div> */}
+                                    {/* Logo Area */}
+<div className="thumbnail" style={{ 
+    width: '100%', 
+    maxWidth: '150px', // Original size ke liye isse apni marzi mutabiq 150px-200px ke darmiyan rakhein
+    display: 'flex',
+    alignItems: 'center'
+}}>
+    <Link href={logo.homeLink} style={{ width: '100%' }}>
+        <Image 
+            src={logo.src} 
+            alt={logo.alt} 
+            width={150}   // Original design ki width
+            height={60}   // Original design ki height
+            priority      // Clarity aur fast loading ke liye
+            style={{ 
+                width: '100%', 
+                height: 'auto', 
+                objectFit: 'contain' // Logo ko stretch hone se bachata hai
+            }} 
+        />
+    </Link>
+</div>
 
                                     <div className="main-header">
                                         {/* Desktop Menu */}

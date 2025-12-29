@@ -28,8 +28,7 @@
   "logo": {
     "src": "/images/logo/Header.png",
     "alt": "finbiz-logo",
-    "width": 100,
-    "height": 30,
+    
     "homeLink": "/"
   },
   "mobileMenuIcon": {
