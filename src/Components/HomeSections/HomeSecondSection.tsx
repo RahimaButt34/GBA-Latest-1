@@ -390,7 +390,7 @@ const HomeSections = () => {
 
 @media (max-width: 480px) {
     .rts-about-area .rts-watermark-01 {
-        font-size: 60px !important;
+        font-size: 80px !important;
     }
     .working-process-area-three .rts-watermark-02 {
         font-size: 80px !important;

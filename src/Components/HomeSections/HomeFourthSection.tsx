@@ -2654,6 +2654,11 @@ const EventsContent = () => {
   background: #1C2428 !important;
   transform: scale(1.2);
 }
+   @media (max-width: 768px) {
+    .rts-watermark-05 {
+      font-size: 80px !important;
+    }
+  }
 
       `}</style>
     </div>
