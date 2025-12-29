@@ -59,14 +59,16 @@ const Footer: React.FC = () => {
                 .signle-footer-contact-8 { display: flex; align-items: center; gap: 16px; margin: 10px 0; min-height: 56px; }
                 .signle-footer-contact-8 .icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 8px; background: #394347; color: #fff; flex-shrink: 0; }
                 .signle-footer-contact-8 .inner-content .title { font-size: 15.5px; color: #fff; font-weight: 600; margin: 0 0 3px 0; }
-                .signle-footer-contact-8 .inner-content a, .signle-footer-contact-8 .inner-content p { display: block; font-size: 14.5px; color: #c7ced0; text-decoration: none; margin: 0; }
+                .signle-footer-contact-8 .inner-content a, .signle-footer-contact-8 .inner-content p { display: block; font-size: 14.5px; color: #c7ced0; text-decoration: none; margin: 0; line-height:1.2 }
                 .copyright-area-main-wrapper { border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 25px 0; margin-top: 40px; }
                 .copyright-8-wrapper { display: flex; justify-content: space-between; align-items: center; color: #c7ced0; font-size: 15px; }
                 .copyright-8-wrapper ul { list-style: none; display: flex; gap: 20px; padding: 0; margin: 0; }
                 .copyright-8-wrapper ul a { color: #c7ced0; text-decoration: none; transition: 0.3s; }
                 .copyright-8-wrapper ul a:hover { color: #fff; }
                 @media (max-width: 991px) { .margin-left-70 { margin-left: 0; } .quick-link-inner { justify-content: space-between; } }
+               
                 @media (max-width: 767px) { .quick-link-inner { flex-direction: column; } .copyright-8-wrapper { flex-direction: column; text-align: center; gap: 10px; } }
+                 @media (max-width: 991px) { .signle-footer-contact-8 .inner-content a, .signle-footer-contact-8 .inner-content p { display: block; font-size: 14.5px; color: #c7ced0; text-decoration: none; margin: 0; line-height:1.2 }}
             `}</style>
 
             <div className="container pb--65">
