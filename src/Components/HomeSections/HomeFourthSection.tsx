@@ -54,7 +54,7 @@
 // // // // // // //                             >
 // // // // // // //                                 Highlights
 // // // // // // //                             </span>
-                            
+
 // // // // // // //                             {/* 💡 WATERMARK DIV '05' - Centered Positioning and Styling */}
 // // // // // // //                             <div 
 // // // // // // //                                 className="rts-watermark-05"
@@ -64,16 +64,16 @@
 // // // // // // //                                     top: '0%',
 // // // // // // //                                     left: '50%',
 // // // // // // //                                     transform: 'translate(-50%, -50%)', 
-                                    
+
 // // // // // // //                                     // --- Styling (Hollow, Heavy, Light Gray) ---
 // // // // // // //                                     // Size is adjusted to 150px to ensure it does not clip
 // // // // // // //                                     fontSize: '150px', 
 // // // // // // //                                     fontWeight: '900', 
-                                    
+
 // // // // // // //                                     color: 'transparent', 
 // // // // // // //                                     WebkitTextFillColor: 'transparent', 
 // // // // // // //                                     WebkitTextStroke: '3px #f5f0f0ff', // Light gray color
-                                    
+
 // // // // // // //                                     opacity: 0.3, 
 // // // // // // //                                     zIndex: 0, // CRITICAL: Places it in the background
 // // // // // // //                                     lineHeight: 1,
@@ -84,7 +84,7 @@
 // // // // // // //                                 05
 // // // // // // //                             </div>
 // // // // // // //                             {/* END WATERMARK DIV */}
-                            
+
 // // // // // // //                             <h2 
 // // // // // // //                                 className="title rts-text-anime-style-1" 
 // // // // // // //                                 style={{ 
@@ -136,11 +136,11 @@
 // // // // // // //                     padding-top: 100px;
 // // // // // // //                     padding-bottom: 50px;
 // // // // // // //                 }
-                
+
 // // // // // // //                 .rts-blog-area .container.pt--40 {
 // // // // // // //                     padding-top: 40px;
 // // // // // // //                 }
-                
+
 // // // // // // //                 .title-style-three.center { text-align: center; }
 // // // // // // //                 .title-style-three .pre { 
 // // // // // // //                     display: block; 
@@ -186,7 +186,7 @@
 // // // // // // //                     object-fit: cover;
 // // // // // // //                     transition: transform 0.5s;
 // // // // // // //                 }
-                
+
 // // // // // // //                 .rts-blog-h-2-wrapper:hover .thumbnail img {
 // // // // // // //                     transform: scale(1.05);
 // // // // // // //                 }
@@ -224,7 +224,7 @@
 // // // // // // //                     color: #ff5e14;
 // // // // // // //                     text-transform: uppercase;
 // // // // // // //                     font-size: 14px;
-                    
+
 // // // // // // //                 }
 // // // // // // //                 .rts-read-more i {
 // // // // // // //                     margin-left: -20px;
@@ -253,7 +253,7 @@
 // // // // // // //                     .rts-blog-area .title-style-three .title {
 // // // // // // //                         font-size: 36px !important; /* Match previous headings for mobile */
 // // // // // // //                     }
-                    
+
 // // // // // // //                     /* Adjust section and container padding */
 // // // // // // //                     .rts-blog-area.rts-section-gapTop {
 // // // // // // //                         padding-top: 0 !important;
@@ -263,7 +263,7 @@
 // // // // // // //                     .rts-blog-area .container.pt--40 {
 // // // // // // //                         padding-top: 20px !important;
 // // // // // // //                     }
-                    
+
 // // // // // // //                     /* Ensure full width on mobile for better usability */
 // // // // // // //                     .col-lg-4, .col-md-6 {
 // // // // // // //                         max-width: 100%;
@@ -379,7 +379,7 @@
 // // // // // //                             >
 // // // // // //                                 Highlights
 // // // // // //                             </span>
-                            
+
 // // // // // //                             {/* 💡 WATERMARK DIV '05' - Centered Positioning and Styling */}
 // // // // // //                             <div 
 // // // // // //                                 className="rts-watermark-05"
@@ -389,16 +389,16 @@
 // // // // // //                                     top: '0%',
 // // // // // //                                     left: '50%',
 // // // // // //                                     transform: 'translate(-50%, -50%)', 
-                                    
+
 // // // // // //                                     // --- Styling (Hollow, Heavy, Light Gray) ---
 // // // // // //                                     // Size is adjusted to 150px to ensure it does not clip
 // // // // // //                                     fontSize: '150px', 
 // // // // // //                                     fontWeight: '900', 
-                                    
+
 // // // // // //                                     color: 'transparent', 
 // // // // // //                                     WebkitTextFillColor: 'transparent', 
 // // // // // //                                     WebkitTextStroke: '3px #f5f0f0ff', // Light gray color
-                                    
+
 // // // // // //                                     opacity: 0.3, 
 // // // // // //                                     zIndex: 0, // CRITICAL: Places it in the background
 // // // // // //                                     lineHeight: 1,
@@ -409,7 +409,7 @@
 // // // // // //                                 05
 // // // // // //                             </div>
 // // // // // //                             {/* END WATERMARK DIV */}
-                            
+
 // // // // // //                             <h2 
 // // // // // //                                 className="title rts-text-anime-style-1" 
 // // // // // //                                 style={{ 
@@ -474,11 +474,11 @@
 // // // // // //                     padding-top: 100px;
 // // // // // //                     padding-bottom: 50px;
 // // // // // //                 }
-                
+
 // // // // // //                 .rts-blog-area .container.pt--40 {
 // // // // // //                     padding-top: 40px;
 // // // // // //                 }
-                
+
 // // // // // //                 .title-style-three.center { text-align: center; }
 // // // // // //                 .title-style-three .pre { 
 // // // // // //                     display: block; 
@@ -524,7 +524,7 @@
 // // // // // //                     object-fit: cover;
 // // // // // //                     transition: transform 0.5s;
 // // // // // //                 }
-                
+
 // // // // // //                 .rts-blog-h-2-wrapper:hover .thumbnail img {
 // // // // // //                     transform: scale(1.05);
 // // // // // //                 }
@@ -562,7 +562,7 @@
 // // // // // //                     color: #ff5e14;
 // // // // // //                     text-transform: uppercase;
 // // // // // //                     font-size: 14px;
-                    
+
 // // // // // //                 }
 // // // // // //                 .rts-read-more i {
 // // // // // //                     margin-left: -20px;
@@ -621,7 +621,7 @@
 // // // // // //                     .rts-blog-area .title-style-three .title {
 // // // // // //                         font-size: 36px !important; 
 // // // // // //                     }
-                    
+
 // // // // // //                     .rts-blog-area.rts-section-gapTop {
 // // // // // //                         padding-top: 0 !important;
 // // // // // //                         margin-top: 0 !important;
@@ -630,7 +630,7 @@
 // // // // // //                     .rts-blog-area .container.pt--40 {
 // // // // // //                         padding-top: 20px !important;
 // // // // // //                     }
-                    
+
 // // // // // //                     .col-lg-4, .col-md-6 {
 // // // // // //                         max-width: 100%;
 // // // // // //                         flex: 0 0 100%;
@@ -748,7 +748,7 @@
 // // // // //                 .title-style-three.center { text-align: center; }
 // // // // //                 .title-style-three .pre { display: block; font-size: 14px; letter-spacing: 2px; color: #666; margin-bottom: 10px; }
 // // // // //                 .title-style-three .title { font-weight: 900; text-transform: uppercase; color: #0d1c2e; }
-                
+
 // // // // //                 .rts-blog-h-2-wrapper { border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; background: white; }
 // // // // //                 .rts-blog-h-2-wrapper:hover { box-shadow: 0 15px 45px rgba(0,0,0,0.1); transform: translateY(-5px); }
 // // // // //                 .rts-blog-h-2-wrapper .thumbnail img { width: 100%; height: 250px; object-fit: cover; transition: 0.5s; }
@@ -911,7 +911,7 @@
 // // // // //                 .title-style-three.center { text-align: center; }
 // // // // //                 .title-style-three .pre { display: block; font-size: 14px; letter-spacing: 2px; color: #666; margin-bottom: 10px; }
 // // // // //                 .title-style-three .title { font-weight: 900; text-transform: uppercase; color: #0d1c2e; }
-                
+
 // // // // //                 .rts-blog-h-2-wrapper { border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; background: white; }
 // // // // //                 .rts-blog-h-2-wrapper:hover { box-shadow: 0 15px 45px rgba(0,0,0,0.1); transform: translateY(-5px); }
 // // // // //                 .rts-blog-h-2-wrapper .thumbnail img { width: 100%; height: 250px; object-fit: cover; transition: 0.5s; }
@@ -993,7 +993,7 @@
 // // // // const Events = () => {
 // // // //     // 1. Fetch data from your API
 // // // //     const { data: apiResponse, error } = useSWR("https://gba.mig.org.pk/api/news", fetcher);
-    
+
 // // // //     // 2. State for filtering (Same logic as your sidebar)
 // // // //     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
@@ -1075,7 +1075,7 @@
 // // // //                                         >
 // // // //                                             {post.category} / GBC Official
 // // // //                                         </span>
-                                        
+
 // // // //                                         <a href={post.fb_post_url || "#"}>
 // // // //                                             <h4 className="title">{post.title}</h4>
 // // // //                                         </a>
@@ -1101,7 +1101,7 @@
 // // // //                 .title-style-three.center { text-align: center; }
 // // // //                 .title-style-three .pre { display: block; font-size: 14px; letter-spacing: 2px; color: #666; margin-bottom: 10px; }
 // // // //                 .title-style-three .title { font-weight: 900; text-transform: uppercase; color: #0d1c2e; }
-                
+
 // // // //                 .rts-blog-h-2-wrapper { border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; background: white; height: 100%; }
 // // // //                 .rts-blog-h-2-wrapper:hover { box-shadow: 0 15px 45px rgba(0,0,0,0.1); transform: translateY(-5px); }
 // // // //                 .rts-blog-h-2-wrapper .thumbnail img { width: 100%; height: 250px; object-fit: cover; transition: 0.5s; }
@@ -1163,7 +1163,7 @@
 // // // //     const handleNavigation = (e: React.MouseEvent, post: any) => {
 // // // //         e.preventDefault();
 // // // //         e.stopPropagation(); // Prevents category click from triggering this
-        
+
 // // // //         if (post.fb_post_url && post.fb_post_url.trim() !== "") {
 // // // //             const slug = slugify(post.title);
 // // // //             router.push(`/blog-details/${slug}`);
@@ -1246,9 +1246,9 @@
 // // // //                                         >
 // // // //                                             {post.category} / GBC Official
 // // // //                                         </span>
-                                        
+
 // // // //                                         <h4 className="title">{post.title}</h4>
-                                        
+
 // // // //                                         <span className="rts-read-more btn-primary">
 // // // //                                             <i className="far fa-arrow-right"></i>Read More
 // // // //                                         </span>
@@ -1320,7 +1320,7 @@
 // // //     const handleNavigation = (e: React.MouseEvent, post: any) => {
 // // //         e.preventDefault();
 // // //         e.stopPropagation();
-        
+
 // // //         if (post.fb_post_url && post.fb_post_url.trim() !== "") {
 // // //             const slug = slugify(post.title);
 // // //             router.push(`/blog-details/${slug}`);
@@ -1403,9 +1403,9 @@
 // // //                                         >
 // // //                                             {post.category} / GBC Official
 // // //                                         </span>
-                                        
+
 // // //                                         <h4 className="title">{post.title}</h4>
-                                        
+
 // // //                                         <div style={{ marginTop: 'auto', paddingTop: '20px' }}>
 // // //                                             <span className="rts-read-more">
 // // //                                                 <i className="far fa-arrow-right" style={{ marginRight: '8px' }}></i> READ MORE
@@ -1428,7 +1428,7 @@
 // // //             <style jsx global>{`
 // // //                 .rts-section-gapTop { padding-top: 100px; padding-bottom: 100px; }
 // // //                 .title-style-three.center { text-align: center; }
-                
+
 // // //                 .rts-blog-h-2-wrapper { 
 // // //                     box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
 // // //                     transition: all 0.3s ease; 
@@ -1436,7 +1436,7 @@
 // // //                     /* Ensuring the bottom shape is fully visible */
 // // //                     margin-bottom: 20px; 
 // // //                 }
-                
+
 // // //                 .rts-blog-h-2-wrapper:hover { 
 // // //                     box-shadow: 0 15px 45px rgba(0,0,0,0.1); 
 // // //                     transform: translateY(-5px); 
@@ -1447,7 +1447,7 @@
 // // //                     height: 250px; 
 // // //                     object-fit: cover; 
 // // //                 }
-                
+
 // // //                 .rts-blog-h-2-wrapper .body .title { 
 // // //                     font-size: 20px; 
 // // //                     font-weight: 700; 
@@ -1472,7 +1472,7 @@
 // // //                     font-size: 13px;
 // // //                     transition: 0.3s;
 // // //                 }
-                
+
 // // //                 .rts-blog-h-2-wrapper:hover .rts-read-more {
 // // //                     color: #ff5e14;
 // // //                 }
@@ -1568,11 +1568,11 @@
 // //                                         <span className="category-tag">
 // //                                             {post.category} / by GBA Official
 // //                                         </span>
-                                        
+
 // //                                         <h4 className="title">
 // //                                             {truncateText(post.title, 50)}
 // //                                         </h4>
-                                        
+
 // //                                         <Link 
 // //                                             className="rts-read-more" 
 // //                                             href={`/archive?category=${encodeURIComponent(post.category)}`}
@@ -1644,7 +1644,7 @@
 // //                     margin-bottom: auto;
 // //                     min-height: 90px;
 // //                 }
-                
+
 // //                 .rts-read-more { 
 // //                     display: flex; 
 // //                     align-items: center; 
@@ -1900,7 +1900,7 @@
 //     );
 // }
 
- 
+
 //         'use client'
 
 // import React, { Suspense } from 'react';
@@ -2133,7 +2133,7 @@
 // }
 
 
- 
+
 // 'use client'
 
 // import React, { Suspense } from 'react';
@@ -2514,7 +2514,7 @@ const EventsContent = () => {
 
                   <div className="body">
                     <span className="category-tag">
-                      {post.category} / by GBA Official
+                      {post.category} 
                     </span>
 
                     <h4 className="title">{truncateText(post.title, 50)}</h4>
@@ -2541,7 +2541,7 @@ const EventsContent = () => {
       </div>
 
       {/* Global CSS */}
-           <style global jsx>{`
+      <style global jsx>{`
         .rts-blog-h-2-wrapper {
           border-radius: 15px;
           background: white;
@@ -2658,7 +2658,9 @@ const EventsContent = () => {
     .rts-watermark-05 {
       font-size: 80px !important;
     }
+      
   }
+
 
       `}</style>
     </div>

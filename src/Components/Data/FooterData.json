@@ -22,7 +22,7 @@
         {"text": "Services", "href": "/services/global-reach"},
         {"text": "Resources", "href": "#"},
         {"text": "Archives", "href": "/archive"},
-        {"text": "Contact Us", "href": "/contact-2"}
+        {"text": "Contact Us", "href": "/contact"}
       ]
     ]
   },
@@ -57,7 +57,7 @@
   },
   "copyrightText": "GBA - Copyright",
   "policyLinks": [
-    {"text": "Privacy Policy", "href": "/privacy-policy.html"},
-    {"text": "Terms & Condition", "href": "/terms-of-condition.html"}
+    {"text": "Privacy Policy", "href": "#"},
+    {"text": "Terms & Condition", "href": "#"}
   ]
 }

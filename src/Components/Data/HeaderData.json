@@ -3,7 +3,7 @@
 {
   "topBar": {
     "ctaMessage": "Are you ready to grow up your business?",
-    "ctaLink": "/contact-2",
+    "ctaLink": "/contact",
     "ctaLinkText": "Contact Us",
     "email": "info@gba.org.pk",
     "socialLinks": [
@@ -104,7 +104,7 @@
     
     { "title": "Resources", "href": "#", "type": "link", "strong": true },
     { "title": "Archives", "href": "/archive", "type": "link", "strong": true },
-    { "title": "Contact", "href": "/contact-2", "type": "link", "strong": true }
+    { "title": "Contact", "href": "/contact", "type": "link", "strong": true }
      
    
   ]

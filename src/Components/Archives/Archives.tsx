@@ -5560,7 +5560,7 @@ const BlogArchiveContent = () => {
                 </div>
                 <div className="wized-body">
                   <h5 className="title">Need Help?</h5>
-                  <Link className="rts-btn btn-primary btn-white" href="/contact-2">Contact Us</Link>
+                  <Link className="rts-btn btn-primary btn-white" href="/contact">Contact Us</Link>
                 </div>
               </div>
             </div>
