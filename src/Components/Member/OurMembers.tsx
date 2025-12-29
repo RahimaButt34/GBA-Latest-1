@@ -134,6 +134,81 @@ const OurMembers = () => {
           padding: 10px;
         }
       `}</style>
+      {/* STYLES */}
+      <style jsx>{`
+        .members-left-title {
+          font-size: 32px; /* Adjusted to match scale of Pic 2 */
+          font-weight: 700;
+          line-height: 1.2;
+          color: #000;
+          margin-bottom: 20px;
+          /* Ensures heading starts exactly at the container edge */
+          padding-left: 0; 
+        }
+
+        .members-right-text {
+          font-size: 16px;
+          line-height: 1.6;
+          color: #333;
+          /* Aligns paragraph top with heading top */
+          margin-top: 5px; 
+          max-width: 100%; 
+        }
+
+        .members-intro-section {
+          margin-top: 60px;
+          margin-bottom: 40px;
+        }
+
+        .brand-table {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          border: 1px solid #e1e1e1;
+          /* Match this width to the Bootstrap container width for perfect alignment */
+          width: 100%; 
+          max-width: 1320px; 
+          margin: 0 auto;
+        }
+
+        @media (max-width: 1400px) {
+          .brand-table { max-width: 1140px; }
+        }
+
+        @media (max-width: 1200px) {
+          .brand-table { max-width: 960px; }
+        }
+
+        @media (max-width: 992px) {
+          .brand-table { 
+            max-width: 720px;
+            grid-template-columns: repeat(2, 1fr); 
+          }
+        }
+
+        .brand-item {
+          border: 1px solid #e1e1e1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 60px;
+          background: #fff;
+        }
+
+        .brand-item img {
+          width: 120px;
+          height: auto;
+          object-fit: contain;
+        }
+
+        .brand-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 0 15px; /* Matches standard container gutter */
+          margin-bottom: 80px;
+        }
+      `}</style>
     </>
   );
 };

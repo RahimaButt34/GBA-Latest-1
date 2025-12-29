@@ -95,7 +95,7 @@
         "left": "450px"
       },
       "dropdownItems": [
-        { "title": "Our Partners", "href": "/members/partners2" },
+        { "title": "Our Partners", "href": "/members/our-partners" },
         { "title": "Our Member", "href": "/members/our-member" },
         { "title": "Flagship", "href": "/members/Flagship" }
       ]
