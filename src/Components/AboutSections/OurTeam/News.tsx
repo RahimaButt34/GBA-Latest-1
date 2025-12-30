@@ -271,53 +271,156 @@
 
 
 
+// 'use client';
+
+// import React from 'react';
+
+// const NewsletterCTA: React.FC = () => {
+//     // Handling form submission
+//     const handleSubscribe = (e: React.FormEvent) => {
+//         e.preventDefault();
+//         // Add your subscription logic here
+//         console.log("Subscription submitted");
+//     };
+
+//     return (
+//         /* rts cta area start */
+//         <div className="rts-cts-area-start bg_cts-10 bg_iamge ptb--95 mt--160">
+//             <div className="container">
+//                 <div className="row">
+//                     <div className="col-lg-12">
+//                         <div className="cta-style-10-wrapper">
+//                             <div className="left-side">
+//                                 <span>Subscribe Newsletter</span>
+//                                 <h3 className="title" >
+//                                     Stay Updated with <br /> the Latest News!
+//                                 </h3>
+//                             </div>
+//                             <div className="right-side">
+//                                 <form onSubmit={handleSubscribe}>
+//                                     <input 
+//                                         style={{ color: 'white' }} 
+//                                         type="email" 
+//                                         placeholder="Enter Email Address" 
+//                                         required 
+//                                     />
+//                                     <button 
+//                                         type="submit" 
+//                                         className="rts-btn btn-primary btn-white"
+//                                     >
+//                                         Subscribe Now
+//                                     </button>
+//                                 </form>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default NewsletterCTA;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 'use client';
 
 import React from 'react';
 
 const NewsletterCTA: React.FC = () => {
-    // Handling form submission
-    const handleSubscribe = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Add your subscription logic here
-        console.log("Subscription submitted");
-    };
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Subscription submitted");
+  };
 
-    return (
-        /* rts cta area start */
-        <div className="rts-cts-area-start bg_cts-10 bg_iamge ptb--95 mt--160">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="cta-style-10-wrapper">
-                            <div className="left-side">
-                                <span>Subscribe Newsletter</span>
-                                <h3 className="title" >
-                                    Stay Updated with <br /> the Latest News!
-                                </h3>
-                            </div>
-                            <div className="right-side">
-                                <form onSubmit={handleSubscribe}>
-                                    <input 
-                                        style={{ color: 'white' }} 
-                                        type="email" 
-                                        placeholder="Enter Email Address" 
-                                        required 
-                                    />
-                                    <button 
-                                        type="submit" 
-                                        className="rts-btn btn-primary btn-white"
-                                    >
-                                        Subscribe Now
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <div className="rts-cts-area-start bg_cts-10 bg_iamge ptb--95 mt--160">
+      
+      {/* ✅ STYLE TAG (sirf placeholder responsiveness) */}
+      <style jsx global>{`
+        /* Desktop */
+        .cta-style-10-wrapper input::placeholder {
+          font-size: 16px;
+        }
+
+        /* Tablet */
+        @media (max-width: 992px) {
+          .cta-style-10-wrapper input::placeholder {
+            font-size: 15px;
+          }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+          .cta-style-10-wrapper input::placeholder {
+            font-size: 14px;
+          }
+        }
+
+        /* Small phones */
+        @media (max-width: 480px) {
+          .cta-style-10-wrapper input::placeholder {
+            font-size: 13px;
+          }
+        }
+      `}</style>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="cta-style-10-wrapper">
+              <div className="left-side">
+                <span>Subscribe Newsletter</span>
+                <h3 className="title">
+                  Stay Updated with <br /> the Latest News!
+                </h3>
+              </div>
+              <div className="right-side">
+                <form onSubmit={handleSubscribe}>
+                  <input
+                    style={{ color: 'white' }}
+                    type="email"
+                    placeholder="Enter Email Address"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="rts-btn btn-primary btn-white"
+                  >
+                    Subscribe Now
+                  </button>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default NewsletterCTA;
