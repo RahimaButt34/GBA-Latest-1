@@ -370,7 +370,7 @@ const NewsletterCTA: React.FC = () => {
         /* Tablet */
         @media (max-width: 992px) {
           .cta-style-10-wrapper input::placeholder {
-            font-size: 8px;
+            font-size: 5px;
           }
         }
 

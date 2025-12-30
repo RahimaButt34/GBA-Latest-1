@@ -1122,6 +1122,76 @@ const FocusArea: React.FC<FocusAreaProps> = ({
             }
           }
         `}</style>
+        <style jsx global>{`
+  /* ===============================
+     MOBILE VIEW RESPONSIVE HEADING & CONTENT
+     =============================== */
+
+  @media (max-width: 768px) {
+    /* 1. Section Gaps Adjustments */
+    .focus2-section {
+      padding-top: 30px !important;
+      padding-bottom: 30px !important;
+    }
+
+    /* 2. Main Title (H2) Responsiveness */
+    /* Clamp use kiya hai taake font size screen ke sath barhe ya ghate */
+    .title-style-three h2 {
+      font-size: clamp(26px, 8vw, 34px) !important; 
+      line-height: 1.2 !important;
+      margin-bottom: 12px !important;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      text-align: left;
+    }
+
+    /* 3. Subtitle Styling */
+    .title-style-three p {
+      font-size: 13px !important;
+      line-height: 1.4 !important;
+      margin-bottom: 15px !important;
+      text-align: left;
+      font-weight: 800 !important;
+    }
+
+    /* 4. Paragraph (Description) */
+    .disc {
+      font-size: 15px !important;
+      line-height: 1.6 !important;
+      margin-top: 0 !important;
+      text-align: left;
+    }
+
+    /* 5. Image & Row Adjustments */
+    .focus2-row {
+      margin-top: 20px !important; /* Row spacing tight kar di */
+      display: flex;
+      flex-direction: column; /* Mobile par stack order fix */
+    }
+
+    /* Mobile par Image hamesha pehle aaye aur gap ho */
+    .order-1 {
+      margin-bottom: 25px !important;
+    }
+
+    .focus2-container {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+
+    /* Theme ki extra spacing remove karne ke liye */
+    .rts-section-gap {
+      padding: 0 !important;
+    }
+  }
+
+  /* Very small screens (like iPhone SE) */
+  @media (max-width: 400px) {
+    .title-style-three h2 {
+      font-size: 24px !important;
+    }
+  }
+`}</style>
       </div>
     </section>
   );

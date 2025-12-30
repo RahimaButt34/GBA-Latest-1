@@ -3942,7 +3942,7 @@ const ServiceProjects = () => {
         }
 
         @media (max-width: 768px) {
-          .bg-title.watermark-service { font-size: 80px !important; top: 15% !important; }
+          .bg-title.watermark-service { font-size: 80px !important; top: 15% !important; opacity:0.8 }
           .title-style-three .title { font-size: 28px !important; }
           .swiper-controls-container { margin-top: 40px !important; gap: 20px; }
           .swiper-button-prev-custom, .swiper-button-next-custom { width: 45px; height: 45px; }
@@ -3965,6 +3965,7 @@ const ServiceProjects = () => {
   .swiper-pagination-fraction-custom {
     font-size: 18px;
   }
+    
       `}</style>
     </>
   );
