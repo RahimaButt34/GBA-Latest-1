@@ -370,6 +370,209 @@
 
 
 
+// 'use client'
+
+// import React from 'react';
+// import Image from 'next/image';
+
+// const FocusPage = () => {
+//     return (
+//         <React.Fragment>
+//             {/* --- SECTION 1: BREADCRUMB --- */}
+//             <div className="rts-breadcrumb-area top-300">
+//                 <div className="container">
+//                     <div className="row">
+//                         <div className="col-lg-12">
+//                             <div className="title-area-left" style={{ textAlign: 'left' }}>
+//                                 <span className="bg-title watermark-focus">
+//                                     Our Focus
+//                                 </span>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 <div className="shape-area">
+//                     <Image src="/images/about/shape/01.png" alt="shape" className="one" width={100} height={100} priority={false} />
+//                     <Image src="/images/about/shape/02.png" alt="shape" className="two" width={100} height={100} priority={false} />
+//                     <Image src="/images/about/shape/03.png" alt="shape" className="three" width={100} height={100} priority={false} />
+//                 </div>
+//             </div>
+
+//             {/* --- SECTION 2: CONTENT AREA --- */}
+//             <div className="rts-about-area rts-section-gap">
+//                 <div className="container pt--10 focus-main-overlap">
+                    
+//                     {/* Heading Block */}
+//                     <div className="focus-heading-wrapper">
+//                         <p className="focus-sub-label">Enabling Growth</p>
+//                         <h1 className="focus-main-title">Our Focus</h1>
+//                     </div>
+
+//                     <div className="rts-about-area rts-section-gap focus-content-section">
+//                         <div className="container pt--10">
+//                             <div className="row align-items-center g-5">
+
+//                                 {/* IMAGE LEFT */}
+//                                 <div className="col-lg-5 col-md-12 order-lg-1 order-1 text-center">
+//                                     <div className="main-thumnal-inner-about-three">
+//                                         <div className="thumbnail">
+//                                             <Image 
+//                                                 src="/images/Focus2/Made In Gujranwala.png" 
+//                                                 alt="Made In Gujranwala"
+//                                                 width={500} 
+//                                                 height={400} 
+//                                                 className="focus-hero-image"
+//                                                 priority={false}
+//                                                 style={{marginTop:'-10px'}}
+
+//                                             />
+//                                         </div>
+//                                     </div>
+//                                 </div>
+
+//                                 {/* TEXT RIGHT */}
+//                                 <div className="col-lg-7 col-md-12 order-lg-2 order-2">
+//                                     <div className="about-content-right-three">
+//                                         <div className="title-style-three left focus-text-heading">
+//                                             <h2>
+//                                                 Made In Gujranwala <br /> Promotion
+//                                             </h2>
+//                                             <p className="focus-accent-text">
+//                                                 Building Global Pathways For Gujranwala’s Industrial Growth
+//                                             </p>
+//                                         </div>
+//                                         <br />
+//                                         <p className="disc focus-description">
+//                                             Gujranwala is home to a diverse range of industries that make a significant contribution
+//                                             to Pakistan’s national economy. One of GBA’s foremost priorities is to enhance the global
+//                                             visibility of Gujranwala’s industrial base and promote the **Made in Gujranwala** brand across
+//                                             international markets. Through strategic initiatives and collaborations, GBA highlights the
+//                                             city’s manufacturing excellence, product diversity, and export potential on global platforms.
+//                                             The Alliance works closely with international trade bodies, chambers of commerce, and
+//                                             business councils to foster partnerships, facilitate B2B linkages, and create sustainable
+//                                             export opportunities. By promoting industrial clusters, encouraging cross-border cooperation,
+//                                             and showcasing innovation-driven enterprises, GBA continues to strengthen Gujranwala’s
+//                                             reputation as a key hub of industrial and trade excellence.
+//                                         </p>
+//                                     </div>
+//                                 </div>
+
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+
+//             {/* --- CONSOLIDATED STYLING --- */}
+//             <style jsx global>{`
+//                 /* DESKTOP STYLES - Matches your original output exactly */
+//                 .watermark-focus {
+//                     font-size: 150px;
+//                     margin-left: 100px;
+//                 }
+
+//                 .focus-main-overlap {
+//                     margin-top: -300px !important;
+//                 }
+
+//                 .focus-heading-wrapper {
+//                     margin-top: -80px;
+//                     margin-left: -50px;
+//                 }
+
+//                 .focus-sub-label {
+//                     font-size: 16px;
+//                     margin-top: -90px;
+//                     margin-left: 100px;
+//                 }
+
+//                 .focus-main-title {
+//                     font-weight: 800;
+//                     font-size: 48px;
+//                     margin-left: 100px;
+//                     margin-top: -10px;
+//                 }
+
+//                 .focus-content-section {
+//                     margin-top: 50px; /* Increased gap so heading doesn't touch image */
+//                 }
+
+//                 .focus-hero-image {
+//                     width: 100%;
+//                     border-radius: 10px;
+//                     margin-top: -100px;
+//                     height: 120%;
+//                 }
+
+//                 .focus-text-heading h2 {
+//                     font-size: 48px;
+//                 }
+
+//                 .focus-accent-text {
+//                     font-weight: 900;
+//                     color: black;
+//                     font-size: 12px;
+//                 }
+
+//                 .focus-description {
+//                     font-size: 15px;
+//                     margin-top: 20px;
+//                 }
+
+//                 /* MOBILE RESPONSIVE STYLES */
+//                 @media (max-width: 768px) {
+//                     .focus-main-overlap {
+//                         margin-top: 0 !important;
+//                         padding-left: 15px !important;
+//                         padding-right: 15px !important;
+//                     }
+
+//                     .focus-heading-wrapper,
+//                     .focus-sub-label,
+//                     .focus-main-title {
+//                         margin-left: 0 !important;
+//                         margin-top: 0 !important;
+//                         text-align: left;
+//                     }
+
+//                     .watermark-focus {
+//                         font-size: 50px !important;
+//                         margin-left: 15px !important;
+//                         opacity: 0.80;
+//                     }
+
+//                     .focus-main-title {
+//                         font-size: 34px !important;
+//                         margin-bottom: 20px;
+//                     }
+
+//                     .focus-hero-image {
+//                         margin-top: 20px !important; /* Fixed: No longer overlaps heading */
+//                         width: 100% !important;
+//                     }
+
+//                     .focus-text-heading h2 {
+//                         font-size: 30px !important;
+//                     }
+
+//                     .focus-content-section {
+//                         margin-top: 20px !important;
+//                         padding-top: 0 !important;
+//                     }
+
+//                     .rts-breadcrumb-area.top-300 {
+//                         padding-top: 60px !important;
+//                         height: auto !important;
+//                     }
+//                 }
+//             `}</style>
+//         </React.Fragment>
+//     );
+// }
+
+// export default FocusPage;
+
+
 'use client'
 
 import React from 'react';
@@ -424,7 +627,6 @@ const FocusPage = () => {
                                                 className="focus-hero-image"
                                                 priority={false}
                                                 style={{marginTop:'-10px'}}
-
                                             />
                                         </div>
                                     </div>
@@ -465,104 +667,136 @@ const FocusPage = () => {
 
             {/* --- CONSOLIDATED STYLING --- */}
             <style jsx global>{`
-                /* DESKTOP STYLES - Matches your original output exactly */
+                /* ===============================
+                   FIX EXTRA GAPS (LIKE PIC 2)
+                   =============================== */
+
+                /* 1) Breadcrumb top space (yehi main extra gap banata hai) */
+                .rts-breadcrumb-area.top-300{
+                    padding-top: 140px !important;   /* was too much */
+                    padding-bottom: 70px !important; /* keep tight like prototype */
+                    height: auto !important;
+                    min-height: unset !important;
+                }
+
+                /* Watermark position/size stays */
                 .watermark-focus {
                     font-size: 150px;
-                    margin-left: 100px;
+                    margin-left: 70px;
+                    margin-top:-20px;
                 }
 
+                /* 2) Outer section gap ko neutralize for this page look */
+                .rts-about-area.rts-section-gap{
+                    padding-top: 0 !important;
+                    padding-bottom: 0 !important;
+                }
+
+                /* 3) Overlap: was -300 (bohat zyada), isi se blank area feel hota */
                 .focus-main-overlap {
-                    margin-top: -300px !important;
+                    margin-top: -100px !important;  /* ✅ tightened to match pic2 */
+                    padding-top: 0 !important;
                 }
 
+                /* 4) Heading block: negative margins remove to stop weird spacing */
                 .focus-heading-wrapper {
-                    margin-top: -80px;
-                    margin-left: -50px;
+                    margin-top: 0px !important;
+                    margin-left: -70px !important;
+                    padding-top: 0 !important;
                 }
 
                 .focus-sub-label {
                     font-size: 16px;
-                    margin-top: -90px;
-                    margin-left: 100px;
+                    margin: 0 !important;
+                    margin-left: 100px !important;
                 }
 
                 .focus-main-title {
                     font-weight: 800;
                     font-size: 48px;
-                    margin-left: 100px;
-                    margin-top: -10px;
+                    margin: 8px 0 0 100px !important; /* ✅ controlled spacing */
                 }
 
+                /* 5) Heading -> Image gap smaller like prototype */
                 .focus-content-section {
-                    margin-top: 50px; /* Increased gap so heading doesn't touch image */
+                    margin-top: 18px !important; /* was 50 */
+                    padding-top: 0 !important;
                 }
 
+                /* 6) Image: remove extra top pull & weird height */
                 .focus-hero-image {
                     width: 100%;
                     border-radius: 10px;
-                    margin-top: -100px;
-                    height: 120%;
+                    margin-top: 0px !important; /* ✅ no extra pull */
+                    height: auto !important;    /* ✅ avoid tall stretching */
                 }
 
                 .focus-text-heading h2 {
                     font-size: 48px;
+                    margin-bottom: 6px;
                 }
 
                 .focus-accent-text {
                     font-weight: 900;
                     color: black;
                     font-size: 12px;
+                    margin-top: 0;
                 }
 
                 .focus-description {
                     font-size: 15px;
-                    margin-top: 20px;
+                    margin-top: 14px; /* slightly tighter */
                 }
 
-                /* MOBILE RESPONSIVE STYLES */
+                /* ===============================
+                   MOBILE RESPONSIVE STYLES
+                   =============================== */
                 @media (max-width: 768px) {
+                    .rts-breadcrumb-area.top-300 {
+                        padding-top: 80px !important;
+                        padding-bottom: 35px !important;
+                        height: auto !important;
+                    }
+
                     .focus-main-overlap {
                         margin-top: 0 !important;
                         padding-left: 15px !important;
                         padding-right: 15px !important;
                     }
 
-                    .focus-heading-wrapper,
-                    .focus-sub-label,
-                    .focus-main-title {
-                        margin-left: 0 !important;
-                        margin-top: 0 !important;
-                        text-align: left;
-                    }
-
                     .watermark-focus {
                         font-size: 50px !important;
                         margin-left: 15px !important;
                         opacity: 0.80;
+                        margin-top:50px;
+                    }
+
+                    .focus-heading-wrapper,
+                    .focus-sub-label,
+                    .focus-main-title {
+                        margin-left: 15px !important;
+                        text-align: left;
                     }
 
                     .focus-main-title {
                         font-size: 34px !important;
-                        margin-bottom: 20px;
+                        margin-top: 6px !important;
+                        margin-bottom: 12px !important;
+                    }
+
+                    .focus-content-section {
+                        margin-top: 14px !important;
+                        padding-top: 0 !important;
                     }
 
                     .focus-hero-image {
-                        margin-top: 20px !important; /* Fixed: No longer overlaps heading */
+                        margin-top: 0px !important;
                         width: 100% !important;
+                        height: auto !important;
                     }
 
                     .focus-text-heading h2 {
                         font-size: 30px !important;
-                    }
-
-                    .focus-content-section {
-                        margin-top: 20px !important;
-                        padding-top: 0 !important;
-                    }
-
-                    .rts-breadcrumb-area.top-300 {
-                        padding-top: 60px !important;
-                        height: auto !important;
                     }
                 }
             `}</style>
