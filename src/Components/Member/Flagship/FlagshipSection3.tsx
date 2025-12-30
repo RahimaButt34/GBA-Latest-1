@@ -683,6 +683,139 @@ export default function FlagshipList() {
             font-size: 14px;
         }
     }
+        /* --- Base Section Styling --- */
+.industry-list { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+.industry-list li { 
+  display: flex; 
+  align-items: flex-start;          /* better for multi-line */
+  gap: 12px; 
+  margin-bottom: 12px; 
+  font-size: 16px; 
+  color: #1c2434;
+  white-space: normal;              /* ✅ allow wrap on mobile */
+  word-break: break-word;           /* ✅ prevent overflow */
+}
+
+.industry-list img { 
+  width: 22px; 
+  height: 22px;
+  flex: 0 0 22px;                   /* ✅ icon fixed, text wraps */
+  margin-top: 2px;
+}
+
+/* --- Wrapper: desktop --- */
+.flagship-list-wrapper{
+  padding-top: 100px;
+  padding-bottom: 120px;
+
+  /* IMPORTANT: avoid hard % width on small screens */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1320px;                /* ✅ same as Bootstrap container */
+  padding-left: 15px;               /* ✅ container gutter */
+  padding-right: 15px;
+
+  box-sizing: border-box;
+}
+
+/* --- Heading Styling --- */
+.title-style-three .title { 
+  font-size: 48px; 
+  font-weight: 800; 
+  text-transform: none; 
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+  color: #0d1c2e;
+  line-height: 1.15;
+}
+
+.title-style-three .outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1px #0d1c2e;
+  text-stroke: 1px #0d1c2e;
+  margin-left: 8px;
+  font-weight: 900; 
+}
+
+.title-style-three.center { 
+  text-align: center; 
+  margin-bottom: 50px;
+}
+
+.title-style-three p {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #64748b;
+  line-height: 1.6;
+  padding: 0 10px;                  /* ✅ small screen breathing space */
+}
+
+/* --- Background: don't stretch weird on mobile --- */
+.working-process-bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;           /* ✅ better than 100% 100% */
+}
+
+/* --- Tablet --- */
+@media (max-width: 991px) {
+  .flagship-list-wrapper{
+    padding-top: 70px;
+    padding-bottom: 80px;
+    max-width: 960px;
+  }
+
+  .title-style-three.center { 
+    margin-bottom: 35px;
+  }
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .flagship-list-wrapper{
+    padding-top: 55px;
+    padding-bottom: 65px;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 100%;
+  }
+
+  .title-style-three .title {
+    font-size: 28px;
+  }
+
+  .title-style-three .outline-text{
+    margin-left: 6px;
+    -webkit-text-stroke: 0.8px #0d1c2e;
+  }
+
+  .industry-list li {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .industry-list img{
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+  }
+}
+
+/* --- Very small devices --- */
+@media (max-width: 480px) {
+  .title-style-three p{
+    font-size: 14px;
+  }
+  .title-style-three .title{
+    font-size: 24px;
+  }
+}
+
   `;
 
   return (

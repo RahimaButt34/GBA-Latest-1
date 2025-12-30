@@ -208,8 +208,8 @@ const OurPartners = () => {
         }
 
         .brand-item img {
-          width: 120px;
-          height: auto;
+          width: 150px;
+          
           object-fit: contain;
         }
 
@@ -295,6 +295,45 @@ const OurPartners = () => {
           padding: 0 15px; /* Matches standard container gutter */
           margin-bottom: 80px;
         }
+          .brand-box {
+  /* container jaisa behavior */
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  /* flex centering hata dein taake left edge container ke sath align ho */
+  display: block;
+
+  margin-bottom: 80px;
+}
+
+.brand-table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #e1e1e1;
+
+  /* EXACT bootstrap container widths */
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto; /* container ke center, but edges same rahengi */
+}
+
+@media (max-width: 1400px) {
+  .brand-table { max-width: 1140px; }
+}
+
+@media (max-width: 1200px) {
+  .brand-table { max-width: 960px; }
+}
+
+@media (max-width: 992px) {
+  .brand-table {
+    max-width: 720px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
       `}</style>
     </>
   );
