@@ -493,6 +493,185 @@
 // export default AboutSection;
 
 
+// 'use client';
+
+// import React from 'react';
+// import Image from 'next/image';
+
+// const AboutSection: React.FC = () => {
+//     return (
+//         <>
+//             {/* --- SECTION 1: BREADCRUMB --- */}
+//             <div className="rts-breadcrumb-area top-300">
+//                 <div className="container">
+//                     <div className="row">
+//                         <div className="col-lg-12">
+//                             <div className="title-area-left" style={{ textAlign: 'left' }}>
+//                                 {/* Watermark with custom class */}
+//                                 <span className="bg-title watermark-about">About Us</span>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+
+//                 <div className="shape-area">
+//                     <Image src="/images/about/shape/01.png" alt="shape" className="one" width={100} height={100} />
+//                     <Image src="/images/about/shape/02.png" alt="shape" className="two" width={100} height={100} />
+//                     <Image src="/images/about/shape/03.png" alt="shape" className="three" width={100} height={100} />
+//                 </div>
+//             </div>
+
+//             {/* --- SECTION 2: MAIN CONTENT --- */}
+//             <div className="rts-about-area rts-section-gap">
+//                 {/* Main overlap container with custom class */}
+//                 <div className="container pt--40 about-main-overlap">
+                    
+//                     {/* Heading Block with custom class */}
+//                     <div className="about-heading-container">
+//                         <p className="about-sub-label">About GBA</p>
+//                         <h1 className="about-main-title">Gujranwala <br />Business Alliance</h1>
+//                     </div>
+
+//                     <div className="row about-content-row">
+                        
+//                         {/* Left Column: Image */}
+//                         <div className="col-lg-5">
+//                             <div className="main-thumnal-inner-about-three">
+//                                 <div className="about-thumbnail-style-three">
+//                                     <div className="thumbnail">
+//                                         <Image 
+//                                             src='/images/GBA/GBA - Industry.jpg' 
+//                                             alt="about" 
+//                                             width={500} 
+//                                             height={400} 
+//                                             style={{ width: '100%', height: 'auto' }} 
+//                                         />
+//                                     </div>
+//                                 </div>
+//                                 <div className="shape">
+//                                     <Image src="/images/about/shape/04.svg" alt="about" width={200} height={200} />
+//                                 </div>
+//                             </div>
+//                         </div>
+
+//                         {/* Right Column: Description */}
+//                         <div className="col-lg-7 pl--100 pl_md--0 mt_md--80 pl_sm--0 mt_sm--80">
+//                             <div className="about-content-right-three">
+//                                 <p className="disc about-description-text">
+//                                     The Gujranwala Business Alliance (GBA) is a dynamic and forward-thinking business association representing the collective strength of over 500 member companies from across Gujranwala’s diverse industrial sectors. Dedicated to promoting international trade, fostering partnerships, and driving industrial advancement, GBA serves as a central platform for collaboration, policy dialogue, and global engagement. Representing Pakistan’s third-largest industrial city, home to more than 21,000 SMEs and industrial units, GBA works to strengthen Gujranwala’s position as a powerhouse of manufacturing, innovation, and export excellence. By connecting local enterprises with international markets, investors, and trade bodies, the Alliance plays a pivotal role in expanding Gujranwala’s economic footprint worldwide.
+//                                     <br /><br />
+//                                     Established in 2021, GBA has emerged as a trusted advocate and facilitator for business growth, working closely with industry leaders, government institutions, diplomatic missions, and international trade organisations. Supported by a vast network of over 1,500 national and international partners - including chambers of commerce, private enterprises, universities, and development agencies across Asia, Europe, Africa, and the Middle East - the Alliance has built strong linkages that drive industrial advancement, enhance export competitiveness, and expand access to global markets.
+//                                     <br /><br />
+//                                     Through trade delegations, business forums, expos, and B2B initiatives, GBA highlights Gujranwala’s industrial strength on the global stage. It also leads capacity-building programs, knowledge partnerships, and industry–academia collaborations that drive innovation and entrepreneurship. By integrating business, knowledge, and international cooperation, GBA continues to position Gujranwala as a globally connected industrial hub contributing to Pakistan’s sustainable economic progress.
+//                                 </p>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+
+//             {/* --- CONSOLIDATED STYLES --- */}
+//             <style jsx global>{`
+//                 /* DESKTOP STYLES - Matches your original design exactly */
+//                 .watermark-about {
+//                     font-size: 150px;
+//                     font-weight: 900;
+//                     color: transparent;
+//                     -webkit-text-stroke: 1px #e0e0e0;
+//                     line-height: 1;
+//                     opacity: 0.5;
+//                     position: absolute;
+//                     z-index: 0;
+//                     top: -50px;
+//                     left: 0;
+//                     width: 100%;
+//                     text-align: left;
+//                     display: block;
+//                     padding-left: 15px;
+//                 }
+
+//                 .about-main-overlap {
+//                     margin-top: -300px !important;
+//                     position: relative;
+//                 }
+
+//                 .about-heading-container {
+//                     margin-top: -100px;
+//                     margin-left: -20px;
+//                 }
+
+//                 .about-sub-label {
+//                     font-size: 16px;
+//                     margin-left: 10px;
+                      
+//                 }
+
+//                 .about-main-title {
+//                     margin-top: -45px;
+//                     font-weight: 800;
+//                     font-size: 48px;
+//                     line-height: 1.2;
+//                 }
+
+//                 .about-content-row {
+//                     margin-top: 100px;
+//                 }
+
+//                 .about-description-text {
+//                     font-size: 15px;
+//                     line-height: 1.6;
+//                 }
+
+//                 /* MOBILE RESPONSIVE STYLES */
+//                 @media (max-width: 768px) {
+//                     .about-main-overlap {
+//                         margin-top: 0 !important;
+//                         padding-left: 20px !important;
+//                         padding-right: 20px !important;
+//                     }
+
+//                     .about-heading-container {
+//                         margin-left: 0 !important;
+//                         margin-top: 0 !important;
+//                     }
+
+//                     .watermark-about {
+//                         font-size: 60px !important;
+//                         top: -20px !important;
+//                         opacity: 0.80;
+//                     }
+
+//                     .about-main-title {
+//                         font-size: 32px !important;
+//                         margin-top: -10 !important;
+//                     }
+
+//                     .about-sub-label {
+//                         margin-left: 0 !important;
+//                         margin-top: 10px !important;
+//                     }
+
+//                     .about-content-row {
+//                         margin-top: 30px !important;
+//                     }
+
+//                     .about-description-text {
+//                         font-size: 14px !important;
+//                     }
+
+//                     .rts-breadcrumb-area.top-300 {
+//                         padding-top: 60px !important;
+//                         height: auto !important;
+//                     }
+//                 }
+//             `}</style>
+//         </>
+//     );
+// };
+
+// export default AboutSection;
+
+
 'use client';
 
 import React from 'react';
@@ -507,7 +686,6 @@ const AboutSection: React.FC = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="title-area-left" style={{ textAlign: 'left' }}>
-                                {/* Watermark with custom class */}
                                 <span className="bg-title watermark-about">About Us</span>
                             </div>
                         </div>
@@ -523,10 +701,8 @@ const AboutSection: React.FC = () => {
 
             {/* --- SECTION 2: MAIN CONTENT --- */}
             <div className="rts-about-area rts-section-gap">
-                {/* Main overlap container with custom class */}
                 <div className="container pt--40 about-main-overlap">
                     
-                    {/* Heading Block with custom class */}
                     <div className="about-heading-container">
                         <p className="about-sub-label">About GBA</p>
                         <h1 className="about-main-title">Gujranwala <br />Business Alliance</h1>
@@ -534,7 +710,6 @@ const AboutSection: React.FC = () => {
 
                     <div className="row about-content-row">
                         
-                        {/* Left Column: Image */}
                         <div className="col-lg-5">
                             <div className="main-thumnal-inner-about-three">
                                 <div className="about-thumbnail-style-three">
@@ -554,8 +729,19 @@ const AboutSection: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Right Column: Description */}
-                        <div className="col-lg-7 pl--100 pl_md--0 mt_md--80 pl_sm--0 mt_sm--80">
+                        {/* <div className="col-lg-7 pl--100 pl_md--0 mt_md--80 pl_sm--0 mt_sm--80">
+                            <div className="about-content-right-three">
+                                <p className="disc about-description-text">
+                                    The Gujranwala Business Alliance (GBA) is a dynamic and forward-thinking business association representing the collective strength of over 500 member companies from across Gujranwala’s diverse industrial sectors. Dedicated to promoting international trade, fostering partnerships, and driving industrial advancement, GBA serves as a central platform for collaboration, policy dialogue, and global engagement. Representing Pakistan’s third-largest industrial city, home to more than 21,000 SMEs and industrial units, GBA works to strengthen Gujranwala’s position as a powerhouse of manufacturing, innovation, and export excellence. By connecting local enterprises with international markets, investors, and trade bodies, the Alliance plays a pivotal role in expanding Gujranwala’s economic footprint worldwide.
+                                    <br /><br />
+                                     Established in 2021, GBA has emerged as a trusted advocate and facilitator for business growth, working closely with industry leaders, government institutions, diplomatic missions, and international trade organisations. Supported by a vast network of over 1,500 national and international partners - including chambers of commerce, private enterprises, universities, and development agencies across Asia, Europe, Africa, and the Middle East - the Alliance has built strong linkages that drive industrial advancement, enhance export competitiveness, and expand access to global markets.
+                                     <br /><br />
+                                     Through trade delegations, business forums, expos, and B2B initiatives, GBA highlights Gujranwala’s industrial strength on the global stage. It also leads capacity-building programs, knowledge partnerships, and industry–academia collaborations that drive innovation and entrepreneurship. By integrating business, knowledge, and international cooperation, GBA continues to position Gujranwala as a globally connected industrial hub contributing to Pakistan’s sustainable economic progress.
+                                </p>
+                            </div>
+                        </div> */}
+                        
+ <div className="col-lg-7 pl--100 pl_md--0 mt_md--80 pl_sm--0 mt_sm--80">
                             <div className="about-content-right-three">
                                 <p className="disc about-description-text">
                                     The Gujranwala Business Alliance (GBA) is a dynamic and forward-thinking business association representing the collective strength of over 500 member companies from across Gujranwala’s diverse industrial sectors. Dedicated to promoting international trade, fostering partnerships, and driving industrial advancement, GBA serves as a central platform for collaboration, policy dialogue, and global engagement. Representing Pakistan’s third-largest industrial city, home to more than 21,000 SMEs and industrial units, GBA works to strengthen Gujranwala’s position as a powerhouse of manufacturing, innovation, and export excellence. By connecting local enterprises with international markets, investors, and trade bodies, the Alliance plays a pivotal role in expanding Gujranwala’s economic footprint worldwide.
@@ -566,32 +752,33 @@ const AboutSection: React.FC = () => {
                                 </p>
                             </div>
                         </div>
+                
                     </div>
                 </div>
             </div>
 
-            {/* --- CONSOLIDATED STYLES --- */}
+            {/* --- STYLES (ONLY GAP FIXED) --- */}
             <style jsx global>{`
-                /* DESKTOP STYLES - Matches your original design exactly */
                 .watermark-about {
                     font-size: 150px;
                     font-weight: 900;
                     color: transparent;
                     -webkit-text-stroke: 1px #e0e0e0;
-                    line-height: 1;
                     opacity: 0.5;
                     position: absolute;
-                    z-index: 0;
-                    top: -50px;
-                    left: 0;
-                    width: 100%;
-                    text-align: left;
-                    display: block;
-                    padding-left: 15px;
+                    top: -60px;
                 }
 
+                /* ✅ FIX 1: Breadcrumb padding reduced */
+                .rts-breadcrumb-area.top-300 {
+                    padding-top: 120px !important; /* 🔽 was too large */
+                    padding-bottom: 50px !important;
+                    height: auto !important;
+                }
+
+                /* ✅ FIX 2: Overlap reduced */
                 .about-main-overlap {
-                    margin-top: -300px !important;
+                    margin-top: -160px !important; /* 🔽 was -300px */
                     position: relative;
                 }
 
@@ -600,55 +787,54 @@ const AboutSection: React.FC = () => {
                     margin-left: -20px;
                 }
 
-                .about-sub-label {
-                    font-size: 16px;
-                    margin-left: 10px;
-                      
-                }
-
-                .about-main-title {
-                    margin-top: -45px;
-                    font-weight: 800;
-                    font-size: 48px;
-                    line-height: 1.2;
-                }
-
                 .about-content-row {
                     margin-top: 100px;
                 }
 
-                .about-description-text {
-                    font-size: 15px;
-                    line-height: 1.6;
-                }
-
-                /* MOBILE RESPONSIVE STYLES */
+                /* MOBILE (unchanged, already correct) */
                 @media (max-width: 768px) {
                     .about-main-overlap {
                         margin-top: 0 !important;
-                        padding-left: 20px !important;
-                        padding-right: 20px !important;
                     }
 
-                    .about-heading-container {
-                        margin-left: 0 !important;
-                        margin-top: 0 !important;
+                    .rts-breadcrumb-area.top-300 {
+                        padding-top: 60px !important;
+                    }
+                }
+                    @media (max-width: 768px) {
+
+                    .rts-breadcrumb-area.top-300 {
+                        padding-top: 70px !important;
+                        padding-bottom: 30px !important;
                     }
 
                     .watermark-about {
                         font-size: 60px !important;
                         top: -20px !important;
-                        opacity: 0.80;
+                        opacity: 0.25;
                     }
 
-                    .about-main-title {
-                        font-size: 32px !important;
-                        margin-top: -10 !important;
+                    .about-main-overlap {
+                        margin-top: 0 !important;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+
+                    .about-heading-container {
+                        margin-top: 0 !important;
+                        margin-left: 0 !important;
+                        text-align: left;
                     }
 
                     .about-sub-label {
-                        margin-left: 0 !important;
-                        margin-top: 10px !important;
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+
+                    .about-main-title {
+                        font-size: 30px;
+                        line-height: 1.25;
+                        margin-top: 0;
                     }
 
                     .about-content-row {
@@ -656,17 +842,26 @@ const AboutSection: React.FC = () => {
                     }
 
                     .about-description-text {
-                        font-size: 14px !important;
+                        font-size: 14px;
+                        line-height: 1.7;
                     }
 
-                    .rts-breadcrumb-area.top-300 {
-                        padding-top: 60px !important;
-                        height: auto !important;
+                    .main-thumnal-inner-about-three {
+                        margin-bottom: 30px;
                     }
                 }
             `}</style>
+           
+            
+            
         </>
     );
 };
 
 export default AboutSection;
+
+
+
+
+
+

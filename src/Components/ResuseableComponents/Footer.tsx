@@ -402,9 +402,23 @@ const Footer: React.FC = () => {
                 <div className="row">
                     <div className="col-lg-3 col-md-12">
                         <div className="footer-logo-area-left-8">
-                            <Link href="/" className="logo">
+                            {/* <Link href="/" className="logo">
                                 <Image src={footerData.logoSrc} alt="logo" width={120} height={50} priority />
-                            </Link>
+                            </Link> */}
+                            <Link href="/" style={{ width: '100%', display: 'block', maxWidth: '150px' }}>
+            <Image 
+                src={footerData.logoSrc} 
+                alt="logo" 
+                width={150}      // Aapke Header logic ke mutabiq
+                height={60}      // Aapke Header logic ke mutabiq
+                priority 
+                style={{ 
+                    width: '100%', 
+                    height: 'auto', 
+                    objectFit: 'contain' // Logo stretch hone se bachega
+                }} 
+            />
+        </Link>
                             <p className="disc">{footerData.description}</p>
                             <ul className="social-area-wrapper-two">
                                 {footerData.socialLinks.map((social, idx) => (

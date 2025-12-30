@@ -799,6 +799,58 @@ const FocusPage = () => {
                         font-size: 30px !important;
                     }
                 }
+                    /* ===============================
+   MOBILE RESPONSIVE HEADING FIX
+   =============================== */
+@media (max-width: 768px) {
+    /* 1. Main Section Heading (Our Focus) */
+    .focus-main-title {
+        font-size: clamp(32px, 8vw, 40px) !important; /* Dynamically scales between 32px and 40px */
+        margin-left: 15px !important;
+        line-height: 1.2 !important;
+        letter-spacing: -1px;
+    }
+
+    /* 2. Content Item Heading (Made In Gujranwala Promotion) */
+    .focus-text-heading h2 {
+        font-size: clamp(26px, 7vw, 32px) !important; /* Shrinks smoothly on small phones */
+        line-height: 1.2 !important;
+        margin-bottom: 10px !important;
+        text-align: left;
+    }
+
+    /* 3. Sub-label (Enabling Growth) */
+    .focus-sub-label {
+        font-size: 14px !important;
+        margin-left: 15px !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* 4. Description Text */
+    .focus-description {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        text-align: justify; /* Optional: cleaner look on mobile */
+    }
+
+    /* 5. Accent Text (The bold subtitle) */
+    .focus-accent-text {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+        display: block; /* Ensures it stays on its own block */
+    }
+
+    /* 6. Fix for very small screens (iPhone SE / etc) */
+    @media (max-width: 400px) {
+        .focus-main-title {
+            font-size: 28px !important;
+        }
+        .focus-text-heading h2 {
+            font-size: 24px !important;
+        }
+    }
+}
             `}</style>
         </React.Fragment>
     );
