@@ -1097,7 +1097,32 @@ const ServicesTemplate: React.FC<ServicesTemplateProps> = ({ data, activePath })
                     </div>
                 </div>
             </div>
+            <style jsx global>{`
+  /* ===============================
+     MOBILE VIEW SPACING FIXES
+     =============================== */
 
+  @media (max-width: 991px) {
+    /* 1. Create gap between Main Content and Sidebar */
+    .mt-service-shorter {
+      margin-top: 50px !important;
+      padding-top: 20px !important;
+    }
+
+   
+
+    
+
+
+  /* Extra Small Devices */
+  @media (max-width: 576px) {
+    .mt-service-shorter {
+      margin-top: 40px !important;
+    }
+    
+    
+  }
+`}</style>
             {/* Service Details Main Area */}
             <div className="rts-service-details-area-main-bottom">
                 <div className="container">
