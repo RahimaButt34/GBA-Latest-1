@@ -358,44 +358,99 @@ const HomeSections = () => {
     padding: 5px 0;
     display: block;
 }
+/* ===== WATERMARK 01 - ABOUT GBA (Desktop) ===== */
+.rts-about-area .rts-watermark-01 {
+    font-size: 150px !important;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px #f5f0f0ff !important;
+    opacity: 0.3 !important;
+    z-index: 0;
+    line-height: 1;
+    padding: 5px 0;
+}
 
-/* ===== MOBILE OVERRIDES ===== */
+/* ===== WATERMARK 02 - OUR FOCUS (Desktop) ===== */
+.working-process-area-three .rts-watermark-02 {
+    font-size: 150px !important;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px #f5f0f0ff !important;
+    opacity: 0.8 !important;
+    z-index: 0;
+    line-height: 1;
+    padding: 5px 0;
+}
+
+/* ===== MOBILE SIZES (SAME AS EVENTS) ===== */
 @media (max-width: 768px) {
-    /* Watermark 01 */
-    .rts-about-area .rts-watermark-01 {
+    .rts-about-area .rts-watermark-01,
+    .working-process-area-three .rts-watermark-02 {
         font-size: 80px !important;
-        top: 5% !important;
-        left: 5% !important;
-        transform: translate(0%, 0%) !important;
         opacity: 0.6 !important;
         -webkit-text-stroke: 2px #f5f0f0ff !important;
     }
-
-    /* Watermark 02 for Mobile */
-@media (max-width: 768px) {
-    .working-process-area-three .rts-watermark-02 {
-        font-size: 80px !important;
-        opacity: 0.6 !important;
-        -webkit-text-stroke: 2px #dad7d7ff !important;
-        
-        /* Neeche laane ke liye ye lines add karein */
-        position: absolute;
-        top: 0px !important; /* Is value ko barha dein (e.g., 30px or 40px) agar mazeed neeche lana ho */
-        left: 50% !important;
-        transform: translateX(-50%) !important; 
-        display: block;
-    }
-}
 }
 
 @media (max-width: 480px) {
-    .rts-about-area .rts-watermark-01 {
-        font-size: 80px !important;
-    }
+    .rts-about-area .rts-watermark-01,
     .working-process-area-three .rts-watermark-02 {
         font-size: 80px !important;
     }
 }
+  /* ===================================== */
+/* MOBILE VIEW FIX FOR WATERMARK 02      */
+/* ===================================== */
+@media (max-width: 768px) {
+  /* 1. Section boundary fix */
+  .working-process-area-three {
+    margin: 40px 15px !important; /* Mobile margin adjust */
+    padding-top: 60px !important; /* Top padding taaki 02 piche chupa na rahe */
+    overflow: hidden !important;   /* Boundary: Watermark bahar nahi jayega */
+    position: relative;
+  }
+
+  /* 2. Watermark 02 Position & Look */
+  .working-process-area-three .rts-watermark-02 {
+    font-size: 80px !important;    /* Size reduced for mobile */
+    top: 10% !important;           /* 0% se thoda niche kiya taaki section ke upar na nikal jaye */
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important; /* Perfect Center */
+    opacity: 0.5 !important;
+    -webkit-text-stroke: 2px #dad7d7ff !important;
+    z-index: 0 !important;
+    white-space: nowrap;
+  }
+
+  /* 3. Text adjustment to prevent overlap */
+  .working-process-area-three .title-style-three.center {
+    position: relative;
+    z-index: 2; /* Text hamesha watermark ke upar rahega */
+  }
+
+  .working-process-area-three .title-style-three .title {
+    font-size: 32px !important; /* Heading size adjustment */
+  }
+}
+
+/* Extra small phones fix */
+@media (max-width: 480px) {
+  .working-process-area-three .rts-watermark-02 {
+    font-size: 70px !important;
+    top: 8% !important;
+  }
+}
+
+
+
+}
+
+
+
+
+
 
                 `}
             </style>

@@ -3848,7 +3848,7 @@ const ServiceProjects = () => {
       <style jsx global>{`
         .bg-title.watermark-service {
           position: absolute;
-          top: 5% !important;
+          top: -10% !important;
           left: 50% !important;
           transform: translate(-50%, -50%) !important;
           font-size: 150px;
@@ -3942,7 +3942,7 @@ const ServiceProjects = () => {
         }
 
         @media (max-width: 768px) {
-          .bg-title.watermark-service { font-size: 80px !important; top: 15% !important; opacity:0.8 }
+          .bg-title.watermark-service { font-size: 80px !important; top: 0% !important; opacity:0.9 }
           .title-style-three .title { font-size: 28px !important; }
           .swiper-controls-container { margin-top: 40px !important; gap: 20px; }
           .swiper-button-prev-custom, .swiper-button-next-custom { width: 45px; height: 45px; }
