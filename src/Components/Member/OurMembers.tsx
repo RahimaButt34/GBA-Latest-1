@@ -244,6 +244,122 @@ const OurMembers = () => {
     max-width: 720px;
     grid-template-columns: repeat(2, 1fr);
   }
+    @media (max-width: 1400px) {
+  .brand-table { max-width: 1140px; }
+}
+
+@media (max-width: 1200px) {
+  .brand-table { max-width: 960px; }
+}
+
+@media (max-width: 992px) {
+  .brand-table {
+    max-width: 720px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+  @media (max-width: 992px) {
+.brand-item img {
+          width: 120px;
+          height: auto;
+          object-fit: contain;
+        }
+          /* ===== Brand Logo Responsive Fix ===== */
+
+.brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+
+.brand-item img {
+  width: 140px;        /* desktop default */
+  max-width: 100%;    /* never overflow */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .brand-item {
+    padding: 40px;
+  }
+
+  .brand-item img {
+    width: 120px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .brand-item {
+    padding: 28px;
+  }
+
+  .brand-item img {
+    width: 95px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .brand-item {
+    padding: 24px;
+  }
+
+  .brand-item img {
+    width: 110px; /* thora bada taake empty feel na ho */
+  }
+}
+
+/* ===== Brand Logo Responsive Fix ===== */
+
+.brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+
+.brand-item img {
+  width: 140px;        /* desktop default */
+  max-width: 100%;    /* never overflow */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .brand-item {
+    padding: 40px;
+  }
+
+  .brand-item img {
+    width: 120px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .brand-item {
+    padding: 28px;
+  }
+
+  .brand-item img {
+    width: 95px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .brand-item {
+    padding: 24px;
+  }
+
+  .brand-item img {
+    width: 110px; /* thora bada taake empty feel na ho */
+  }
 }
 
       `}</style>
