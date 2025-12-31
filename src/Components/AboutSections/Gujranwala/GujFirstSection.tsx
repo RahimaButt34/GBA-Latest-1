@@ -588,8 +588,8 @@ const GujranwalaAbout = () => {
           }
 
           .rts-breadcrumb-area {
-            padding-top: 60px !important;
-            padding-bottom: 30px !important;
+            padding-top: 90px !important;
+            padding-bottom: 10px !important;
             height: auto !important;
           }
         }
