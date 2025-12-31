@@ -4129,14 +4129,25 @@ const ServiceProjects = () => {
           margin-left: 10px;
         }
 
+        // .swiper-controls-container {
+        //   display: flex;
+        //   align-items: center;
+        //   justify-content: center;
+        //   gap: 40px;
+        //   margin-top: 60px;
+        //   width: 100%;
+        // }
         .swiper-controls-container {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 40px;
-          margin-top: 60px;
-          width: 100%;
-        }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  /* margin-top: 60px;  <-- Isko hatayen ya change karein */
+  margin-top: -50px;    /* Isse ye slides ke upar move ho jayega */
+  position: relative;
+  z-index: 10;          /* Taake buttons click hote rahein */
+  width: 100%;
+}
 
         .swiper-button-prev-custom,
         .swiper-button-next-custom {

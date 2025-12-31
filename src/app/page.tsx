@@ -84,6 +84,13 @@ export default function Home() {
             z-index: 5;
             background-color: white; /* Prevents overlap transparency */
           }
+            .desktop-pull-up2 {
+            margin-top: -90px !important;
+            padding-bottom:80px;
+            position: relative;
+            z-index: 5;
+            background-color: white; /* Prevents overlap transparency */
+          }
           
           .final-pull-up {
             margin-top: -40px !important;
@@ -105,7 +112,7 @@ export default function Home() {
         </section>
 
         {/* SECTION 2 - Desktop Pushed Up, Mobile Normal */}
-        <div className="desktop-pull-up">
+        <div className="desktop-pull-up2">
           <ServicesSection />
         </div>
 
