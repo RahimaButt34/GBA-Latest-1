@@ -3725,6 +3725,258 @@
 
 
 
+// 'use client';
+
+// import React, { useState } from 'react';
+// import Link from 'next/link';
+// import Image from 'next/image';
+
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Navigation, Pagination } from 'swiper/modules';
+
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+
+// const services = [
+//   { title: 'Global Reach', img: '/images/about/Global Reach.jpg', link: '/services/global-reach' },
+//   { title: 'Business Delegations', img: '/images/about/Business Delegations.jpg', link: '/services/business-deligation' },
+//   { title: 'Pakistan Products House', img: '/images/about/Pakistan Products House.jpg', link: '/services/pakistan-products' },
+//   { title: 'Trade Shows & Expos', img: '/images/about/Trade Shows & Expos.jpg', link: '/services/trade-shows' },
+//   { title: 'Industry Academia Linkages', img: '/images/about/Industry Academia.jpg', link: '/services/industry-academia' },
+//   { title: 'Global Growth Windows', img: '/images/about/Global Growth Windows.jpg', link: '/services/global-growth' },
+//   { title: 'International Tech Gateways', img: '/images/about/International Tech.jpg', link: '/services/international-tech' },
+//   { title: 'Leadership Incubation & Mentorship', img: '/images/about/Leadership Incubation.jpg', link: '/services/leadership-incubation' },
+//   { title: 'Business Events', img: '/images/about/Business Events.jpg', link: '/services/business-events' },
+//   { title: 'Women Empowerment', img: '/images/about/Women Empowerment.jpg', link: '/services/women-empowerment' },
+//   { title: 'BRI Centre', img: '/images/about/BRI Centre.jpg', link: '/services/bri-centre' },
+//   { title: 'Capacity Building & Research', img: '/images/about/Capacity Building.jpg', link: '/services/capacity-building' },
+//   { title: 'Global Trade Facilitation Desks', img: '/images/about/Global Trade Facilitation.jpg', link: '/services/global-trade' },
+//   { title: 'Community Development', img: '/images/about/Community Development.jpg', link: '/services/community-development' },
+// ];
+
+// const ServiceProjects = () => {
+//   const [activeSlide, setActiveSlide] = useState(1);
+
+//   return (
+//     <>
+//       <div className="rts-section-gap">
+//         <div className="container">
+//           <div className="row">
+//             <div className="col-lg-12">
+//               <div className="title-style-three center">
+//                 <span className="pre">Shaping a Global Future</span>
+//                 <div className="bg-title watermark-service">03</div>
+//                 <h2 className="title">
+//                   <span className="solid-text">OUR</span>
+//                   <span className="outline-text">SERVICES</span>
+//                 </h2>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="container-1680 mt--40">
+//           <div className="row">
+//             <div className="col-lg-12">
+//               <div className="case-studies-wrapper-main-5">
+//                 <Swiper
+//                   modules={[Navigation]}
+//                   onSlideChange={(swiper) => setActiveSlide(swiper.realIndex + 1)}
+//                   navigation={{
+//                     prevEl: '.swiper-button-prev-custom',
+//                     nextEl: '.swiper-button-next-custom',
+//                   }}
+//                   loop={true}
+//                   spaceBetween={30}
+//                   slidesPerView={1}
+//                   breakpoints={{
+//                     576: { slidesPerView: 2 },
+//                     992: { slidesPerView: 3 },
+//                     1600: { slidesPerView: 4 },
+//                   }}
+//                   className="mySwiper-case-studies-5"
+//                 >
+//                   {services.map((item, index) => (
+//                     <SwiperSlide key={index}>
+//                       <div className="single-case-studies-four">
+//                         <Link href={item.link} className="thumbnail">
+//                           <Image
+//                             src={item.img}
+//                             alt={item.title}
+//                             width={400}
+//                             height={300}
+//                             style={{ width: '100%', height: 'auto' }}
+//                           />
+//                         </Link>
+//                         <div className="inner">
+//                           <Link href={item.link}>
+//                             <h3 className="title">{item.title}</h3>
+//                           </Link>
+//                         </div>
+//                       </div>
+//                     </SwiperSlide>
+//                   ))}
+//                 </Swiper>
+
+//                 {/* UPDATED: Cleaned Controls Container */}
+//                 <div className="swiper-controls-container">
+//                   <button className="swiper-button-prev-custom" aria-label="Previous slide">
+//                     <i className="far fa-arrow-left"></i>
+//                   </button>
+
+//                   <div className="swiper-pagination-fraction-custom">
+//                     <span className="swiper-pagination-current">
+//                       {activeSlide.toString().padStart(2, '0')}
+//                     </span>
+//                     <span className="separator">/</span>
+//                     <span className="swiper-pagination-total">
+//                       {services.length.toString().padStart(2, '0')}
+//                     </span>
+//                   </div>
+
+//                   <button className="swiper-button-next-custom" aria-label="Next slide">
+//                     <i className="far fa-arrow-right"></i>
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <style jsx global>{`
+//         .bg-title.watermark-service {
+//           position: absolute;
+//           top: -10% !important;
+//           left: 50% !important;
+//           transform: translate(-50%, -50%) !important;
+//           font-size: 150px;
+//           font-weight: 900;
+//           color: transparent;
+//           -webkit-text-fill-color: transparent;
+//           -webkit-text-stroke: 3px #f5f0f0ff;
+//           opacity: 0.8;
+//           z-index: 0;
+//           line-height: 1;
+//            padding: 5px 0;
+//         }
+
+
+//         .title-style-three .title {
+//           font-size: 60px;
+//           font-weight: 900;
+//           text-transform: uppercase;
+//           display: inline-block;
+//           margin: 0;
+//         }
+
+//         .title-style-three .solid-text { color: #0d1c2e; }
+//         .title-style-three .outline-text {
+//           color: transparent;
+//           -webkit-text-stroke: 1.5px #0d1c2e;
+//           text-stroke: 1.5px #0d1c2e;
+//           margin-left: 10px;
+//         }
+
+//         /* FIXED STYLING FOR CONTROLS */
+//         .swiper-controls-container {
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           gap: 40px; /* Distance between buttons and counter */
+//           margin-top: 60px;
+//           width: 100%;
+//         }
+
+//         .swiper-button-prev-custom,
+//         .swiper-button-next-custom {
+//           width: 50px;
+//           height: 50px;
+//           background: #ffffff;
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           border-radius: 8px;
+//           cursor: pointer;
+//           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+//           transition: all 0.3s ease;
+//           color: #0d1c2e;
+//           border: none;
+//           padding: 0;
+//         }
+
+//         .swiper-button-prev-custom:hover,
+//         .swiper-button-next-custom:hover {
+//           background: #0d1c2e;
+//           color: #fff;
+//         }
+
+//         .swiper-pagination-fraction-custom {
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           gap: 12px;
+//           font-size: 22px;
+//           font-family: inherit;
+//           min-width: 100px; /* Ensures counter doesn't jump when numbers change */
+//         }
+
+//         .swiper-pagination-current {
+//           font-weight: 800;
+//           color: #0d1c2e;
+//           min-width: 25px;
+//           text-align: right;
+//         }
+
+//         .separator {
+//           color: #6d767e;
+//           opacity: 0.5;
+//           font-weight: 300;
+//         }
+
+//         .swiper-pagination-total {
+//           color: #6d767e;
+//           font-weight: 400;
+//           min-width: 25px;
+//           text-align: left;
+//         }
+          
+
+//         @media (max-width: 768px) {
+//           .bg-title.watermark-service { font-size: 80px !important; top: 0% !important; opacity:0.8,z-index: 0 !important;
+//     line-height: 1 !important; }
+//           .title-style-three .title { font-size: 28px !important; }
+//           .swiper-controls-container { margin-top: 40px !important; gap: 20px; }
+//           .swiper-button-prev-custom, .swiper-button-next-custom { width: 45px; height: 45px; }
+//           .swiper-pagination-fraction-custom { font-size: 18px; min-width: 80px; }
+//         }
+
+//         /* Mobile Specific Adjustments */
+// @media (max-width: 768px) {
+//   .swiper-controls-container {
+//     /* Pulls it up even more on mobile to avoid long empty spaces */ 
+//     margin-top: -40px; 
+//     gap: 20px;
+//     padding-bottom: 30px;
+//   }
+  
+//   .rts-section-gap {
+//     padding-bottom: 40px !important;
+//   }
+
+//   .swiper-pagination-fraction-custom {
+//     font-size: 18px;
+//   }
+    
+//       `}</style>
+//     </>
+//   );
+// };
+
+// export default ServiceProjects;
+
+
 'use client';
 
 import React, { useState } from 'react';
@@ -3764,10 +4016,10 @@ const ServiceProjects = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className="title-style-three center">
-                <span className="pre">Shaping a Global Future</span>
+              <div className="title-style-three center" style={{ position: 'relative' }}>
+                <span className="pre" style={{ position: 'relative', zIndex: '2' }}>Shaping a Global Future</span>
                 <div className="bg-title watermark-service">03</div>
-                <h2 className="title">
+                <h2 className="title" style={{ position: 'relative', zIndex: '2' }}>
                   <span className="solid-text">OUR</span>
                   <span className="outline-text">SERVICES</span>
                 </h2>
@@ -3819,7 +4071,6 @@ const ServiceProjects = () => {
                   ))}
                 </Swiper>
 
-                {/* UPDATED: Cleaned Controls Container */}
                 <div className="swiper-controls-container">
                   <button className="swiper-button-prev-custom" aria-label="Previous slide">
                     <i className="far fa-arrow-left"></i>
@@ -3848,7 +4099,7 @@ const ServiceProjects = () => {
       <style jsx global>{`
         .bg-title.watermark-service {
           position: absolute;
-          top: -10% !important;
+          top: 0% !important;
           left: 50% !important;
           transform: translate(-50%, -50%) !important;
           font-size: 150px;
@@ -3857,11 +4108,10 @@ const ServiceProjects = () => {
           -webkit-text-fill-color: transparent;
           -webkit-text-stroke: 3px #f5f0f0ff;
           opacity: 0.8;
-          z-index: 0;
+          z-index: 1; /* Sits behind the text which is z-index 2 */
           line-height: 1;
-           padding: 5px 0;
+          pointer-events: none; /* Ensures it doesn't interfere with clicks */
         }
-
 
         .title-style-three .title {
           font-size: 60px;
@@ -3879,12 +4129,11 @@ const ServiceProjects = () => {
           margin-left: 10px;
         }
 
-        /* FIXED STYLING FOR CONTROLS */
         .swiper-controls-container {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 40px; /* Distance between buttons and counter */
+          gap: 40px;
           margin-top: 60px;
           width: 100%;
         }
@@ -3903,13 +4152,6 @@ const ServiceProjects = () => {
           transition: all 0.3s ease;
           color: #0d1c2e;
           border: none;
-          padding: 0;
-        }
-
-        .swiper-button-prev-custom:hover,
-        .swiper-button-next-custom:hover {
-          background: #0d1c2e;
-          color: #fff;
         }
 
         .swiper-pagination-fraction-custom {
@@ -3918,57 +4160,17 @@ const ServiceProjects = () => {
           justify-content: center;
           gap: 12px;
           font-size: 22px;
-          font-family: inherit;
-          min-width: 100px; /* Ensures counter doesn't jump when numbers change */
+          min-width: 100px;
         }
-
-        .swiper-pagination-current {
-          font-weight: 800;
-          color: #0d1c2e;
-          min-width: 25px;
-          text-align: right;
-        }
-
-        .separator {
-          color: #6d767e;
-          opacity: 0.5;
-          font-weight: 300;
-        }
-
-        .swiper-pagination-total {
-          color: #6d767e;
-          font-weight: 400;
-          min-width: 25px;
-          text-align: left;
-        }
-          
 
         @media (max-width: 768px) {
-          .bg-title.watermark-service { font-size: 80px !important; top: 0% !important; opacity:0.8,z-index: 0 !important;
-    line-height: 1 !important; }
+          .bg-title.watermark-service { 
+            font-size: 80px !important; 
+            top: 0% !important; 
+          }
           .title-style-three .title { font-size: 28px !important; }
-          .swiper-controls-container { margin-top: 40px !important; gap: 20px; }
-          .swiper-button-prev-custom, .swiper-button-next-custom { width: 45px; height: 45px; }
-          .swiper-pagination-fraction-custom { font-size: 18px; min-width: 80px; }
+          .swiper-controls-container { margin-top: -40px; gap: 20px; padding-bottom: 30px; }
         }
-
-        /* Mobile Specific Adjustments */
-@media (max-width: 768px) {
-  .swiper-controls-container {
-    /* Pulls it up even more on mobile to avoid long empty spaces */ 
-    margin-top: -40px; 
-    gap: 20px;
-    padding-bottom: 30px;
-  }
-  
-  .rts-section-gap {
-    padding-bottom: 40px !important;
-  }
-
-  .swiper-pagination-fraction-custom {
-    font-size: 18px;
-  }
-    
       `}</style>
     </>
   );
