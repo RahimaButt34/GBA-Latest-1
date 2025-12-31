@@ -2,7 +2,7 @@
 // import React from 'react';
 
 // const GujranwalaIndustries = () => {
-    
+
 //     const iconPath = '/images/logo/logos.png'; // Assuming a single icon for all items
 
 //     const industryColumns = [
@@ -97,7 +97,7 @@
 //                 .industry-list img {
 //                     width: 20px; /* Icon size */
 //                 }
-                
+
 //                 /* Mobile Fixes */
 //                 @media (max-width: 768px) {
 //                     /* 2. Also ensure the solid part of the text is reduced in size */
@@ -187,7 +187,7 @@
 import React from 'react';
 
 const GujranwalaIndustries = () => {
-    
+
     const iconPath = '/images/logo/logos.png'; // Assuming a single icon for all items
 
     const industryColumns = [
@@ -349,17 +349,17 @@ const GujranwalaIndustries = () => {
             {/* ---------------------------------------------------------------------- */}
             {/* 2. WORKING PROCESS SECTION (Industries of Gujranwala) */}
             {/* ---------------------------------------------------------------------- */}
-            <div 
-                className="working-process-area-three rts-section-gap working-process-bg" 
+            <div
+                className="working-process-area-three rts-section-gap working-process-bg"
                 // Removed the style prop to allow background styles from the CSS block to take effect, 
                 // and to prevent style conflicts unless they are essential margin/padding.
                 // Keeping essential spacing for layout
-                style={{ 
-                    alignItems: 'center', 
-                    marginTop: '120px', 
-                    marginBottom: '120px', 
+                style={{
+                    alignItems: 'center',
+                    marginTop: '120px',
+                    marginBottom: '120px',
                     // Keeping these margins as they are present in your original code
-                    marginLeft: '60px', 
+                    marginLeft: '60px',
                     marginRight: '60px',
                     // Adding min-height or min-width might be necessary if the background relies on viewport size
                     // minHeight: '100vh', 
@@ -374,8 +374,8 @@ const GujranwalaIndustries = () => {
                                 <span className="outline-text">Gujranwala</span>
                             </h2>
                             <p style={{ fontSize: '15px', lineHeight: '1.6' }} className="max-w-3xl mx-auto">
-                                From engineering goods and ceramics to home appliances and textiles, Gujranwala’s industries represent a diverse and rapidly expanding 
-                                <br/> 
+                                From engineering goods and ceramics to home appliances and textiles, Gujranwala’s industries represent a diverse and rapidly expanding
+                                <br />
                                 manufacturing base that drives both domestic growth and international trade
                             </p>
                         </div>
@@ -403,27 +403,27 @@ const GujranwalaIndustries = () => {
                     </div> */}
 
                     {/* Industry List Columns */}
-<div 
-    className="row justify-content-center mt-5 pt-10" 
-    style={{ display: 'flex', justifyContent: 'center', width: '100%' }}
->
-    {industryColumns.map((column, colIndex) => (
-        <div 
-            key={colIndex} 
-            className="col-lg-3 col-md-6 mb-4" // Changed col-lg-4 to col-lg-3 for tighter centering
-            style={{ display: 'flex', justifyContent: 'center' }}
-        >
-            <ul className="industry-list">
-                {column.map((industry, itemIndex) => (
-                    <li key={itemIndex}>
-                        <img src={iconPath} alt="" />
-                        {industry}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    ))}
-</div>
+                    <div
+                        className="row justify-content-center mt-5 pt-10"
+                        style={{ display: 'flex', justifyContent: 'center', width: '100%' }}
+                    >
+                        {industryColumns.map((column, colIndex) => (
+                            <div
+                                key={colIndex}
+                                className="col-lg-3 col-md-6 mb-4" // Changed col-lg-4 to col-lg-3 for tighter centering
+                                style={{ display: 'flex', justifyContent: 'center' }}
+                            >
+                                <ul className="industry-list">
+                                    {column.map((industry, itemIndex) => (
+                                        <li key={itemIndex}>
+                                            <img src={iconPath} alt="" />
+                                            {industry}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </>
