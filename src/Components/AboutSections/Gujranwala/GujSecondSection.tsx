@@ -333,6 +333,16 @@ const GujranwalaIndustries = () => {
                     /* The original style is likely in an external CSS file, 
                        so I'll try to override the most common issues.
                     */
+                   .row.justify-content-center {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap;
+}
+
+.industry-list {
+    margin: 0 auto; /* Centers the list inside the column */
+    width: fit-content;
+}
                 }
             `}</style>
 
@@ -372,7 +382,7 @@ const GujranwalaIndustries = () => {
                     </div>
 
                     {/* Industry List Columns */}
-                    <div className="row justify-content-center mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-10">
+                    {/* <div className="row justify-content-center mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-10">
                         {industryColumns.map((column, colIndex) => (
                             <div 
                                 key={colIndex} 
@@ -390,7 +400,30 @@ const GujranwalaIndustries = () => {
                                 </ul>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
+
+                    {/* Industry List Columns */}
+<div 
+    className="row justify-content-center mt-5 pt-10" 
+    style={{ display: 'flex', justifyContent: 'center', width: '100%' }}
+>
+    {industryColumns.map((column, colIndex) => (
+        <div 
+            key={colIndex} 
+            className="col-lg-3 col-md-6 mb-4" // Changed col-lg-4 to col-lg-3 for tighter centering
+            style={{ display: 'flex', justifyContent: 'center' }}
+        >
+            <ul className="industry-list">
+                {column.map((industry, itemIndex) => (
+                    <li key={itemIndex}>
+                        <img src={iconPath} alt="" />
+                        {industry}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    ))}
+</div>
                 </div>
             </div>
         </>

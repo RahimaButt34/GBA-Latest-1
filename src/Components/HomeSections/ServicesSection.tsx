@@ -3856,11 +3856,12 @@ const ServiceProjects = () => {
           color: transparent;
           -webkit-text-fill-color: transparent;
           -webkit-text-stroke: 3px #f5f0f0ff;
-          opacity: 0.3;
+          opacity: 0.8;
           z-index: 0;
           line-height: 1;
-          display: block;
+           padding: 5px 0;
         }
+
 
         .title-style-three .title {
           font-size: 60px;
@@ -3940,9 +3941,11 @@ const ServiceProjects = () => {
           min-width: 25px;
           text-align: left;
         }
+          
 
         @media (max-width: 768px) {
-          .bg-title.watermark-service { font-size: 80px !important; top: 0% !important; opacity:0.9 }
+          .bg-title.watermark-service { font-size: 80px !important; top: 0% !important; opacity:0.8,z-index: 0 !important;
+    line-height: 1 !important; }
           .title-style-three .title { font-size: 28px !important; }
           .swiper-controls-container { margin-top: 40px !important; gap: 20px; }
           .swiper-button-prev-custom, .swiper-button-next-custom { width: 45px; height: 45px; }
@@ -3952,7 +3955,7 @@ const ServiceProjects = () => {
         /* Mobile Specific Adjustments */
 @media (max-width: 768px) {
   .swiper-controls-container {
-    /* Pulls it up even more on mobile to avoid long empty spaces */
+    /* Pulls it up even more on mobile to avoid long empty spaces */ 
     margin-top: -40px; 
     gap: 20px;
     padding-bottom: 30px;

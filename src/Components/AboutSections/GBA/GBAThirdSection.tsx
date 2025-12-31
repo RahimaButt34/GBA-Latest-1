@@ -28,6 +28,67 @@ const JoinGBASection: React.FC = () => {
                   the global CSS file (src/app/globals.css) to ensure the 
                   media queries work correctly with the global classes.
                 */}
+                <style jsx global>{`
+/* ✅ Mobile View Styling for "Why Join GBA?" Section */
+
+@media (max-width: 768px) {
+
+    /* Watermark "Why" - Font chhota aur right side pe */
+    .title-style-two .bg-content {
+        font-size: 70px !important; /* Chhota font */
+        right: 10px !important; /* Right side pe move */
+        left: auto !important;
+        top: 5px !important;
+        opacity: 0.3 !important;
+    }
+
+    /* "Choose" text - Thora left aur niche */
+    .title-style-two .pre {
+        font-size: 13px !important;
+        margin-left: 5px !important;
+        margin-bottom: 8px !important;
+        display: block;
+    }
+
+    /* "Why Join GBA?" heading - Thora left aur niche */
+    .title-style-two .title {
+        font-size: 32px !important; /* Mobile ke liye chhota */
+        margin-left: 5px !important;
+        margin-top: 5px !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Image mobile pe proper */
+    .left-thumbnail img {
+        width: 100% !important;
+        border-radius: 12px !important;
+    }
+
+    /* Description text mobile pe readable */
+    .right-content-testimonials .disc {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        margin-top: 20px !important;
+    }
+}
+
+/* Extra small screens - 480px se kam */
+@media (max-width: 480px) {
+
+    .title-style-two .bg-content {
+        font-size: 60px !important;
+        right: 5px !important;
+    }
+
+    .title-style-two .title {
+        font-size: 28px !important;
+    }
+
+    .right-content-testimonials .disc {
+        font-size: 14px !important;
+    }
+}
+`}</style>
 
                 <div className="row">
                     <div className="col-lg-12">
@@ -68,6 +129,7 @@ const JoinGBASection: React.FC = () => {
                 </div>
             </div>
         </div>
+        
     );
 }
 

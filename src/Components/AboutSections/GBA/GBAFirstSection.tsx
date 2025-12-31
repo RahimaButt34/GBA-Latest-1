@@ -850,6 +850,44 @@ const AboutSection: React.FC = () => {
                         margin-bottom: 30px;
                     }
                 }
+                    /* Watermark ko thora upar set karne ke liye */
+.watermark-about {
+    font-size: 150px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px #e0e0e0;
+    opacity: 0.5;
+    position: absolute;
+    top: -80px; /* Isay -60px se -80px kar dein */
+    left: 0;
+    z-index: 0;
+}
+
+/* "About GBA" text ki alignment */
+.about-sub-label {
+    margin-top: 60px !important; /* Isse text niche watermark ke darmiyan ayega */
+    margin-bottom: 0px !important; /* Heading ke kareeb karne ke liye */
+    display: block;
+    position: relative;
+    z-index: 1;
+    color: #666;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* Main Heading ki alignment */
+.about-main-title {
+    margin-top: 5px !important; /* Heading aur sub-label ka gap khatam karne ke liye */
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+/* Container ki overall position */
+.about-heading-container {
+    margin-top: -120px !important; 
+    margin-left: 0px; /* Left alignment check karein */
+    position: relative;
+}
             `}</style>
            
             

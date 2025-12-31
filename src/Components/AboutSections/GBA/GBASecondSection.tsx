@@ -257,37 +257,64 @@ import Image from 'next/image';
 const MissionVisionSection = () => {
     
     const customStyles = `
-        /* --- Desktop & Global Styling (Moved from Inline) --- */
+       /* --- Desktop & Global Styling --- */
+       
         .gba-mission-vision-section {
             margin-top: -110px;
         }
-        .gba-container-padding {
-            padding-top: 40px;
-        }
-        .gba-pre-title {
-            font-size: 16px;
-        }
-        .gba-watermark-main {
-            margin-top: -40px; 
-            font-size: 100px;
-            white-space: nowrap; /* Prevents cutoff */
-        }
-        .gba-heading-main {
-            font-size: 48px;
-        }
-        .gba-description-text {
-            font-size: 15px;
-        }
-        .gba-image-wrapper {
-            margin-top: 100px;
-        }
-        .gba-rounded-img {
-            border-radius: 10px;
+
+        /* Container ko relative rakhna zaroori hai watermark ke liye */
+        .title-style-three.left {
+            position: relative;
+            padding-top: 50px; /* Space for watermark visibility */
+            margin-bottom: 25px !important;
         }
 
-        /* --- Global existing styles preservation --- */
-        .rts-about-area + .rts-about-area {
-            margin-top: -30px !important; 
+        .gba-pre-title {
+            font-size: 16px;
+            position: relative;
+            z-index: 2;
+            display: block;
+            margin-bottom: 0px;
+        }
+
+        /* ✅ WATERMARK: Absolute positioning for exact overlap */
+        .gba-watermark-main {
+            position: absolute;
+            top: -10px;      /* Image 1 ke mutabiq position */
+            left: -5px;      /* Thora left align */
+            font-size: 80px; /* Bara size jaisa pic mein hai */
+            line-height: 1;
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 1px #ececec; /* Light outline */
+            opacity: 0.6;
+            z-index: 0;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        /* ✅ HEADING: Watermark ke upar aur thora niche */
+        .gba-heading-main {
+            font-size: 52px; /* Slightly larger for better impact */
+            font-weight: 800;
+            position: relative;
+            z-index: 2;
+            margin-top: 5px !important;
+            color: #1c2539;
+            letter-spacing: -1px;
+        }
+
+        /* ✅ IMAGE: Upar shift karne ke liye */
+        .gba-image-wrapper {
+            margin-top: -30px !important; /* Image ko upar le jane ke liye negative margin barhaya */
+            position: relative;
+            z-index: 5;
+        }
+
+        .gba-rounded-img {
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* Professional look */
         }
 
         /* --- Responsive Styles for Mobile Screen (max-width: 768px) --- */
@@ -312,30 +339,134 @@ const MissionVisionSection = () => {
                 text-align: left !important;
             }
 
-            /* FIX: Ensure watermark is visible in full form and not cut off */
-            .gba-watermark-main {
-                display: block !important;
-                font-size: 42px !important; /* Scaled to fit screen width */
-                opacity: 0.12 !important;
-                margin-top: -20px !important; 
-                width: 100% !important;
-                text-align: left !important;
-                margin-left: 0px !important; 
-                white-space: nowrap !important; /* Forces full form on one line */
+            
+    /* ✅ WATERMARK (MOBILE) */
+    .gba-watermark-main {
+      font-size: 42px !important;   /* watermark chhota */
+      top: -5px !important;
+      left: -10px !important;
+      opacity: 0.35 !important;
+      -webkit-text-stroke: 1px #e2e2e2;
+    }
+
+    /* ✅ MAIN HEADING (MOBILE) */
+    .gba-heading-main {
+      font-size: 30px !important;   /* Mission & Vision font kam */
+      line-height: 1.25;
+      margin-top: 6px !important;
+      letter-spacing: -0.5px;
+    }
+      @media (max-width: 768px) {
+
+  /* IMAGE CARD FIX */
+  .thumbnail-large,
+  .choose-image-wrapper,
+  .why-join-image {
+    width: 100%;
+    margin: 0 auto 20px auto;
+    text-align: center;
+  }
+
+  .thumbnail-large img,
+  .choose-image-wrapper img,
+  .why-join-image img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 14px;
+    object-fit: cover;
+  }
+
+  /* IMAGE CONTAINER SPACING */
+  .col-lg-5 {
+    margin-bottom: 25px;
+  }
+
+  /* SMALL LABEL (CHOOSE) */
+  .choose-sub-title,
+  .why-join-label,
+  .pre-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  /* MAIN HEADING (Why Join GBA?) */
+  .why-join-title,
+  .section-title,
+  h2 {
+    font-size: 28px !important;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  /* DESCRIPTION TEXT */
+  .why-join-desc,
+  .disc,
+  p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+    /* --- Responsive Styles for Mobile Screen (max-width: 768px) --- */
+        @media (max-width: 768px) {
+            .gba-mission-vision-section {
+                margin-top: 0px !important;
+                fontsize:48px
+            }
+            .mt_md--80, .mt_sm--80 {
+                margin-top: 30px !important; 
+            }
+            .pr--100, .pl--100 {
+                padding-right: 15px !important; 
+                padding-left: 15px !important; 
             }
             
-            .gba-heading-main {
-                font-size: 30px !important;
+            .col-lg-7 {
+                padding-right: 15px !important; 
+                padding-left: 15px !important;
+            }
+            .col-lg-7 .title-style-three,
+            .col-lg-7 .disc {
+                text-align: left !important;
             }
 
+            /* Mobile pe watermark chhota aur image normal */
+            .gba-watermark-main {
+                font-size: 40px;
+            }
+
+}
+             @media (max-width: 768px) {
+            .gba-mission-vision-section {
+                margin-top: 0px !important;
+            }
+            .mt_md--80, .mt_sm--80 {
+                margin-top: 30px !important; 
+            }
+            .pr--100, .pl--100 {
+                padding-right: 15px !important; 
+                padding-left: 15px !important; 
+            }
+            
+            .col-lg-7 {
+                padding-right: 15px !important; 
+                padding-left: 15px !important;
+            }
+            .col-lg-7 .title-style-three,
+            .col-lg-7 .disc {
+                text-align: left !important;
+            }
+
+            /* Mobile pe watermark chhota aur image normal */
+            .gba-watermark-main {
+                font-size: 40px;
+            }
+            
             .gba-image-wrapper {
-                margin-top: 30px !important;
-            }
-
-            .rts-about-area .disc {
-                margin-bottom: 35px !important;
+                margin-top: 40px !important;
             }
         }
+
     `;
 
     return (
@@ -350,9 +481,9 @@ const MissionVisionSection = () => {
                         <div className="col-lg-7 pr--100 pr_md--0 mt_md--80 pr_sm--0 mt_sm--80">
                             <div className="title-style-three left mb-4">
                                 <span className="pre gba-pre-title"> A Vision For Progress</span>
-                                <div className="bg-title gba-watermark-main"> Mission & Vission</div>
+                                <div className="bg-title gba-watermark-main" style={{ fontSize: '130px', left: '-40px' }}> Mission & Vision</div>
                                 <h2 className="title rts-text-anime-style-1 gba-heading-main">
-                                    Mission & Vission
+                                    Mission & Vision
                                 </h2>
                             </div>
 

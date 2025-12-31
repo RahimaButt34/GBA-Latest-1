@@ -532,7 +532,7 @@ const GujranwalaAbout = () => {
 
         /* ✅ ONLY CHANGE: remove extra top grey space by reducing breadcrumb padding */
         .rts-breadcrumb-area{
-          padding-top: 100px !important;   /* 🔽 was large default -> reduced */
+          padding-top: 150px !important;   /* 🔽 was large default -> reduced */
           padding-bottom: 55px !important;
           height: auto !important;
           min-height: unset !important;
