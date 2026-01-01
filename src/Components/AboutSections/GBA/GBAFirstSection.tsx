@@ -705,7 +705,7 @@ const AboutSection: React.FC = () => {
                     
                     <div className="about-heading-container">
                         <p className="about-sub-label">About GBA</p>
-                        <h1 className="about-main-title">Gujranwala <br />Business Alliance</h1>
+                        <h1 className="about-main-title"style={{ fontSize:'48px' }} >Gujranwala <br />Business Alliance</h1>
                     </div>
 
                     <div className="row about-content-row">

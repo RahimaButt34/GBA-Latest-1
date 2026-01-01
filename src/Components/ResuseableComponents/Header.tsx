@@ -110,8 +110,15 @@ export default function Header() {
                             <div className="col-lg-12">
                                 <div className="header-top-one-wrapper nav-cta-layout">
                                     <div className="left top-cta-message">
-                                        <p>
+                                        {/* <p>
                                             {topBar.ctaMessage}
+                                            <Link className="contact-link" href={topBar.ctaLink}>
+                                                {topBar.ctaLinkText} <i className="fal fa-arrow-right" />
+                                            </Link>
+                                        </p> */}
+                                        <p>
+                                            {/* .trim() laga kar check karein agar space missing hai to space manually add karein */}
+                                            {topBar.ctaMessage.endsWith('?') ? `${topBar.ctaMessage} ` : topBar.ctaMessage}
                                             <Link className="contact-link" href={topBar.ctaLink}>
                                                 {topBar.ctaLinkText} <i className="fal fa-arrow-right" />
                                             </Link>
@@ -131,10 +138,10 @@ export default function Header() {
                                                 </li>
                                             ))}
                                         </ul> */}
-                                        <ul className="social-wrapper-one">
+                                        {/* <ul className="social-wrapper-one">
                                             {topBar.socialLinks.map((social, idx) => (
                                                 <li key={idx}>
-                                                    {/* Added target and rel below */}
+                                                   
                                                     <a
                                                         href={social.href}
                                                         aria-label={social.ariaLabel}
@@ -146,6 +153,34 @@ export default function Header() {
                                                     </a>
                                                 </li>
                                             ))}
+                                        </ul> */}
+                                        <ul className="social-wrapper-one">
+                                            {topBar.socialLinks.map((social, idx) => {
+                                                // State ke bajaye hum CSS variable ya class use kar sakte hain
+                                                // Lekin inline handle karne ke liye simple logic ye hai:
+                                                return (
+                                                    <li key={idx}>
+                                                        <a
+                                                            href={social.href}
+                                                            aria-label={social.ariaLabel}
+                                                            className={social.className}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            onMouseEnter={(e) => {
+                                                                e.currentTarget.style.color = '#00B9FE';
+                                                            }}
+                                                            onMouseLeave={(e) => {
+                                                                e.currentTarget.style.color = ''; // Wapis original color par le ayega
+                                                            }}
+                                                            style={{
+                                                                transition: 'color 0.3s ease', // Smooth effect ke liye
+                                                            }}
+                                                        >
+                                                            <i className={social.iconClass} />
+                                                        </a>
+                                                    </li>
+                                                );
+                                            })}
                                         </ul>
                                     </div>
                                 </div>
@@ -167,27 +202,27 @@ export default function Header() {
                                         </Link>
                                     </div> */}
                                     {/* Logo Area */}
-<div className="thumbnail" style={{ 
-    width: '100%', 
-    maxWidth: '150px', // Original size ke liye isse apni marzi mutabiq 150px-200px ke darmiyan rakhein
-    display: 'flex',
-    alignItems: 'center'
-}}>
-    <Link href={logo.homeLink} style={{ width: '100%' }}>
-        <Image 
-            src={logo.src} 
-            alt={logo.alt} 
-            width={150}   // Original design ki width
-            height={60}   // Original design ki height
-            priority      // Clarity aur fast loading ke liye
-            style={{ 
-                width: '100%', 
-                height: 'auto', 
-                objectFit: 'contain' // Logo ko stretch hone se bachata hai
-            }} 
-        />
-    </Link>
-</div>
+                                    <div className="thumbnail" style={{
+                                        width: '100%',
+                                        maxWidth: '150px', // Original size ke liye isse apni marzi mutabiq 150px-200px ke darmiyan rakhein
+                                        display: 'flex',
+                                        alignItems: 'center'
+                                    }}>
+                                        <Link href={logo.homeLink} style={{ width: '100%' }}>
+                                            <Image
+                                                src={logo.src}
+                                                alt={logo.alt}
+                                                width={150}   // Original design ki width
+                                                height={60}   // Original design ki height
+                                                priority      // Clarity aur fast loading ke liye
+                                                style={{
+                                                    width: '100%',
+                                                    height: 'auto',
+                                                    objectFit: 'contain' // Logo ko stretch hone se bachata hai
+                                                }}
+                                            />
+                                        </Link>
+                                    </div>
 
                                     <div className="main-header">
                                         {/* Desktop Menu */}

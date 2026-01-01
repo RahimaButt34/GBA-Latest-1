@@ -240,7 +240,7 @@ const NewsletterCTA: React.FC = () => {
             <div className="cta-style-10-wrapper">
               <div className="left-side">
                 <span>Subscribe Newsletter</span>
-                <h3 className="title">
+                <h3 className="title" style={{ fontSize:'48px' }}>
                   Stay Updated with <br /> the Latest News!
                 </h3>
               </div>

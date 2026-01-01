@@ -91,7 +91,16 @@ export default function Home() {
             z-index: 5;
             background-color: white; /* Prevents overlap transparency */
           }
+            .desktop-pull-up3 {
+            margin-top: -40px !important;
+            padding-bottom:40px;
+            position: relative;
+            z-index: 5;
+            background-color: white; /* Prevents overlap transparency */
+          }
           
+          
+
           .final-pull-up {
             margin-top: -40px !important;
             position: relative;
@@ -117,12 +126,12 @@ export default function Home() {
         </div>
 
         {/* SECTION 3 - Desktop Pushed Up, Mobile Normal */}
-        <div className="desktop-pull-up">
+        <div className="desktop-pull-up3">
           <HomeThirdSection />
         </div>
 
         {/* SECTION 4 - Desktop Pushed Up, Mobile Normal */}
-        <div className="desktop-pull-up">
+        <div className="desktop-pull-up3">
           <HomeFourthSection />
         </div>
 
