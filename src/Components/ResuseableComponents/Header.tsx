@@ -155,10 +155,10 @@ export default function Header() {
                                             ))}
                                         </ul> */}
 
-                                       <>
-  {/* 1. The Style Block (Place this above the map) */}
-  <style>
-    {`
+                                        <>
+                                            {/* 1. The Style Block (Place this above the map) */}
+                                            <style>
+                                                {`
       .social-wrapper-one li a i {
         transition: color 0.3s ease;
         color: #ffffff; 
@@ -168,28 +168,28 @@ export default function Header() {
         color: var(--hover-color) !important;
       }
     `}
-  </style>
+                                            </style>
 
-  {/* 2. The Loop */}
-  <ul className="social-wrapper-one">
-  {topBar.socialLinks.map((social: any, idx: number) => (
-    <li key={idx}>
-      <a
-        href={social.href}
-        aria-label={social.ariaLabel}
-        className={social.className}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ 
-          "--hover-color": social.hoverColor || "#00B9FE" 
-        } as React.CSSProperties}
-      >
-        <i className={social.iconClass} />
-      </a>
-    </li>
-  ))}
-</ul>
-</>
+                                            {/* 2. The Loop */}
+                                            <ul className="social-wrapper-one">
+                                                {topBar.socialLinks.map((social: any, idx: number) => (
+                                                    <li key={idx}>
+                                                        <a
+                                                            href={social.href}
+                                                            aria-label={social.ariaLabel}
+                                                            className={social.className}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            style={{
+                                                                "--hover-color": social.hoverColor || "#00B9FE"
+                                                            } as React.CSSProperties}
+                                                        >
+                                                            <i className={social.iconClass} />
+                                                        </a>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </>
                                         {/* <ul className="social-wrapper-one">
                                             {topBar.socialLinks.map((social, idx) => {
                                                 // State ke bajaye hum CSS variable ya class use kar sakte hain
@@ -262,11 +262,18 @@ export default function Header() {
 
                                     <div className="main-header">
                                         {/* Desktop Menu */}
-                                        <div className="nav-area d-none d-lg-block">
+                                        {/* <div className="nav-area d-none d-lg-block">
                                             <ul className="d-flex align-items-center">
                                                 {mainNav.map((item, i) => renderNavItem(item, i))}
                                             </ul>
-                                        </div>
+                                        </div> */}
+{/* Desktop Menu   Gap Created  Between Sections*/}
+<div className="nav-area d-none d-lg-block">
+    {/* I added style={{ gap: '30px' }} below */}
+    <ul className="d-flex align-items-center" style={{ gap: '50px' }}>
+        {mainNav.map((item, i) => renderNavItem(item, i))}
+    </ul>
+</div>
 
                                         {/* Mobile Menu Button */}
                                         <div className="button-area d-lg-none">
