@@ -1,63 +1,116 @@
 
-// // // // CtaArea.tsx
-// // // import React from 'react';
+// // // // // CtaArea.tsx
+// // // // import React from 'react';
 
-// // // // Define the component's props if needed, but for this static example, we can use an empty interface.
-// // // interface CtaAreaProps {}
+// // // // // Define the component's props if needed, but for this static example, we can use an empty interface.
+// // // // interface CtaAreaProps {}
 
-// // // const CtaArea: React.FC<CtaAreaProps> = () => {
-// // //   // Image path relative to the 'publ  ic' directory
-// // //   const backgroundImagePath = '/images/cta/10.webp';
+// // // // const CtaArea: React.FC<CtaAreaProps> = () => {
+// // // //   // Image path relative to the 'publ  ic' directory
+// // // //   const backgroundImagePath = '/images/cta/10.webp';
    
 
-// // //   return (
-// // //     // Note: The original had bg_cts-10 and bg_iamge classes, which presumably set the background image.
-// // //     // In React, we'll use an inline style to set the background URL directly for simplicity and robustness.
-// // //     <div
-// // //       className="rts-cts-area-start bg_cts-10  bg_iamge ptb--95 mt--160"
-// // //       style={{
-// // //         backgroundImage: `url(${backgroundImagePath})`,
+// // // //   return (
+// // // //     // Note: The original had bg_cts-10 and bg_iamge classes, which presumably set the background image.
+// // // //     // In React, we'll use an inline style to set the background URL directly for simplicity and robustness.
+// // // //     <div
+// // // //       className="rts-cts-area-start bg_cts-10  bg_iamge ptb--95 mt--160"
+// // // //       style={{
+// // // //         backgroundImage: `url(${backgroundImagePath})`,
         
-// // //         // Assuming your original CSS set these properties:
-// // //         backgroundSize: 'cover',
-// // //         backgroundPosition: 'center',
-// // //         backgroundRepeat: 'no-repeat',
-// // //       }}
-// // //     >
+// // // //         // Assuming your original CSS set these properties:
+// // // //         backgroundSize: 'cover',
+// // // //         backgroundPosition: 'center',
+// // // //         backgroundRepeat: 'no-repeat',
+// // // //       }}
+// // // //     >
         
-// // //       <div className="container">
-// // //         <div className="row">
-// // //           <div className="col-lg-12">
-// // //             <div className="cta-style-10-wrapper">
-// // //               <div className="left-side">
-// // //                 <span>Subscribe Newsletter</span>
-// // //                 <h3 className="title">
-// // //                   Stay Updated with <br /> the Latest News!
-// // //                 </h3>
-// // //               </div>
-// // //               <div className="right-side">
-// // //                 <form action="#">
-// // //                   {/* The input style has been moved inline from the original snippet. 
-// // //                       It's better practice to define this in CSS. */}
-// // //                   <input
-// // //                     style={{ color: 'white' }}
-// // //                     type="text"
-// // //                     placeholder="Enter Email Address"
-// // //                   />
-// // //                   <button className="rts-btn btn-primary btn-white">
-// // //                     Subscribe Now
-// // //                   </button>
-// // //                 </form>
-// // //               </div>
+// // // //       <div className="container">
+// // // //         <div className="row">
+// // // //           <div className="col-lg-12">
+// // // //             <div className="cta-style-10-wrapper">
+// // // //               <div className="left-side">
+// // // //                 <span>Subscribe Newsletter</span>
+// // // //                 <h3 className="title">
+// // // //                   Stay Updated with <br /> the Latest News!
+// // // //                 </h3>
+// // // //               </div>
+// // // //               <div className="right-side">
+// // // //                 <form action="#">
+// // // //                   {/* The input style has been moved inline from the original snippet. 
+// // // //                       It's better practice to define this in CSS. */}
+// // // //                   <input
+// // // //                     style={{ color: 'white' }}
+// // // //                     type="text"
+// // // //                     placeholder="Enter Email Address"
+// // // //                   />
+// // // //                   <button className="rts-btn btn-primary btn-white">
+// // // //                     Subscribe Now
+// // // //                   </button>
+// // // //                 </form>
+// // // //               </div>
+// // // //             </div>
+// // // //           </div>
+// // // //         </div>
+// // // //       </div>
+// // // //     </div>
+// // // //   );
+// // // // };
+
+// // // // export default CtaArea;
+
+
+
+// // // 'use client';
+
+// // // import React from 'react';
+
+// // // const NewsletterCTA: React.FC = () => {
+// // //     // Handling form submission
+// // //     const handleSubscribe = (e: React.FormEvent) => {
+// // //         e.preventDefault();
+// // //         // Add your subscription logic here
+// // //         console.log("Subscription submitted");
+// // //     };
+
+// // //     return (
+// // //         /* rts cta area start */
+// // //         <div className="rts-cts-area-start bg_cts-10 bg_iamge ptb--95 mt--160">
+// // //             <div className="container">
+// // //                 <div className="row">
+// // //                     <div className="col-lg-12">
+// // //                         <div className="cta-style-10-wrapper">
+// // //                             <div className="left-side">
+// // //                                 <span>Subscribe Newsletter</span>
+// // //                                 <h3 className="title">
+// // //                                     Stay Updated with <br /> the Latest News!
+// // //                                 </h3>
+// // //                             </div>
+// // //                             <div className="right-side">
+// // //                                 <form onSubmit={handleSubscribe}>
+// // //                                     <input 
+// // //                                         style={{ color: 'white' }} 
+// // //                                         type="email" 
+// // //                                         placeholder="Enter Email Address" 
+// // //                                         required 
+// // //                                     />
+// // //                                     <button 
+// // //                                         type="submit" 
+// // //                                         className="rts-btn btn-primary btn-white"
+// // //                                     >
+// // //                                         Subscribe Now
+// // //                                     </button>
+// // //                                 </form>
+// // //                             </div>
+// // //                         </div>
+// // //                     </div>
+// // //                 </div>
 // // //             </div>
-// // //           </div>
 // // //         </div>
-// // //       </div>
-// // //     </div>
-// // //   );
+// // //     );
 // // // };
 
-// // // export default CtaArea;
+// // // export default NewsletterCTA;
 
 
 
@@ -66,53 +119,78 @@
 // // import React from 'react';
 
 // // const NewsletterCTA: React.FC = () => {
-// //     // Handling form submission
-// //     const handleSubscribe = (e: React.FormEvent) => {
-// //         e.preventDefault();
-// //         // Add your subscription logic here
-// //         console.log("Subscription submitted");
-// //     };
+// //   const handleSubscribe = (e: React.FormEvent) => {
+// //     e.preventDefault();
+// //     console.log("Subscription submitted");
+// //   };
 
-// //     return (
-// //         /* rts cta area start */
-// //         <div className="rts-cts-area-start bg_cts-10 bg_iamge ptb--95 mt--160">
-// //             <div className="container">
-// //                 <div className="row">
-// //                     <div className="col-lg-12">
-// //                         <div className="cta-style-10-wrapper">
-// //                             <div className="left-side">
-// //                                 <span>Subscribe Newsletter</span>
-// //                                 <h3 className="title">
-// //                                     Stay Updated with <br /> the Latest News!
-// //                                 </h3>
-// //                             </div>
-// //                             <div className="right-side">
-// //                                 <form onSubmit={handleSubscribe}>
-// //                                     <input 
-// //                                         style={{ color: 'white' }} 
-// //                                         type="email" 
-// //                                         placeholder="Enter Email Address" 
-// //                                         required 
-// //                                     />
-// //                                     <button 
-// //                                         type="submit" 
-// //                                         className="rts-btn btn-primary btn-white"
-// //                                     >
-// //                                         Subscribe Now
-// //                                     </button>
-// //                                 </form>
-// //                             </div>
-// //                         </div>
-// //                     </div>
-// //                 </div>
+// //   return (
+// //     <div className="rts-cts-area-start bg_cts-10 bg_iamge ptb--95 mt--160">
+      
+// //       {/* ✅ STYLE TAG (sirf placeholder responsiveness) */}
+// //       <style jsx global>{`
+// //         /* Desktop */
+// //         .cta-style-10-wrapper input::placeholder {
+// //           font-size: 16px;
+// //         }
+
+// //         /* Tablet */
+// //         @media (max-width: 992px) {
+// //           .cta-style-10-wrapper input::placeholder {
+// //             font-size: 5px;
+// //           }
+// //         }
+
+// //         /* Mobile */
+// //         @media (max-width: 768px) {
+// //           .cta-style-10-wrapper input::placeholder {
+// //             font-size: 14px;
+// //           }
+// //         }
+
+// //         /* Small phones */
+// //         @media (max-width: 480px) {
+// //           .cta-style-10-wrapper input::placeholder {
+// //             font-size: 13px;
+// //           }
+// //         }
+// //       `}</style>
+
+// //       <div className="container">
+// //         <div className="row">
+// //           <div className="col-lg-12">
+// //             <div className="cta-style-10-wrapper">
+// //               <div className="left-side">
+// //                 <span>Subscribe Newsletter</span>
+// //                 <h3 className="title">
+// //                   Stay Updated with <br /> the Latest News!
+// //                 </h3>
+// //               </div>
+// //               <div className="right-side">
+// //                 <form onSubmit={handleSubscribe}>
+// //                   <input
+// //                     style={{ color: 'white' }}
+// //                     type="email"
+// //                     placeholder="Enter Email Address"
+// //                     required
+// //                   />
+// //                   <button
+// //                     type="submit"
+// //                     className="rts-btn btn-primary btn-white"
+// //                   >
+// //                     Subscribe Now
+// //                   </button>
+// //                 </form>
+// //               </div>
 // //             </div>
+// //           </div>
 // //         </div>
-// //     );
+// //       </div>
+// //     </div>
+// //   );
 // // };
 
 // // export default NewsletterCTA;
-
-
 
 // 'use client';
 
@@ -126,8 +204,8 @@
 
 //   return (
 //     <div className="rts-cts-area-start bg_cts-10 bg_iamge ptb--95 mt--160">
-      
-//       {/* ✅ STYLE TAG (sirf placeholder responsiveness) */}
+
+//       {/* ✅ STYLE TAG (sirf placeholder responsiveness FIXED) */}
 //       <style jsx global>{`
 //         /* Desktop */
 //         .cta-style-10-wrapper input::placeholder {
@@ -137,7 +215,7 @@
 //         /* Tablet */
 //         @media (max-width: 992px) {
 //           .cta-style-10-wrapper input::placeholder {
-//             font-size: 5px;
+//             font-size: 14px; /* ✅ FIXED (was 5px) */
 //           }
 //         }
 
@@ -162,7 +240,7 @@
 //             <div className="cta-style-10-wrapper">
 //               <div className="left-side">
 //                 <span>Subscribe Newsletter</span>
-//                 <h3 className="title">
+//                 <h3 className="title" style={{ fontSize:'48px' }}>
 //                   Stay Updated with <br /> the Latest News!
 //                 </h3>
 //               </div>
@@ -192,6 +270,8 @@
 
 // export default NewsletterCTA;
 
+
+
 'use client';
 
 import React from 'react';
@@ -205,22 +285,54 @@ const NewsletterCTA: React.FC = () => {
   return (
     <div className="rts-cts-area-start bg_cts-10 bg_iamge ptb--95 mt--160">
 
-      {/* ✅ STYLE TAG (sirf placeholder responsiveness FIXED) */}
+      {/* ✅ CSS FIXED FOR RESPONSIVENESS */}
       <style jsx global>{`
-        /* Desktop */
+        /* Desktop Default */
+        .cta-style-10-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 30px;
+        }
+
         .cta-style-10-wrapper input::placeholder {
           font-size: 16px;
         }
 
-        /* Tablet */
+        /* Tablet & Mobile Layout Fix */
         @media (max-width: 992px) {
-          .cta-style-10-wrapper input::placeholder {
-            font-size: 14px; /* ✅ FIXED (was 5px) */
+          .cta-style-10-wrapper {
+            flex-direction: column; /* Stack vertically */
+            text-align: center;
+            padding: 40px 20px;
           }
-        }
 
-        /* Mobile */
-        @media (max-width: 768px) {
+          .cta-style-10-wrapper .left-side h3 {
+            font-size: 32px !important; /* Mobile par heading choti */
+            line-height: 1.2;
+          }
+
+          .cta-style-10-wrapper .right-side {
+            width: 100%;
+          }
+
+          .cta-style-10-wrapper form {
+            display: flex;
+            flex-direction: column; /* Input aur button ek ke niche ek */
+            gap: 15px;
+            width: 100%;
+          }
+
+          .cta-style-10-wrapper input {
+            width: 100% !important;
+            margin: 0 !important;
+            text-align: center;
+          }
+
+          .cta-style-10-wrapper button {
+            width: 100%;
+          }
+
           .cta-style-10-wrapper input::placeholder {
             font-size: 14px;
           }
@@ -228,6 +340,9 @@ const NewsletterCTA: React.FC = () => {
 
         /* Small phones */
         @media (max-width: 480px) {
+          .cta-style-10-wrapper .left-side h3 {
+            font-size: 28px !important;
+          }
           .cta-style-10-wrapper input::placeholder {
             font-size: 13px;
           }
@@ -240,7 +355,7 @@ const NewsletterCTA: React.FC = () => {
             <div className="cta-style-10-wrapper">
               <div className="left-side">
                 <span>Subscribe Newsletter</span>
-                <h3 className="title" style={{ fontSize:'48px' }}>
+                <h3 className="title" style={{ fontSize:'48px' }} >
                   Stay Updated with <br /> the Latest News!
                 </h3>
               </div>
