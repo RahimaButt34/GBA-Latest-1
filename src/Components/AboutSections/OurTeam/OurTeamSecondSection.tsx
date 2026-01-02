@@ -713,7 +713,7 @@ const teamMembers: TeamMember[] = [
   { name: "syed wajid a. shah", role: "Director Industry-Academia", image: "/images/Our Team/Team/Group 111.png", delay: "0.2" },
   { name: "mohsin ali", role: "Director Industry liaison", image: "/images/Our Team/Team/Group 112.png", delay: "0.4" },
   { name: "usman nawaz bajwa", role: "Director SME development", image: "/images/Our Team/Team/Group 113.png", delay: "0.6" },
-  { name: "Kh. faiq kaleem", role: "Director youth empowerment", image: "/images/Our Team/Team/Group 114.png", delay: "0.8" },
+  { name: "Kh. faiq kaleem", role: "Dir youth empowerment", image: "/images/Our Team/Team/Group 114.png", delay: "0.8" },
   { name: "arsalan shahid", role: "Director International jvs", image: "/images/Our Team/Team/Group 115.png", delay: "0.2" },
   { name: "kh. rohan ashraf", role: "Director finance", image: "/images/Our Team/Team/Group 116.png", delay: "0.4" },
   { name: "Anas farooqi", role: "Director media affairs", image: "/images/Our Team/Team/Group 117.png", delay: "0.6" },
@@ -766,7 +766,7 @@ const OurTeamSection: React.FC = () => {
 
             /* REMOVE GAP FROM THE LAST ROW */
             .row > .team-column-spacing:nth-last-child(-n+4) {
-                margin-bottom: 0px !important;
+                margin-bottom: 50px !important;
             }
 
             .single-team-card-wrapper {
@@ -797,8 +797,11 @@ const OurTeamSection: React.FC = () => {
                 padding: 20px 10px;
                 border-radius: 10px;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                
             }
 
+
+            
             .member-name {
                 font-size: 18px;
                 font-weight: 700;
