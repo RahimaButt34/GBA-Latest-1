@@ -10,18 +10,21 @@
       {
         "iconClass": "fab fa-facebook-f",
         "href": "https://www.facebook.com/gbaofficial",
-        "ariaLabel": "Facebook"
+        "ariaLabel": "Facebook",
+        "hoverColor": "#00B9FE"
       },
       {
         "iconClass": "fab fa-instagram",
         "href": "https://www.instagram.com/gba.connect/",
-        "ariaLabel": "Instagram"
+        "ariaLabel": "Instagram",
+        "hoverColor": "#00B9FE"
       },
       {
         "iconClass": "fab fa-linkedin-in",
         "href": "https://www.linkedin.com/company/gbaofficial/",
         "ariaLabel": "LinkedIn",
-        "className": "mr--0"
+        "className": "mr--0",
+        "hoverColor": "#00B9FE"
       }
     ]
   },
