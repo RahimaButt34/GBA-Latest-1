@@ -1836,6 +1836,8 @@ const MessageSection: React.FC = () => {
           .chairman-name-text { font-size: 26px !important; }
           .chairman-description { font-size: 14px !important; line-height: 1.6; }
         }
+
+        
       `}</style>
       
     </>

@@ -1078,6 +1078,110 @@ const Flagship = () => {
                     </div>
                 </div>
             </div>
+            
+            <style jsx global>{`
+    /* --- Base Styles for Title --- */
+    .title-style-three .title {
+        font-size: 60px;
+        font-weight: 900;
+        display: inline-block;
+        margin: 0;
+    }
+
+    .title-style-three .solid-text {
+        color: #0d1c2e;
+    }
+
+    .title-style-three .outline-text {
+        color: transparent;
+        -webkit-text-stroke: 1.5px #0d1c2e;
+        text-stroke: 1.5px #0d1c2e;
+        margin-left: 10px;
+    }
+
+    .title-style-three.center {
+        text-align: center;
+    }
+
+    /* Industry List Styles - Desktop */
+    .industry-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+
+    .industry-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px; /* Desktop par halka gap */
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .industry-list img {
+        width: 18px;
+    }
+
+    .working-process-bg {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    /* --- Media Queries (Mobile & Tablet Styling) --- */
+    @media (max-width: 991px) {
+        
+        /* 1. Top Padding add ki hai jesa aapne manga */
+        .working-process-area-three {
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+            margin-top: 40px !important;
+            margin-bottom: 40px !important;
+            padding-top: 70px !important; /* Top space */
+        }
+
+        /* 2. Heading wrap aur size adjust */
+        .title-style-three .solid-text,
+        .title-style-three .outline-text {
+            font-size: 30px !important;
+            display: block; 
+            margin-left: 0 !important;
+            line-height: 1.2;
+        }
+
+        .title-style-three.center {
+            margin-bottom: 35px !important;
+        }
+
+        /* 3. Columns alignment: Left aligned on mobile */
+        .row.justify-content-center > div {
+            justify-content: flex-start !important;
+            padding-left: 25px !important;
+            margin-bottom: 0px !important; /* Column gap khatam */
+        }
+
+        /* 4. List items ke darmiyan gap khatam (spacing kam) */
+        .industry-list li {
+            font-size: 14px;
+            margin-bottom: 3px !important; /* Tight spacing */
+            line-height: 1.3;
+        }
+
+        /* 5. Sab se aakhri column ke end mein bottom padding */
+        .row.justify-content-center > div:last-child {
+            padding-bottom: 80px !important; /* Bottom space */
+        }
+
+        /* Paragraph gap */
+        .title-style-three p {
+            margin-bottom: 25px !important;
+            padding: 0 10px;
+        }
+    }
+`}</style>
         </>
     );
 };

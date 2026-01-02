@@ -1013,6 +1013,7 @@ const OurTeamSection: React.FC = () => {
                 flex-direction: column;
                 justify-content: space-between;
             }
+                
 
             .text-data {
                 flex-grow: 1;
