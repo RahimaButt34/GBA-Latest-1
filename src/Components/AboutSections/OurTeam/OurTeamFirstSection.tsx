@@ -1776,7 +1776,7 @@ const MessageSection: React.FC = () => {
         }
 
         .content-row-spacing {
-          margin-top: 80px;
+          margin-top: 30px;
         }
 
         .chairman-name-text {
@@ -1815,10 +1815,12 @@ const MessageSection: React.FC = () => {
           .content-row-spacing { margin-top: 40px; }
           .pl--50 { padding-left: 0 !important; }
           
-          .chairman-text-wrapper { height: auto !important; margin-top: 30px; }
+          .chairman-text-wrapper { height: auto !important; margin-top: 30px; 
+          margin-top: 15px !important; /* Image se gap mazeed kam */
+            text-align: left !important; /* Text alignment left */}
           .chairman-description-container { justify-content: flex-start !important; gap: 20px; }
           .chairman-image { height: 400px !important; width: 100% !important; }
-          .chairman-name-text { text-align: center; font-size: 32px !important; }
+          .chairman-name-text { text-align: left; font-size: 32px !important;padding-left: 10px; /* Thora sa side gap */ }
         }
 
         @media (max-width: 768px) {
