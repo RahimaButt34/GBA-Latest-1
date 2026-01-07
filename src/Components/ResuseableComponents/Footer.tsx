@@ -367,7 +367,12 @@ const Footer: React.FC = () => {
         <footer className="footer-8-area-bg">
             <style jsx>{`
                 /* 1. Footer Top Padding aur Background */
-                .footer-8-area-bg { background-color: #262c3f; color: #fff; padding-top: 30px; }
+                .footer-8-area-bg { background-color: #262c3f; color: #fff; padding-top: 30px; /* ✅ Background settings for Pic 2 alignment */
+                    background-size: 113% auto !important; 
+                    background-position: center  !important;
+                    color: #fff; 
+                    /* ✅ GAP INCREASED: Upar se content ko niche dhakela hai */
+                    padding-top: 100px;}
                 
                 .footer-logo-area-left-8 .disc { font-size: 15px; color: #c7ced0; margin-top: 15px; line-height: 1.5; }
                 .social-area-wrapper-two { list-style: none; padding: 0; display: flex; gap: 15px; margin-top: 20px; }

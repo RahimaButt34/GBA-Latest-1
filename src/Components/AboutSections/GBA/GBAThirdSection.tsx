@@ -36,7 +36,7 @@ const JoinGBASection: React.FC = () => {
     /* Watermark "Why" - Font chhota aur right side pe */
     .title-style-two .bg-content {
         font-size: 70px !important; /* Chhota font */
-        right: 10px !important; /* Right side pe move */
+        right: 30px !important; /* Right side pe move */
         left: auto !important;
         top: 5px !important;
         opacity: 0.3 !important;
@@ -88,7 +88,26 @@ const JoinGBASection: React.FC = () => {
         font-size: 14px !important;
     }
 }
+
+
+
+
+/* ✅ Why Watermark Desktop Styling */
+.title-style-two .bg-content {
+    left: -30px !important;      /* Watermark ko right side push karne ke liye value badhayi hai */
+    // top: -20px !important;       /* Thora upar set karne ke liye */
+    // font-size: 150px !important; /* Design ke mutabiq bada font size */
+    opacity: 0.6 !important;     /* Light color taake main text clear dikhe */
+    white-space: nowrap;         /* Text ko ek line mein rakhne ke liye */
+}
+
+/* Heading ko watermark ke upar laane ke liye */
+// .title-style-two .title {
+//     position: relative;
+//     z-index: 2;
+// }
 `}</style>
+
 
                 <div className="row">
                     <div className="col-lg-12">
@@ -129,6 +148,7 @@ const JoinGBASection: React.FC = () => {
                 </div>
             </div>
         </div>
+        
         
     );
 }

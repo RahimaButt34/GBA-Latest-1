@@ -1,0 +1,12 @@
+{
+  "aboutHeader": {
+    "watermark": "About Us",
+    "subHeading": "About GBA",
+    "heading": "Gujranwala\nBusiness Alliance",
+    "shapes": [
+      { "src": "/images/about/shape/01.png", "className": "one" },
+      { "src": "/images/about/shape/02.png", "className": "two" },
+      { "src": "/images/about/shape/03.png", "className": "three" }
+    ]
+  }
+}

@@ -1743,8 +1743,8 @@ const MessageSection: React.FC = () => {
         }
 
         .rts-breadcrumb-area.top-300 {
-          padding-top: 140px !important; //top-distance
-          padding-bottom: 50px !important;
+          padding-top: 150px !important; //top-distance//updtaed from 140px
+          padding-bottom: 55px !important;//updated from 50
           height: auto !important;
           min-height: unset !important;
         }
