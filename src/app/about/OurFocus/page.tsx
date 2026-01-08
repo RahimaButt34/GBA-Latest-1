@@ -52,14 +52,14 @@ export default function Home() {
   return (
     <>
       {/* 1. OurTeamFirstSection (Add negative bottom margin if needed) */}
-      <div style={firstSectionBottomStyle}>
+      {/* <div style={firstSectionBottomStyle}> */}
         <OurFocusFirstSection />
-      </div>
-      
+      {/* </div>
+       */}
       {/* 2. OurTeamSecondSection (Apply negative top margin to pull it up) */}
-      <div style={negativeMarginStyletwo}>
+      {/* <div style={negativeMarginStyletwo}> */}
         <OurFocusSecondSection />
-      </div>
+      {/* </div> */}
       {/* <div style={negativeMarginStyletwo}>
         <OurFocusThirdSection />
       </div> */}

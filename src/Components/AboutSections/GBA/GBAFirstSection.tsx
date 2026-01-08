@@ -1254,8 +1254,8 @@ const AboutSection: React.FC = () => {
                 }
 
                 .rts-breadcrumb-area.top-300 {
-                    padding-top: 120px !important;
-                    padding-bottom: 50px !important;
+                    padding-top: 150px !important;//120
+                    padding-bottom: 55px !important;//
                     height: auto !important;
                 }
 
