@@ -1297,7 +1297,7 @@ const AboutSection: React.FC = () => {
                     font-weight: 800;
                 }
 
-                /* MOBILE (unchanged) */
+                
                 /* MOBILE (unchanged, already correct) */
                 @media (max-width: 768px) {
                     .about-main-overlap {
@@ -1319,6 +1319,7 @@ const AboutSection: React.FC = () => {
                         font-size: 60px !important;
                         top: -20px !important;
                         opacity: 0.25;
+                        padding-top:10px;
                     }
 
                     .about-main-overlap {
