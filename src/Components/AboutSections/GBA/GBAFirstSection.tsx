@@ -1319,11 +1319,12 @@ const AboutSection: React.FC = () => {
                         font-size: 60px !important;
                         top: -20px !important;
                         opacity: 0.25;
-                        padding-top:10px;
+                        
+                        
                     }
 
                     .about-main-overlap {
-                        margin-top: 0 !important;
+                        margin-top: 30 !important;//0
                         padding-left: 15px;
                         padding-right: 15px;
                     }
