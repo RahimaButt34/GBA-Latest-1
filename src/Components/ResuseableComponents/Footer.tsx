@@ -377,7 +377,34 @@ const Footer: React.FC = () => {
                 .footer-logo-area-left-8 .disc { font-size: 15px; color: #c7ced0; margin-top: 15px; line-height: 1.5; }
                 .social-area-wrapper-two { list-style: none; padding: 0; display: flex; gap: 15px; margin-top: 20px; }
                 .social-area-wrapper-two li a { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #394347; color: #fff; transition: 0.3s; }
-                .social-area-wrapper-two li a:hover { background: #00B9FE; }//#4F46E5 updated
+                // .social-area-wrapper-two li a:hover { background: #00B9FE; }//#4F46E5 updated
+
+
+                /* Purane hover code ko hata kar ye lagayein */
+
+.social-area-wrapper-two li a { 
+    width: 40px; 
+    height: 40px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%; 
+    background: #394347; /* Background hamesha yahi rahega */
+    color: #fff; 
+    transition: 0.3s; 
+    text-decoration: none;
+}
+
+/* Hover karne par sirf ICON ka color change hoga */
+.social-area-wrapper-two li a:hover i { 
+    color: #00B9FE; /* Icon color blue ho jayega */
+    transform: scale(1.1); /* Optional: Icon thoda bada dikhega */
+}
+
+/* Background ko change hone se rokne ke liye */
+.social-area-wrapper-two li a:hover {
+    background: #394347 !important; /* Circle ka color change nahi hoga */
+}
                 
                 .footer-one-single-wized .wized-title .title { font-size: 24px; font-weight: 700; margin-bottom: 2px; }
                 .quick-link-inner { display: flex; flex-wrap: wrap; gap: 15px; }
