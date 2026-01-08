@@ -1268,8 +1268,8 @@ const OurFocusSection: React.FC = () => {
                         {/* Reduced padding-left to 30px to bring text closer to image */}
                         <div className="col-lg-7 pl--30 pl_md--0 mt_md--80 pl_sm--0 mt_sm--80">
                             <div className="about-content-right-three">
-                                {/* padding-top: 45px pushes text down to match image top corner perfectly */}
-                                <div className="title-style-three left" style={{ paddingTop: '45px' }}>
+                                {/* padding-top: 45px i updated to 10px to make it equal to img pushes text down to match image top corner perfectly */}
+                                <div className="title-style-three left" style={{ paddingTop: '10px' }}>
                                     <h2 style={{ fontSize: '48px', fontWeight: '800', lineHeight: '1.1' }}>Made In Gujranwala <br /> Promotion</h2>
                                     <p style={{ fontWeight: '900', color: 'black', fontSize: '14px', marginTop: '10px' }}>
                                         Building Global Pathways For Gujranwala’s Industrial Growth
@@ -1381,6 +1381,7 @@ const OurFocusSection: React.FC = () => {
                     .focus-content-row { margin-top: 30px !important; }
                     .watermark-focus { font-size: 60px !important; top: 40px !important; }
                     .pl--30 { padding-left: 15px !important; }
+                   
                     .rts-breadcrumb-area.top-300 {
                     padding-top: 10px !important;
                     padding-bottom: 10px !important;
