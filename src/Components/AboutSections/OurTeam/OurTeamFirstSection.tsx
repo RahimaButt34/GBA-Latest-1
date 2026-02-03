@@ -2141,6 +2141,319 @@
 // export default MessageSection;
 
 
+// 'use client';
+
+// import React from 'react';
+// import Image from 'next/image';
+
+// const MessageSection: React.FC = () => {
+//   return (
+//     <>
+//       {/* --- SECTION 1: BREADCRUMB --- */}
+//       <div className="rts-breadcrumb-area top-300">
+//         <div className="container">
+//           <div className="row">
+//             <div className="col-lg-12">
+//               <div className="title-area-left" style={{ textAlign: 'left' }}>
+//                 <span className="bg-title watermark-about">Message</span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="shape-area">
+//           <Image src="/images/about/shape/01.png" alt="shape" className="one" width={100} height={100} />
+//           <Image src="/images/about/shape/02.png" alt="shape" className="two" width={100} height={100} />
+//           <Image src="/images/about/shape/03.png" alt="shape" className="three" width={100} height={100} />
+//         </div>
+//       </div>
+
+//       {/* --- SECTION 2: CHAIRMAN'S MESSAGE --- */}
+//       <div className="rts-about-area rts-section-gap">
+//         <div className="container pt--40 main-content-overlap">
+          
+//           <div className="about-heading-container">
+//             <p className="about-sub-label">Leadership with Purpose</p>
+//             <h1 className="about-main-title" style={{ fontSize: '48px' }}>
+//               Message From The <br /> Chairman
+//             </h1>
+//           </div>
+
+//           {/* Added 'content-row-spacing' style to move image and text down */}
+//           <div className="row content-row-spacing d-flex align-items-stretch" style={{ gap: 0, marginTop: '50px' }}>
+//             {/* Image Column */}
+//             <div className="col-lg-5 image-column-flex">
+//               <div className="main-thumnal-inner-about-three" style={{ width: '100%', height: '100%' }}>
+//                 <div className="thumbnail chairman-image-wrapper" style={{ height: '100%' }}>
+//                   <Image
+//                     src="/images/Our Team/Chairman - Ahmad Ikram Lone.png"
+//                     className="chairman-image"
+//                     alt="Ahmad Ikram Lone, Chairman of GBA"
+//                     width={550}
+//                     height={650}
+//                     style={{ 
+//                         objectFit: 'cover', 
+//                         width: '100%', 
+//                         height: '100%', 
+//                         borderRadius: '10px' 
+//                     }}
+//                     priority
+//                   />
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Text Column */}
+//             <div className="col-lg-7 pl--50 pl_md--0 mt_md--80 pl_sm--0 mt_sm--80">
+//               <div className="about-content-right-three chairman-text-wrapper d-flex flex-column h-100">
+//                 <div className="title-style-three left">
+//                   <h2 className="chairman-name-text" style={{ fontWeight: '800' }}>Ahmad Ikram Lone</h2>
+//                 </div>
+                
+//                 <div className="chairman-description-container d-flex flex-column justify-content-between flex-grow-1">
+//                   <p className="disc chairman-description" style={{ textAlign: 'justify' }}>
+//                     It is with great pride and enthusiasm that I extend my warmest greetings as Founder & Chairman of
+//                     the Gujranwala Business Alliance (GBA). I am honoured to lead this alliance, dedicated to
+//                     advancing Gujranwala's industrial potential and connecting our enterprises with global
+//                     opportunities. Renowned for its entrepreneurial spirit, craftsmanship, and industrial
+//                     excellence, Gujranwala continues to be a symbol of resilience and innovation. Through GBA, we are
+//                     building on these strengths to create a modern business ecosystem that fosters innovation,
+//                     competitiveness, and collaboration. Our mission is to help local enterprises grow beyond borders,
+//                     access new markets, and position Gujranwala among the world's leading industrial cities.
+//                   </p>
+//                   <p className="disc chairman-description" style={{ textAlign: 'justify', marginTop: '20px' }}>
+//                     At GBA, we believe that lasting progress is built on strong partnerships. We are deeply committed
+//                     to engaging with industry leaders, academia, policymakers, and international trade organisations
+//                     to promote an enabling environment for business and investment. By fostering dialogue, advocating
+//                     for the private sector, and offering practical support programs, we aim to remove barriers to
+//                     growth and create opportunities that drive meaningful transformation.
+//                   </p>
+//                   <p className="disc chairman-description" style={{ textAlign: 'justify', marginTop: '20px' }}>
+//                     I extend my sincere appreciation to our members, partners, and stakeholders for their trust and
+//                     collaboration. Together, we are shaping a stronger, more connected, and future-ready Gujranwala.
+//                   </p>
+//                 </div>
+//               </div>
+//             </div>
+
+//           </div>
+//         </div>
+//       </div>
+
+//       <style jsx global>{`
+//         .watermark-about {
+//           font-size: 150px;
+//           font-weight: 900;
+//           color: transparent;
+//           -webkit-text-stroke: 1px #e0e0e0;
+//           opacity: 0.5;
+//           position: absolute;
+//           top: -80px;
+//           left: 0;
+//           z-index: 0;
+//         }
+
+//         .rts-breadcrumb-area.top-300 {
+//           padding-top: 150px !important;
+//           padding-bottom: 55px !important;
+//           height: auto !important;
+//         }
+
+//         .main-content-overlap {
+//           margin-top: -160px !important;
+//           position: relative;
+//         }
+
+//         .about-heading-container {
+//           margin-top: -120px !important;
+//           position: relative;
+//           z-index: 2;
+//         }
+
+//         .about-sub-label {
+//           margin-top: 60px !important;
+//           margin-bottom: 0px !important;
+//           display: block;
+//           color: #666;
+//           font-size: 16px;
+//         }
+
+//         .about-main-title {
+//           margin-top: 5px !important;
+//           line-height: 1.1;
+//           font-weight: 800;
+//         }
+
+//         /* Image and Paragraph container move down */
+//         .content-row-spacing {
+//           margin-top: 60px !important; 
+//         }
+
+//         .chairman-image-wrapper {
+//           width: 100%;
+//           border-radius: 10px;
+//           overflow: hidden !important;
+//           display: flex;
+//         }
+
+//         .chairman-name-text {
+//           font-size: 40px !important;
+//           margin-top: 0;
+//           line-height: 1.2;
+//           margin-bottom: 20px;
+//           color: #1c2539;
+//         }
+
+//         .chairman-description {
+//           font-size: 15.5px !important;
+//           line-height: 1.7;
+//           color: #666;
+//           margin-bottom: 0;
+//         }
+
+//         .chairman-description-container {
+//           flex-grow: 1;
+//         }
+//         /* --- MOBILE RESPONSIVE STYLING (Targeting 768px and below) --- */
+// @media (max-width: 768px) {
+//     /* Breadcrumb adjust for mobile */
+//     .rts-breadcrumb-area.top-300 {
+//         padding-top: 30px !important;
+//         padding-bottom: 10px !important;
+//     }
+
+//     /* Watermark text resize to fit screen */
+//     .watermark-about {
+//         font-size: 60px !important;
+//         top: 10px !important;
+//         opacity: 0.5;
+//     }
+
+//     /* Main container overlap reset for mobile flow */
+//     .main-content-overlap {
+//         margin-top: 0 !important;
+//         padding-left: 15px;
+//         padding-right: 15px;
+//     }
+
+//     /* Heading container alignment */
+//     .about-heading-container {
+//         margin-top: 0 !important;
+//         text-align: left;
+//     }
+
+//     .about-sub-label {
+//         font-size: 14px;
+//         margin-top: 20px !important;
+//         margin-bottom: 5px !important;
+//     }
+
+//     .about-main-title {
+//         font-size: 30px !important;
+//         line-height: 1.25;
+//         margin-top: 0;
+//     }
+
+//     /* The gap you wanted below the title */
+//     .content-row-spacing {
+//         margin-top: 10px !important;
+//     }
+//         /* --- PERFECT ALIGNMENT & ZERO GAP STYLING --- */
+// @media (max-width: 768px) {
+//     /* Container padding ko image aur text ke mutabiq set kiya */
+//     .main-content-overlap {
+//         margin-top: 0 !important;
+//         padding-left: 15px !important; 
+//         padding-right: 15px !important;
+//     }
+
+//     /* Image aur Heading ke darmiyan ka gap khatam */
+//     .image-column-flex {
+//         margin-bottom: 10 !important; 
+//         padding-left: 0 !important;
+//         padding-right: 0 !important;
+//     }
+
+//     /* Heading "Ahmad Ikram Lone" ko image ke sath align kiya */
+//     .chairman-name-text {
+//         font-size: 26px !important;
+//         margin-top: 10px !important; /* Image ke bilkul kareeb */
+//         margin-bottom: 10px !important;
+//         padding-left: 0 !important;
+//         margin-left: 0 !important;
+//         text-align: left !important;
+//     }
+
+//     /* Paragraph ko image ki width ke sath start aur end par align kiya */
+//     .chairman-description {
+//         font-size: 14.5px !important;
+//         line-height: 1.6;
+//         text-align: justify !important; /* Dono sides touch karne ke liye */
+//         margin-top: 0 !important;
+//         padding-left: 0 !important;
+//         padding-right: 0 !important;
+//     }
+
+//     .chairman-description-container {
+//         padding-left: 0 !important;
+//         padding-right: 0 !important;
+//     }
+
+//     /* Bootstrap ki extra spacing khatam ki taake left/right align ho jaye */
+//     .col-lg-7, .pl--50, .pl_sm--0 {
+//         padding-left: 0 !important;
+//         padding-right: 0 !important;
+//         margin-top: 0 !important;
+//     }
+
+//     /* Content row ka extra margin khatam */
+//     .content-row-spacing {
+//         margin-top: 5px !important;
+//     }
+// }
+
+//     /* Image column bottom margin for stacking */
+//     .image-column-flex {
+//         margin-bottom: 30px;
+//     }
+
+//     /* Chairman Name resize for mobile */
+//     .chairman-name-text {
+//         font-size: 28px !important;
+//         margin-bottom: 15px;
+//     }
+
+//     /* Paragraph text resize for readability */
+//     .chairman-description {
+//         font-size: 14px !important;
+//         line-height: 1.6;
+//         text-align: left !important; /* Mobile par justify aksar aacha nahi lagta */
+//     }
+
+//     /* Remove extra margin on top of secondary paragraphs in mobile */
+//     .chairman-description-container p {
+//         margin-top: 15px !important;
+//     }
+// }
+
+// /* Tablet view adjustment (Optional: for cleaner look between 769px and 991px) */
+// @media (min-width: 769px) and (max-width: 991px) {
+//     .pl--50 {
+//         padding-left: 0 !important;
+//     }
+//     .mt_md--80 {
+//         margin-top: 40px !important;
+//     }
+// }
+       
+//       `}</style>
+//     </>
+//   );
+// };
+
+// export default MessageSection;
+
+
 'use client';
 
 import React from 'react';
@@ -2151,7 +2464,7 @@ const MessageSection: React.FC = () => {
     <>
       {/* --- SECTION 1: BREADCRUMB --- */}
       <div className="rts-breadcrumb-area top-300">
-        <div className="container">
+        <div className="container custom-max-width">
           <div className="row">
             <div className="col-lg-12">
               <div className="title-area-left" style={{ textAlign: 'left' }}>
@@ -2170,7 +2483,7 @@ const MessageSection: React.FC = () => {
 
       {/* --- SECTION 2: CHAIRMAN'S MESSAGE --- */}
       <div className="rts-about-area rts-section-gap">
-        <div className="container pt--40 main-content-overlap">
+        <div className="container custom-max-width pt--40 main-content-overlap">
           
           <div className="about-heading-container">
             <p className="about-sub-label">Leadership with Purpose</p>
@@ -2179,8 +2492,8 @@ const MessageSection: React.FC = () => {
             </h1>
           </div>
 
-          {/* Added 'content-row-spacing' style to move image and text down */}
-          <div className="row content-row-spacing d-flex align-items-stretch" style={{ gap: 0, marginTop: '50px' }}>
+          {/* Added 'd-flex align-items-stretch' to make image and text equal height */}
+          <div className="row content-row-spacing d-flex align-items-stretch" style={{ marginTop: '50px' }}>
             {/* Image Column */}
             <div className="col-lg-5 image-column-flex">
               <div className="main-thumnal-inner-about-three" style={{ width: '100%', height: '100%' }}>
@@ -2241,6 +2554,14 @@ const MessageSection: React.FC = () => {
       </div>
 
       <style jsx global>{`
+        /* Desktop Center Alignment */
+        @media (min-width: 1200px) {
+            .custom-max-width {
+                max-width: 1100px !important;
+                margin: 0 auto !important;
+            }
+        }
+
         .watermark-about {
           font-size: 150px;
           font-weight: 900;
@@ -2284,7 +2605,6 @@ const MessageSection: React.FC = () => {
           font-weight: 800;
         }
 
-        /* Image and Paragraph container move down */
         .content-row-spacing {
           margin-top: 60px !important; 
         }
@@ -2305,7 +2625,7 @@ const MessageSection: React.FC = () => {
         }
 
         .chairman-description {
-          font-size: 15.5px !important;
+          font-size: 15px !important;
           line-height: 1.7;
           color: #666;
           margin-bottom: 0;
@@ -2314,139 +2634,119 @@ const MessageSection: React.FC = () => {
         .chairman-description-container {
           flex-grow: 1;
         }
-        /* --- MOBILE RESPONSIVE STYLING (Targeting 768px and below) --- */
-@media (max-width: 768px) {
-    /* Breadcrumb adjust for mobile */
-    .rts-breadcrumb-area.top-300 {
-        padding-top: 30px !important;
-        padding-bottom: 10px !important;
-    }
 
-    /* Watermark text resize to fit screen */
-    .watermark-about {
-        font-size: 60px !important;
-        top: 10px !important;
-        opacity: 0.5;
-    }
+        /* --- MOBILE RESPONSIVE STYLING (Aapka original mobile code) --- */
+        @media (max-width: 768px) {
+            .rts-breadcrumb-area.top-300 {
+                padding-top: 30px !important;
+                padding-bottom: 10px !important;
+            }
 
-    /* Main container overlap reset for mobile flow */
-    .main-content-overlap {
-        margin-top: 0 !important;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+            .watermark-about {
+                font-size: 60px !important;
+                top: 10px !important;
+                opacity: 0.5;
+            }
 
-    /* Heading container alignment */
-    .about-heading-container {
-        margin-top: 0 !important;
-        text-align: left;
-    }
+            .main-content-overlap {
+                margin-top: 0 !important;
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
 
-    .about-sub-label {
-        font-size: 14px;
-        margin-top: 20px !important;
-        margin-bottom: 5px !important;
-    }
+            .about-heading-container {
+                margin-top: 0 !important;
+                text-align: left;
+            }
 
-    .about-main-title {
-        font-size: 30px !important;
-        line-height: 1.25;
-        margin-top: 0;
-    }
+            .about-sub-label {
+                font-size: 14px;
+                margin-top: 20px !important;
+                margin-bottom: 5px !important;
+            }
 
-    /* The gap you wanted below the title */
-    .content-row-spacing {
-        margin-top: 10px !important;
-    }
-        /* --- PERFECT ALIGNMENT & ZERO GAP STYLING --- */
-@media (max-width: 768px) {
-    /* Container padding ko image aur text ke mutabiq set kiya */
-    .main-content-overlap {
-        margin-top: 0 !important;
-        padding-left: 15px !important; 
-        padding-right: 15px !important;
-    }
+            .about-main-title {
+                font-size: 30px !important;
+                line-height: 1.25;
+                margin-top: 0;
+            }
 
-    /* Image aur Heading ke darmiyan ka gap khatam */
-    .image-column-flex {
-        margin-bottom: 10 !important; 
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
+            .content-row-spacing {
+                margin-top: 10px !important;
+            }
 
-    /* Heading "Ahmad Ikram Lone" ko image ke sath align kiya */
-    .chairman-name-text {
-        font-size: 26px !important;
-        margin-top: 10px !important; /* Image ke bilkul kareeb */
-        margin-bottom: 10px !important;
-        padding-left: 0 !important;
-        margin-left: 0 !important;
-        text-align: left !important;
-    }
+            .image-column-flex {
+                margin-bottom: 10 !important; 
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
 
-    /* Paragraph ko image ki width ke sath start aur end par align kiya */
-    .chairman-description {
-        font-size: 14.5px !important;
-        line-height: 1.6;
-        text-align: justify !important; /* Dono sides touch karne ke liye */
-        margin-top: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
+            .chairman-name-text {
+                font-size: 20px !important;
+                margin-top: 10px !important;
+                margin-bottom: 10px !important;
+                text-align: left !important;
+            }
 
-    .chairman-description-container {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
+            .chairman-description {
+                font-size: 14.5px !important;
+                line-height: 1.6;
+                text-align: justify !important;
+            }
 
-    /* Bootstrap ki extra spacing khatam ki taake left/right align ho jaye */
-    .col-lg-7, .pl--50, .pl_sm--0 {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        margin-top: 0 !important;
-    }
-
-    /* Content row ka extra margin khatam */
-    .content-row-spacing {
-        margin-top: 5px !important;
-    }
-}
-
-    /* Image column bottom margin for stacking */
-    .image-column-flex {
-        margin-bottom: 30px;
-    }
-
-    /* Chairman Name resize for mobile */
-    .chairman-name-text {
-        font-size: 28px !important;
-        margin-bottom: 15px;
-    }
-
-    /* Paragraph text resize for readability */
-    .chairman-description {
-        font-size: 14px !important;
-        line-height: 1.6;
-        text-align: left !important; /* Mobile par justify aksar aacha nahi lagta */
-    }
-
-    /* Remove extra margin on top of secondary paragraphs in mobile */
-    .chairman-description-container p {
-        margin-top: 15px !important;
-    }
-}
-
-/* Tablet view adjustment (Optional: for cleaner look between 769px and 991px) */
-@media (min-width: 769px) and (max-width: 991px) {
-    .pl--50 {
-        padding-left: 0 !important;
-    }
-    .mt_md--80 {
-        margin-top: 40px !important;
-    }
-}
-       
+            .col-lg-7, .pl--50, .pl_sm--0 {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                margin-top: 0 !important;
+            }
+        }
       `}</style>
+      <style jsx global>{`
+  @media (max-width: 768px) {
+    /* 1. Paragraph ke beech ke gaps khatam karne ke liye */
+    .chairman-description, 
+    .focus-description-text,
+    .disc {
+      text-align: left !important; /* Justify mobile par gaps banata hai, Left alignment ise fix karegi */
+      line-height: 1.5 !important; /* Lines ke darmiyan space kam karne ke liye */
+      margin-bottom: 12px !important; /* Ek para se dusre para ka gap kam kiya */
+      font-size: 14px !important;
+      word-spacing: normal !important; /* Words ke beech ka extra space khatam */
+    }
+
+    /* 2. Screen ke edges (sides) se space dene ke liye */
+    .custom-max-width, 
+    .box-view-container {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      width: 100% !important;
+    }
+
+    /* 3. Section ke top/bottom ki extra padding kam karne ke liye */
+    .rts-section-gap,
+    .section-main-padding {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+    }
+
+    /* 4. Overlap aur extra margins ko zero karne ke liye */
+    .main-content-overlap,
+    .focus-main-overlap {
+      margin-top: 0 !important;
+    }
+
+    .content-row-spacing {
+      margin-top: 20px !important;
+    }
+
+    /* 5. Title ke niche ka gap kam karein */
+    .chairman-name-text,
+    .promotion-title {
+      margin-bottom: 10px !important;
+      line-height: 1.2 !important;
+    }
+  }
+`}</style>
     </>
   );
 };

@@ -287,6 +287,9 @@ const NewsletterCTA: React.FC = () => {
 
       {/* ✅ CSS FIXED FOR RESPONSIVENESS */}
       <style jsx global>{`
+
+
+
         /* Desktop Default */
         .cta-style-10-wrapper {
           display: flex;

@@ -1,11 +1,91 @@
+// // "use client";
+// // import React from "react";
+
+// // // Import JSON file
+// // import contentData from "../Data/OurPartnersData.json";
+
+
+// // // Interface for Type Safety
+// // interface PartnersContent {
+// //   pageTitle: string;
+// //   banner: {
+// //     bgTitle: string;
+// //     title: string;
+// //     titleFontSize: string;
+// //   };
+// //   introSection: {
+// //     leftTitle: string;
+// //     rightText: string;
+// //     rightTextFontSize: string;
+// //   };
+// //   partnersLogos: string[];
+// // }
+
+// // const OurPartners = () => {
+// //   const data: PartnersContent = contentData as PartnersContent;
+
+// //   return (
+// //     <>
+// //       {/* BANNER */}
+// //       <div className="partner-breadcrumb bg_image">
+// //         <div className="container">
+// //           <div className="row">
+// //             <div className="col-lg-12">
+// //               <div className="title-area">
+// //                 <h1
+// //                   className="title"
+// //                   style={{ color: "aliceblue", fontSize: data.banner.titleFontSize }}
+// //                 >
+// //                   {data.banner.title}
+// //                 </h1>
+// //               </div>
+// //             </div>
+// //           </div>
+// //         </div>
+// //       </div>
+
+// //       {/* INTRO SECTION */}
+// //       <div className="rts-service-details-area-main-bottom members-intro-section pt--50 pb--80">
+// //         <div className="container">
+// //           <div className="row align-items-start">
+// //             <div className="col-xl-5 col-lg-5 col-md-12">
+// //               <h2 className="members-left-title">{data.introSection.leftTitle}</h2>
+// //             </div>
+
+// //             <div className="col-xl-7 col-lg-7 col-md-12">
+// //               <p
+// //                 className="members-right-text"
+// //                 style={{ fontSize: data.introSection.rightTextFontSize }}
+// //               >
+// //                 {data.introSection.rightText}
+// //               </p>
+// //             </div>
+// //           </div>
+// //         </div>
+// //       </div>
+
+// //       {/* PARTNERS GRID */}
+// //       <div className="brand-box">
+// //         <div className="brand-table">
+// //           {data.partnersLogos.map((logo, index) => (
+// //             <div key={index} className="brand-item">
+// //               <img src={logo} alt={`Partner-${index}`} />
+// //             </div>
+// //           ))}
+// //         </div>
+// //       </div>
+// //     </>
+// //   );
+// // };
+
+// // export default OurPartners;
+
+
+
 // "use client";
 // import React from "react";
-
-// // Import JSON file
 // import contentData from "../Data/OurPartnersData.json";
 
-
-// // Interface for Type Safety
 // interface PartnersContent {
 //   pageTitle: string;
 //   banner: {
@@ -74,6 +154,237 @@
 //           ))}
 //         </div>
 //       </div>
+
+//       {/* STYLES */}
+//       <style jsx>{`
+//         /* Intro Section */
+//         .members-left-title {
+//           font-size: 32px;
+//           font-weight: 700;
+//           line-height: 1.3;
+//           color: #000;
+//           margin-bottom: 20px;
+//         }
+
+//         .members-right-text {
+//           font-size: 16px;
+//           line-height: 1.8;
+//           color: #333;
+//           max-width: 650px;
+//         }
+
+//         .members-intro-section {
+//           margin-top: 40px;
+//         }
+
+//         /* Partners Grid */
+//         .brand-table {
+//           display: grid;
+//           grid-template-columns: repeat(4, 1fr);
+//           border: 1px solid #e1e1e1;
+//           width: 80%;
+//           margin: 0 auto;
+//         }
+
+//         @media (max-width: 768px) {
+//           .brand-table {
+//             grid-template-columns: repeat(2, 1fr);
+//           }
+//         }
+
+//         .brand-item {
+//           border: 1px solid #e1e1e1;
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           padding: 50px 60px;
+//           background: #fff;
+//         }
+
+//         @media (max-width: 768px) {
+//           .brand-item {
+//             padding: 30px;
+//           }
+//         }
+
+//         .brand-item img {
+//           width: 150px;
+          
+//           object-fit: contain;
+//         }
+
+//         .brand-box {
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//           text-align: center;
+//           padding: 10px;
+//         }
+//       `}</style>
+//       {/* STYLES */}
+//       <style jsx>{`
+//         .members-left-title {
+//           font-size: 32px; /* Adjusted to match scale of Pic 2 */
+//           font-weight: 700;
+//           line-height: 1.2;
+//           color: #000;
+//           margin-bottom: 20px;
+//           /* Ensures heading starts exactly at the container edge */
+//           padding-left: 0; 
+//         }
+
+//         .members-right-text {
+//           font-size: 16px;
+//           line-height: 1.6;
+//           color: #333;
+//           /* Aligns paragraph top with heading top */
+//           margin-top: 5px; 
+//           max-width: 100%; 
+//         }
+
+//         .members-intro-section {
+//           margin-top: 60px;
+//           margin-bottom: 40px;
+//         }
+
+//         .brand-table {
+//           display: grid;
+//           grid-template-columns: repeat(4, 1fr);
+//           border: 1px solid #e1e1e1;
+//           /* Match this width to the Bootstrap container width for perfect alignment */
+//           width: 100%; 
+//           max-width: 1320px; 
+//           margin: 0 auto;
+//         }
+
+//         @media (max-width: 1400px) {
+//           .brand-table { max-width: 1140px; }
+//         }
+
+//         @media (max-width: 1200px) {
+//           .brand-table { max-width: 960px; }
+//         }
+
+//         @media (max-width: 992px) {
+//           .brand-table { 
+//             max-width: 720px;
+//             grid-template-columns: repeat(2, 1fr); 
+//           }
+//         }
+
+//         .brand-item {
+//           border: 1px solid #e1e1e1;
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           padding: 60px;
+//           background: #fff;
+//         }
+
+//         .brand-item img {
+//           width: 120px;
+//           height: auto;
+//           object-fit: contain;
+//         }
+
+//         .brand-box {
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//           text-align: center;
+//           padding: 0 15px; /* Matches standard container gutter */
+//           margin-bottom: 80px;
+//         }
+//           .brand-box {
+//   /* container jaisa behavior */
+//   width: 100%;
+//   margin: 0 auto;
+//   padding-left: 15px;
+//   padding-right: 15px;
+
+//   /* flex centering hata dein taake left edge container ke sath align ho */
+//   display: block;
+
+//   margin-bottom: 80px;
+// }
+
+// .brand-table {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   border: 1px solid #e1e1e1;
+
+//   /* EXACT bootstrap container widths */
+//   width: 100%;
+//   max-width: 1320px;
+//   margin: 0 auto; /* container ke center, but edges same rahengi */
+// }
+
+// @media (max-width: 1400px) {
+//   .brand-table { max-width: 1140px; }
+// }
+
+// @media (max-width: 1200px) {
+//   .brand-table { max-width: 960px; }
+// }
+
+// @media (max-width: 992px) {
+//   .brand-table {
+//     max-width: 720px;
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+    
+// }
+//   /* ===== Brand Logo Responsive Fix ===== */
+
+// .brand-item {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 60px;
+// }
+
+// .brand-item img {
+//   width: 140px;        /* desktop default */
+//   max-width: 100%;    /* never overflow */
+//   height: auto;
+//   object-fit: contain;
+// }
+
+// /* Tablet */
+// @media (max-width: 992px) {
+//   .brand-item {
+//     padding: 40px;
+//   }
+
+//   .brand-item img {
+//     width: 120px;
+//   }
+// }
+
+// /* Mobile */
+// @media (max-width: 768px) {
+//   .brand-item {
+//     padding: 28px;
+//   }
+
+//   .brand-item img {
+//     width: 95px;
+//   }
+// }
+
+// /* Small phones */
+// @media (max-width: 480px) {
+//   .brand-item {
+//     padding: 24px;
+//   }
+
+//   .brand-item img {
+//     width: 110px; /* thora bada taake empty feel na ho */
+//   }
+// }
+
+
+//       `}</style>
 //     </>
 //   );
 // };
@@ -108,7 +419,7 @@ const OurPartners = () => {
     <>
       {/* BANNER */}
       <div className="partner-breadcrumb bg_image">
-        <div className="container">
+        <div className="box-view-container"> {/* Container replaced with box-view-container */}
           <div className="row">
             <div className="col-lg-12">
               <div className="title-area">
@@ -126,7 +437,7 @@ const OurPartners = () => {
 
       {/* INTRO SECTION */}
       <div className="rts-service-details-area-main-bottom members-intro-section pt--50 pb--80">
-        <div className="container">
+        <div className="box-view-container"> {/* Container replaced with box-view-container */}
           <div className="row align-items-start">
             <div className="col-xl-5 col-lg-5 col-md-12">
               <h2 className="members-left-title">{data.introSection.leftTitle}</h2>
@@ -146,100 +457,41 @@ const OurPartners = () => {
 
       {/* PARTNERS GRID */}
       <div className="brand-box">
-        <div className="brand-table">
-          {data.partnersLogos.map((logo, index) => (
-            <div key={index} className="brand-item">
-              <img src={logo} alt={`Partner-${index}`} />
-            </div>
-          ))}
+        <div className="box-view-container"> {/* Grid wrapped for edge-to-edge alignment with text */}
+          <div className="brand-table">
+            {data.partnersLogos.map((logo, index) => (
+              <div key={index} className="brand-item">
+                <img src={logo} alt={`Partner-${index}`} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* STYLES */}
-      <style jsx>{`
+      <style jsx global>{`
+        /* --- BOX VIEW CORE --- */
+        .box-view-container {
+          max-width: 1100px;//1200
+          margin: 0 auto;
+          width: 100%;
+          padding: 0 15px;
+        }
+
         /* Intro Section */
         .members-left-title {
           font-size: 32px;
           font-weight: 700;
-          line-height: 1.3;
-          color: #000;
-          margin-bottom: 20px;
-        }
-
-        .members-right-text {
-          font-size: 16px;
-          line-height: 1.8;
-          color: #333;
-          max-width: 650px;
-        }
-
-        .members-intro-section {
-          margin-top: 40px;
-        }
-
-        /* Partners Grid */
-        .brand-table {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          border: 1px solid #e1e1e1;
-          width: 80%;
-          margin: 0 auto;
-        }
-
-        @media (max-width: 768px) {
-          .brand-table {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-
-        .brand-item {
-          border: 1px solid #e1e1e1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 50px 60px;
-          background: #fff;
-        }
-
-        @media (max-width: 768px) {
-          .brand-item {
-            padding: 30px;
-          }
-        }
-
-        .brand-item img {
-          width: 150px;
-          
-          object-fit: contain;
-        }
-
-        .brand-box {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          padding: 10px;
-        }
-      `}</style>
-      {/* STYLES */}
-      <style jsx>{`
-        .members-left-title {
-          font-size: 32px; /* Adjusted to match scale of Pic 2 */
-          font-weight: 700;
           line-height: 1.2;
           color: #000;
           margin-bottom: 20px;
-          /* Ensures heading starts exactly at the container edge */
-          padding-left: 0; 
+          padding-left: 0;
         }
 
         .members-right-text {
-          font-size: 16px;
           line-height: 1.6;
           color: #333;
-          /* Aligns paragraph top with heading top */
-          margin-top: 5px; 
-          max-width: 100%; 
+          margin-top: 5px;
+          max-width: 100%;
         }
 
         .members-intro-section {
@@ -247,29 +499,20 @@ const OurPartners = () => {
           margin-bottom: 40px;
         }
 
+        /* Partners Grid Styling */
+        .brand-box {
+          width: 100%;
+          margin: 0 auto;
+          display: block;
+          margin-bottom: 80px;
+        }
+
         .brand-table {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           border: 1px solid #e1e1e1;
-          /* Match this width to the Bootstrap container width for perfect alignment */
-          width: 100%; 
-          max-width: 1320px; 
-          margin: 0 auto;
-        }
-
-        @media (max-width: 1400px) {
-          .brand-table { max-width: 1140px; }
-        }
-
-        @media (max-width: 1200px) {
-          .brand-table { max-width: 960px; }
-        }
-
-        @media (max-width: 992px) {
-          .brand-table { 
-            max-width: 720px;
-            grid-template-columns: repeat(2, 1fr); 
-          }
+          width: 100%;
+          background: #fff;
         }
 
         .brand-item {
@@ -282,108 +525,52 @@ const OurPartners = () => {
         }
 
         .brand-item img {
-          width: 120px;
+          width: 140px; /* Desktop default */
+          max-width: 100%;
           height: auto;
           object-fit: contain;
         }
 
-        .brand-box {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          padding: 0 15px; /* Matches standard container gutter */
-          margin-bottom: 80px;
+        /* --- RESPONSIVENESS (YOUR ORIGINAL LOGIC PRESERVED) --- */
+        
+        /* Tablet */
+        @media (max-width: 992px) {
+          .brand-table {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .brand-item {
+            padding: 40px;
+          }
+          .brand-item img {
+            width: 120px;
+          }
         }
-          .brand-box {
-  /* container jaisa behavior */
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
 
-  /* flex centering hata dein taake left edge container ke sath align ho */
-  display: block;
+        /* Mobile */
+        @media (max-width: 768px) {
+          .box-view-container {
+            max-width: 100% !important;
+          }
+          .brand-item {
+            padding: 28px;
+          }
+          .brand-item img {
+            width: 95px;
+          }
+          .members-intro-section {
+            margin-top: 30px;
+          }
+        }
 
-  margin-bottom: 80px;
-}
-
-.brand-table {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border: 1px solid #e1e1e1;
-
-  /* EXACT bootstrap container widths */
-  width: 100%;
-  max-width: 1320px;
-  margin: 0 auto; /* container ke center, but edges same rahengi */
-}
-
-@media (max-width: 1400px) {
-  .brand-table { max-width: 1140px; }
-}
-
-@media (max-width: 1200px) {
-  .brand-table { max-width: 960px; }
-}
-
-@media (max-width: 992px) {
-  .brand-table {
-    max-width: 720px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-    
-}
-  /* ===== Brand Logo Responsive Fix ===== */
-
-.brand-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px;
-}
-
-.brand-item img {
-  width: 140px;        /* desktop default */
-  max-width: 100%;    /* never overflow */
-  height: auto;
-  object-fit: contain;
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-  .brand-item {
-    padding: 40px;
-  }
-
-  .brand-item img {
-    width: 120px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .brand-item {
-    padding: 28px;
-  }
-
-  .brand-item img {
-    width: 95px;
-  }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-  .brand-item {
-    padding: 24px;
-  }
-
-  .brand-item img {
-    width: 110px; /* thora bada taake empty feel na ho */
-  }
-}
-
-
+        /* Small phones */
+        @media (max-width: 480px) {
+          .brand-item {
+            padding: 24px;
+          }
+          .brand-item img {
+            width: 110px;
+          }
+        }
       `}</style>
     </>
   );

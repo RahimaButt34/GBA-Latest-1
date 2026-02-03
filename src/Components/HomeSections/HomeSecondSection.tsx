@@ -5,103 +5,19 @@ import React from 'react';
 const HomeSections = () => {
     return (
         <>
-            {/* ==================================== */}
-            {/* 1. About GBA Section */}
-            {/* ==================================== */}
-            <div className="rts-about-area rts-section-gap">
-                <div className="container pt--40">
-                    <div className="row align-items-center">
-
-                        {/* Left Column - Image & Shape */}
-                        <div className="col-lg-5">
-                            <div className="main-thumnal-inner-about-three">
-                                <div className="about-thumbnail-style-three">
-                                    <div className="thumbnail">
-                                        <img src="/images/about/Main Homepage.jpg" alt="about" />
-                                    </div>
-                                </div>
-                                <div className="shape">
-                                    <img src="/images/about/shape/04.svg" alt="about" />
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Right Column - Content */}
-                        <div className="col-lg-7 pl--100 pl_md--0 mt_md--80 pl_sm--0 mt_sm--80">
-                            <div className="about-content-right-three">
-                                <div
-                                    className="title-style-three left"
-                                    // 💡 CRITICAL: Anchor the absolute watermark to this parent div
-                                    style={{ position: 'relative' }}
-                                >
-
-                                    {/* 💡 WATERMARK 01 DIV (Updated to new hollow style) */}
-                                    <div
-                                        className="rts-watermark-01"
-                                        style={{
-                                            position: 'absolute',
-                                            // Positioned near the top-left of the container
-                                            top: '0%',
-                                            left: '0%',
-
-                                            // Shifts the watermark slightly right and centers it vertically
-                                            transform: 'translate(5%, -50%)',
-
-                                            // --- Styling (Hollow, Heavy, Light Gray - MATCHING GujranwalaAbout) ---
-                                            fontSize: '180px', // Large desktop size
-                                            fontWeight: '900',
-
-                                            color: 'transparent',
-                                            WebkitTextFillColor: 'transparent',
-                                            WebkitTextStroke: '3px #f5f0f0ff', // Light gray color
-
-                                            opacity: 0.3,
-                                            zIndex: 0, // Behind the text
-                                            lineHeight: 1,
-                                            padding: '5px 0',
-                                            display: 'block',
-                                        }}
-                                    >
-                                        01
-                                    </div>
-                                    {/* END WATERMARK DIV */}
-
-
-                                    <span
-                                        className="pre"
-                                        style={{
-                                            fontSize: '16px',
-                                            zIndex: 1,
-                                            position: 'relative'
-                                        }}
-                                    >
-                                        About GBA
-                                    </span>
-
-                                    <h2 style={{ fontSize: '48px', zIndex: 1, position: 'relative' }}>
-                                        Empowering Businesses to Succeed Globally
-                                    </h2>
-                                </div>
-                                <p className="disc" style={{ fontSize: '15px' }}>
-                                    The Gujranwala Business Alliance (GBA) is a dynamic and forward-thinking business association representing the collective strength of over 500 member companies from across Gujranwala’s diverse industrial sectors. Dedicated to promoting international trade, fostering partnerships, and driving industrial advancement, GBA serves as a central platform for collaboration, policy dialogue, and global engagement. Representing Pakistan’s third-largest industrial city, home to more than 21,000 SMEs and industrial units, GBA works to strengthen Gujranwala’s position as a powerhouse of manufacturing, innovation, and export excellence. By connecting local enterprises with international markets, investors, and trade bodies, the Alliance plays a pivotal role in expanding Gujranwala’s economic footprint worldwide.
-                                </p>
-                                <a href="/about/GBA" className="rts-btn btn-primary">Explore</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
             {/* ==================================== */}
             {/* 2. Our Focus / Working Process Section */}
             {/* ==================================== */}
+            <div className='box-view'>
             <div
-                className="working-process-area-three rts-section-gap working-process-bg"
+                className=" working-process-area-three rts-section-gap working-process-bg"
                 style={{
-                    marginTop: "120px",
-                    marginBottom: "120px",
-                    marginLeft: "60px",
-                    marginRight: "60px",
+                    // marginTop: "0px",//upadte 120
+                    // marginBottom: "120px",
+                    // marginLeft: "160px",
+                    // marginRight: "160px",
                 }}
             >
 
@@ -180,16 +96,20 @@ const HomeSections = () => {
                             { title: "Enterpreneurship & Leadership Development", desc: "Nurturing Visionaries for Tomorrow’s Global Economy", icon: "Entrepreneurship & Leadership-Development.png", innerClass: "five" },
                             { title: "Industry-Academia Linkages", desc: "Bridging Knowledge, Innovation, and Industry Needs", icon: "Industry-Academia-Linkages.png", innerClass: "six" },
                         ].map((item, index) => (
-                            <div key={index} className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 rts-jump__item">
-                                <div className="rts-working-process-1 process-lg text-center">
-                                    <div className={`inner ${item.innerClass}`}>
+                            <div key={index} className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 rts-jump__item"   >
+                                <div className="rts-working-process-1 process-lg text-center"  >
+                                     <div className="rts-working-process-1 process-lg text-center2"   >
+                                    
+                                    
+                                    <div className={`inner ${item.innerClass}`} >
                                         <div className="icon">
                                             <img
                                                 src={`/images/Our Focus - icons/${item.icon}`}
                                                 alt="Working_process"
+                                                
                                             />
                                         </div>
-                                    </div>
+                                    </div></div>
                                     <div className="content">
                                         <h6 className="title" style={{ fontSize: '18px' }}>
                                             {item.title.split(' ').slice(0, 3).join(' ')} <br />
@@ -207,11 +127,35 @@ const HomeSections = () => {
                     </div>
                 </div>
             </div>
-
+</div>
             {/* Combined Custom CSS for Specific Theming and Mobile Overrides */}
             <style jsx global>
                 {`
-            
+
+ .working-process-bg {
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                }
+
+
+            .box-view {
+    padding-left: 90px;
+    padding-right: 90px;
+}
+    .rts-working-process-1 .inner .icon {
+    background: white !important; /* White background khatam */
+    width: 80% !important; /* Icon box ko container ke mutabiq kiya */
+    height: 80% !important;
+}
+    @media (max-width: 768px) {
+    .box-view {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+
                         
 
                     /* --- Our Focus Title Styles (Desktop Base) --- */
@@ -242,40 +186,7 @@ const HomeSections = () => {
                         text-align: center;
                     }
 
-                    /* ==================================== */
-                    /* --- MOBILE OVERRIDES (max-width: 768px) --- */
-                    /* ==================================== */
-                    @media (max-width: 768px) {
-                        
-                        /* --- SECTION 1: ABOUT GBA WATERMARK 01 FIX --- */
-                        .rts-about-area .rts-watermark-01 {
-                            font-size: 80px !important; /* Reduced size */
-                            top: 5% !important; /* Move higher */
-                            left: 5% !important; /* Keep near the edge */
-                            transform: translate(0%, 0%) !important; /* Reset complex transform */
-                            opacity: 0.6 !important; /* Make it slightly more subtle */
-                            -webkit-text-stroke: 2px #f5f0f0ff !important; /* Slightly thinner stroke for small screens */
-
-                            /* Ensure the 20px request does not apply here. Keeping 80px for better visibility */
-                        }
-
-                        /* --- SECTION 1: ABOUT GBA CONTENT SPACING/HEADINGS --- */
-                        .rts-about-area .pl--100.pl_md--0.mt_md--80.pl_sm--0.mt_sm--80 {
-                            margin-top: 5px !important; 
-                            padding-left: 15px !important;
-                            padding-right: 15px !important;
-                        }
-                        .rts-about-area .container.pt--40 {
-                            padding-top: 40px !important;
-                        }
-                        .rts-about-area .about-content-right-three h2 {
-                            font-size: 28px !important;
-                            line-height: 1.3;
-                        }
-                        .rts-about-area .disc {
-                            font-size: 14px !important;
-                        }
-
+                    
                         /* --- SECTION 2: OUR FOCUS WATERMARK 02 FIX --- */
                         .working-process-area-three {
                             margin: 60px 0 !important; /* Tighter vertical spacing for section */
@@ -292,8 +203,16 @@ const HomeSections = () => {
                         /* --- SECTION 2: OUR FOCUS HEADING FIX --- */
                         .working-process-area-three .title-style-three .title {
                             font-size: 36px; /* Adjust focus title size for mobile */
-                        }
-                        
+                        }b
+//                         .working-process-bg {
+//     background-image: url('/images/bg/working-process-bg.png'); /* apna image path */
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: cover;     /* responsive */
+
+// }
+
+
                         /* --- SECTION 2: CARDS FIX --- */
                         .rts-working-process-1 .content .title {
                             font-size: 16px !important; /* Smaller card titles */
@@ -318,23 +237,7 @@ const HomeSections = () => {
                 background-size: 100% 100%; /* This is the key part */
 }
            
-/* ===== WATERMARK 01 - ABOUT GBA ===== */
-.rts-about-area .rts-watermark-01 {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    transform: translate(5%, -50%);
-    font-size: 180px;       /* Desktop size */
-    font-weight: 900;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 3px #f5f0f0ff; /* Hollow light gray */
-    opacity: 0.3;
-    z-index: 0;
-    line-height: 1;
-    padding: 5px 0;
-    display: block;
-}
+
 
 /* ===== WATERMARK 02 - OUR FOCUS ===== */
 .working-process-area-three .rts-watermark-02 {
@@ -358,18 +261,7 @@ const HomeSections = () => {
     padding: 5px 0;
     display: block;
 }
-/* ===== WATERMARK 01 - ABOUT GBA (Desktop) ===== */
-.rts-about-area .rts-watermark-01 {
-    font-size: 150px !important;
-    font-weight: 900;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 3px #f5f0f0ff !important;
-    opacity: 0.3 !important;
-    z-index: 0;
-    line-height: 1;
-    padding: 5px 0;
-}
+
 
 /* ===== WATERMARK 02 - OUR FOCUS (Desktop) ===== */
 .working-process-area-three .rts-watermark-02 {

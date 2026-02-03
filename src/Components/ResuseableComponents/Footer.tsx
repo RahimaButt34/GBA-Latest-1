@@ -427,7 +427,45 @@ const Footer: React.FC = () => {
                 
                 @media (max-width: 991px) { .margin-left-70 { margin-left: 0; } }
                 @media (max-width: 767px) { .copyright-8-wrapper { flex-direction: column; gap: 10px; } }
-            `}</style>
+          
+     /* --- Contact Details Parent Container --- */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* ✅ Yeh teeno icons ke darmiyan exact 25px ka gap rakhega */
+    margin-top: 20px;
+}
+
+/* --- Individual Contact Row --- */
+.signle-footer-contact-8 { 
+    display: flex; 
+    align-items: flex-start; /* ✅ Top alignment taake long address ke sath icon upar hi rahe */
+    gap: 16px; 
+    margin: 0 !important; /* Purane margin ko khatam karein */
+    min-height: auto; 
+}
+
+/* --- Icon Box Styling --- */
+.signle-footer-contact-8 .icon { 
+    width: 44px; 
+    height: 44px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 8px; 
+    background: #394347; 
+    color: #fff; 
+    flex-shrink: 0; 
+    margin-top: 5px; /* Visual balance ke liye thora sa niche */
+}
+
+/* --- Text Alignment --- */
+.signle-footer-contact-8 .inner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}     
+          `}</style>
 
             {/* pb--65 ko hata kar margin/padding manual control ki hai */}
             <div className="container" style={{ paddingBottom: '20px' }}>

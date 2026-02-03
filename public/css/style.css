@@ -19229,9 +19229,10 @@ body.with-sticky-item {
 .rts-working-process-1 .content .title {
   margin-bottom: 7px;
 }
+
 .rts-working-process-1.process-lg .inner {
-  width: 245px;
-  height: 245px;
+  width: 180px; 
+  height: 180px;
 }
 .rts-working-process-1.process-lg .inner::after {
   width: 60px;
@@ -19249,6 +19250,7 @@ body.with-sticky-item {
 }
 
 .thumbnail-area-wrapper-inner-6 {
+ 
   padding-left: -150px;
 }
 

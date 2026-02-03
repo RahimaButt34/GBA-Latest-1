@@ -1206,7 +1206,7 @@ const AboutSection: React.FC = () => {
                     <div className="row about-content-row d-flex align-items-stretch">
                         
                         <div className="col-lg-5">
-                            <div className="main-thumnal-inner-about-three" style={{ height: '100%' }}>
+                            <div className="main-thumnal-inner-about-three" >
                                 <div className="about-thumbnail-style-three" style={{ height: '100%' }}>
                                     <div className="thumbnail" style={{ height: '100%' }}>
                                         <Image 
@@ -1225,13 +1225,14 @@ const AboutSection: React.FC = () => {
                         </div>
 
                         <div className="col-lg-7 pl--100 pl_md--0 mt_md--80 pl_sm--0 mt_sm--80">
-                            <div className="about-content-right-three h-100">
+                            <div className="about-content-right-three h-100" >
                                 <p className="disc about-description-text" style={{ textAlign: 'justify', margin: 0 }}>
                                     The Gujranwala Business Alliance (GBA) is a dynamic and forward-thinking business association representing the collective strength of over 500 member companies from across Gujranwala’s diverse industrial sectors. Dedicated to promoting international trade, fostering partnerships, and driving industrial advancement, GBA serves as a central platform for collaboration, policy dialogue, and global engagement. Representing Pakistan’s third-largest industrial city, home to more than 21,000 SMEs and industrial units, GBA works to strengthen Gujranwala’s position as a powerhouse of manufacturing, innovation, and export excellence. By connecting local enterprises with international markets, investors, and trade bodies, the Alliance plays a pivotal role in expanding Gujranwala’s economic footprint worldwide.
                                     <br /><br />
                                     Established in 2021, GBA has emerged as a trusted advocate and facilitator for business growth, working closely with industry leaders, government institutions, diplomatic missions, and international trade organisations. Supported by a vast network of over 1,500 national and international partners - including chambers of commerce, private enterprises, universities, and development agencies across Asia, Europe, Africa, and the Middle East - the Alliance has built strong linkages that drive industrial advancement, enhance export competitiveness, and expand access to global markets.
                                     <br /><br />
-                                    Through trade delegations, business forums, expos, and B2B initiatives, GBA highlights Gujranwala’s industrial strength on the global stage. It also leads capacity-building programs, knowledge partnerships, and industry–academia collaborations that drive innovation and entrepreneurship. By integrating business, knowledge, and international cooperation, GBA continues to position Gujranwala as a globally connected industrial hub contributing to Pakistan’s sustainable economic progress.
+
+                                  
                                 </p>
                             </div>
                         </div>
@@ -1240,7 +1241,42 @@ const AboutSection: React.FC = () => {
             </div>
 
             {/* --- STYLES (ONLY GAP FIXED) --- */}
+            
             <style jsx global>{`
+/* CHANGE 1: Content ko center mein limit karne ke liye */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1100px !important; //1140
+        margin: 0 auto !important; 
+    }
+}
+/* CHANGE 2: Mobile view side spacing */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100% !important;
+        padding-left: 20px !important; 
+        padding-right: 20px !important;
+    }
+}/* CHANGE 3: Mobile overlap aur extra padding reset */
+@media (max-width: 768px) {
+    .about-main-overlap {
+        margin-top: 30px !important; 
+    }
+    .pl--100 {
+        padding-left: 0 !important; /* Extra 100px padding mobile pe khatam */
+    }
+}
+
+
+.rts-breadcrumb-area.top-300 {
+    padding-top: 80px !important;    /* 150 se kam karke 80 kiya */
+    padding-bottom: 20px !important; /* Gap kam karne ke liye */
+}
+    .about-content-row-custom, .about-content-row {
+    margin-top: 40px !important; /* 100px se kam karke 40px kiya taake image heading ke kareeb ho jaye */
+}
+    //chnage
+
                 .watermark-about {
                     font-size: 150px;
                     font-weight: 900;
@@ -1324,7 +1360,7 @@ const AboutSection: React.FC = () => {
                     }
 
                     .about-main-overlap {
-                        margin-top: 30 !important;//0
+                        margin-top: 30 !important;//0 updated
                         padding-left: 15px;
                         padding-right: 15px;
                     }
@@ -1411,3 +1447,4 @@ const AboutSection: React.FC = () => {
 };
 
 export default AboutSection;
+

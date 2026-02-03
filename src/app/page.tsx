@@ -63,7 +63,7 @@
 // }
 
 'use client';
-
+import HomeFirstSection from "../Components/HomeSections/HomeFirstSection";
 import HomeSecondSection from "../Components/HomeSections/HomeSecondSection";
 import HomeThirdSection from "../Components/HomeSections/HomeThirdSection";
 import HomeFourthSection from "../Components/HomeSections/HomeFourthSection";
@@ -117,8 +117,13 @@ export default function Home() {
       <main className="main-page-wrapper">
         {/* SECTION 1 - Always Normal */}
         <section>
-          <HomeSecondSection />
+          <HomeFirstSection />
         </section>
+{/* SECTION 2 - Desktop Pushed Up, Mobile Normal */}
+ <div className="desktop-pull-up2">
+          <HomeSecondSection />
+        </div>
+        
 
         {/* SECTION 2 - Desktop Pushed Up, Mobile Normal */}
         <div className="desktop-pull-up2">

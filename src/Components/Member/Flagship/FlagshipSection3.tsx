@@ -1027,19 +1027,20 @@ const Flagship = () => {
                 }
             `}</style>
 
-            {/* ---------------------------------------------------------------------- */}
+            {/* margin top 120 se 70k kia ah---------------------------------------------------------------------- */}
             {/* 2. WORKING PROCESS SECTION (Flagship Programs) */}
             {/* ---------------------------------------------------------------------- */}
             <div
                 className="working-process-area-three rts-section-gap working-process-bg"
                 style={{
                     alignItems: 'center',
-                    marginTop: '120px',
+                    marginTop: '70px',
                     marginBottom: '120px',
                     marginLeft: '60px',
                     marginRight: '60px',
                 }}
             >
+                
                 <div className="container mx-auto px-4">
                     <div className="row mt-40">
                         {/* Title Block */}

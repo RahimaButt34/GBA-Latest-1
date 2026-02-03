@@ -1,3 +1,375 @@
+// "use client";
+// import React from "react";
+// import membersData from "../Data/OurMemberData.json";
+
+// interface MembersContent {
+//   pageTitle: string;
+//   banner: {
+//     bgTitle: string;
+//     title: string;
+//     titleFontSize: string;
+//   };
+//   introSection: {
+//     leftTitle: string;
+//     rightText: string;
+//     rightTextFontSize: string;
+//   };
+//   membersLogos: string[];
+// }
+
+// const OurMembers = () => {
+//   const data: MembersContent = membersData as MembersContent;
+
+//   return (
+//     <>
+//       {/* BANNER */}
+//       <div className="partner-breadcrumb bg_image">
+//         <div className="container">
+//           <div className="row">
+//             <div className="col-lg-12">
+//               <div className="title-area">
+//                 <h1
+//                   className="title"
+//                   style={{ color: "aliceblue", fontSize: data.banner.titleFontSize }}
+//                 >
+//                   {data.banner.title}
+//                 </h1>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* INTRO SECTION */}
+//       <div className="rts-service-details-area-main-bottom members-intro-section pt--50 pb--80">
+//         <div className="container">
+//           <div className="row align-items-start">
+//             <div className="col-xl-5 col-lg-5 col-md-12">
+//               <h2 className="members-left-title">{data.introSection.leftTitle}</h2>
+//             </div>
+//             <div className="col-xl-7 col-lg-7 col-md-12">
+//               <p
+//                 className="members-right-text"
+//                 style={{ fontSize: data.introSection.rightTextFontSize }}
+//               >
+//                 {data.introSection.rightText}
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* MEMBERS GRID */}
+//       <div className="brand-box">
+//         <div className="brand-table">
+//           {data.membersLogos.map((logo, index) => (
+//             <div key={index} className="brand-item">
+//               <img src={logo} alt={`Member-${index + 1}`} />
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* STYLES */}
+//       <style jsx>{`
+//         .members-left-title {
+//           font-size: 32px;
+//           font-weight: 700;
+//           line-height: 1.3;
+//           color: #000;
+//           margin-bottom: 20px;
+//         }
+
+//         .members-right-text {
+//           font-size: 16px;
+//           line-height: 1.8;
+//           color: #333;
+//           max-width: 650px;
+//         }
+
+//         .members-intro-section {
+//           margin-top: 40px;
+//         }
+
+//         .brand-table {
+//           display: grid;
+//           grid-template-columns: repeat(4, 1fr);
+//           border: 1px solid #e1e1e1;
+//           width: 80%;
+//           margin: 0 auto;
+//         }
+
+//         @media (max-width: 768px) {
+//           .brand-table {
+//             grid-template-columns: repeat(2, 1fr);
+//           }
+//         }
+
+//         .brand-item {
+//           border: 1px solid #e1e1e1;
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           padding: 60px;
+//           background: #fff;
+//         }
+
+//         @media (max-width: 768px) {
+//           .brand-item {
+//             padding: 30px;
+//           }
+//         }
+
+//         .brand-item img {
+//           width: 150px;
+//           object-fit: contain;
+//         }
+
+//         .brand-box {
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//           text-align: center;
+//           padding: 10px;
+//         }
+//       `}</style>
+//       {/* STYLES */}
+//       <style jsx>{`
+//         .members-left-title {
+//           font-size: 32px; /* Adjusted to match scale of Pic 2 */
+//           font-weight: 700;
+//           line-height: 1.2;
+//           color: #000;
+//           margin-bottom: 20px;
+//           /* Ensures heading starts exactly at the container edge */
+//           padding-left: 0; 
+//         }
+
+//         .members-right-text {
+//           font-size: 16px;
+//           line-height: 1.6;
+//           color: #333;
+//           /* Aligns paragraph top with heading top */
+//           margin-top: 5px; 
+//           max-width: 100%; 
+//         }
+
+//         .members-intro-section {
+//           margin-top: 60px;
+//           margin-bottom: 40px;
+//         }
+
+//         .brand-table {
+//           display: grid;
+//           grid-template-columns: repeat(4, 1fr);
+//           border: 1px solid #e1e1e1;
+//           /* Match this width to the Bootstrap container width for perfect alignment */
+//           width: 100%; 
+//           max-width: 1320px; 
+//           margin: 0 auto;
+//         }
+
+//         @media (max-width: 1400px) {
+//           .brand-table { max-width: 1140px; }
+//         }
+
+//         @media (max-width: 1200px) {
+//           .brand-table { max-width: 960px; }
+//         }
+
+//         @media (max-width: 992px) {
+//           .brand-table { 
+//             max-width: 720px;
+//             grid-template-columns: repeat(2, 1fr); 
+//           }
+//         }
+
+//         .brand-item {
+//           border: 1px solid #e1e1e1;
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           padding: 60px;
+//           background: #fff;
+//         }
+
+//         .brand-item img {
+//           width: 120px;
+//           height: auto;
+//           object-fit: contain;
+//         }
+
+//         .brand-box {
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//           text-align: center;
+//           padding: 0 15px; /* Matches standard container gutter */
+//           margin-bottom: 80px;
+//         }
+//           .brand-box {
+//   /* container jaisa behavior */
+//   width: 100%;
+//   margin: 0 auto;
+//   padding-left: 15px;
+//   padding-right: 15px;
+
+//   /* flex centering hata dein taake left edge container ke sath align ho */
+//   display: block;
+
+//   margin-bottom: 80px;
+// }
+
+// .brand-table {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   border: 1px solid #e1e1e1;
+
+//   /* EXACT bootstrap container widths */
+//   width: 100%;
+//   max-width: 1320px;
+//   margin: 0 auto; /* container ke center, but edges same rahengi */
+// }
+
+// @media (max-width: 1400px) {
+//   .brand-table { max-width: 1140px; }
+// }
+
+// @media (max-width: 1200px) {
+//   .brand-table { max-width: 960px; }
+// }
+
+// @media (max-width: 992px) {
+//   .brand-table {
+//     max-width: 720px;
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+//     @media (max-width: 1400px) {
+//   .brand-table { max-width: 1140px; }
+// }
+
+// @media (max-width: 1200px) {
+//   .brand-table { max-width: 960px; }
+// }
+
+// @media (max-width: 992px) {
+//   .brand-table {
+//     max-width: 720px;
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+// }
+//   @media (max-width: 992px) {
+// .brand-item img {
+//           width: 120px;
+//           height: auto;
+//           object-fit: contain;
+//         }
+//           /* ===== Brand Logo Responsive Fix ===== */
+
+// .brand-item {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 60px;
+// }
+
+// .brand-item img {
+//   width: 140px;        /* desktop default */
+//   max-width: 100%;    /* never overflow */
+//   height: auto;
+//   object-fit: contain;
+// }
+
+// /* Tablet */
+// @media (max-width: 992px) {
+//   .brand-item {
+//     padding: 40px;
+//   }
+
+//   .brand-item img {
+//     width: 120px;
+//   }
+// }
+
+// /* Mobile */
+// @media (max-width: 768px) {
+//   .brand-item {
+//     padding: 28px;
+//   }
+
+//   .brand-item img {
+//     width: 95px;
+//   }
+// }
+
+// /* Small phones */
+// @media (max-width: 480px) {
+//   .brand-item {
+//     padding: 24px;
+//   }
+
+//   .brand-item img {
+//     width: 110px; /* thora bada taake empty feel na ho */
+//   }
+// }
+
+// /* ===== Brand Logo Responsive Fix ===== */
+
+// .brand-item {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 60px;
+// }
+
+// .brand-item img {
+//   width: 140px;        /* desktop default */
+//   max-width: 100%;    /* never overflow */
+//   height: auto;
+//   object-fit: contain;
+// }
+
+// /* Tablet */
+// @media (max-width: 992px) {
+//   .brand-item {
+//     padding: 40px;
+//   }
+
+//   .brand-item img {
+//     width: 120px;
+//   }
+// }
+
+// /* Mobile */
+// @media (max-width: 768px) {
+//   .brand-item {
+//     padding: 28px;
+//   }
+
+//   .brand-item img {
+//     width: 95px;
+//   }
+// }
+
+// /* Small phones */
+// @media (max-width: 480px) {
+//   .brand-item {
+//     padding: 24px;
+//   }
+
+//   .brand-item img {
+//     width: 110px; /* thora bada taake empty feel na ho */
+//   }
+// }
+
+//       `}</style>
+//     </>
+//   );
+// };
+
+// export default OurMembers;
+
+
 "use client";
 import React from "react";
 import membersData from "../Data/OurMemberData.json";
@@ -24,7 +396,7 @@ const OurMembers = () => {
     <>
       {/* BANNER */}
       <div className="partner-breadcrumb bg_image">
-        <div className="container">
+        <div className="box-view-container"> {/* Replaced container with box-view-container */}
           <div className="row">
             <div className="col-lg-12">
               <div className="title-area">
@@ -42,7 +414,7 @@ const OurMembers = () => {
 
       {/* INTRO SECTION */}
       <div className="rts-service-details-area-main-bottom members-intro-section pt--50 pb--80">
-        <div className="container">
+        <div className="box-view-container"> {/* Replaced container with box-view-container */}
           <div className="row align-items-start">
             <div className="col-xl-5 col-lg-5 col-md-12">
               <h2 className="members-left-title">{data.introSection.leftTitle}</h2>
@@ -61,97 +433,40 @@ const OurMembers = () => {
 
       {/* MEMBERS GRID */}
       <div className="brand-box">
-        <div className="brand-table">
-          {data.membersLogos.map((logo, index) => (
-            <div key={index} className="brand-item">
-              <img src={logo} alt={`Member-${index + 1}`} />
-            </div>
-          ))}
+        <div className="box-view-container"> {/* Wrapped grid in box-view-container for consistent alignment */}
+          <div className="brand-table">
+            {data.membersLogos.map((logo, index) => (
+              <div key={index} className="brand-item">
+                <img src={logo} alt={`Member-${index + 1}`} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* STYLES */}
-      <style jsx>{`
+      <style jsx global>{`
+        /* --- BOX VIEW CORE --- */
+        .box-view-container {
+          max-width: 1100px;
+          margin: 0 auto;
+          width: 100%;
+          padding: 0 15px;
+        }
+
         .members-left-title {
           font-size: 32px;
-          font-weight: 700;
-          line-height: 1.3;
-          color: #000;
-          margin-bottom: 20px;
-        }
-
-        .members-right-text {
-          font-size: 16px;
-          line-height: 1.8;
-          color: #333;
-          max-width: 650px;
-        }
-
-        .members-intro-section {
-          margin-top: 40px;
-        }
-
-        .brand-table {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          border: 1px solid #e1e1e1;
-          width: 80%;
-          margin: 0 auto;
-        }
-
-        @media (max-width: 768px) {
-          .brand-table {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-
-        .brand-item {
-          border: 1px solid #e1e1e1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 60px;
-          background: #fff;
-        }
-
-        @media (max-width: 768px) {
-          .brand-item {
-            padding: 30px;
-          }
-        }
-
-        .brand-item img {
-          width: 150px;
-          object-fit: contain;
-        }
-
-        .brand-box {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          padding: 10px;
-        }
-      `}</style>
-      {/* STYLES */}
-      <style jsx>{`
-        .members-left-title {
-          font-size: 32px; /* Adjusted to match scale of Pic 2 */
           font-weight: 700;
           line-height: 1.2;
           color: #000;
           margin-bottom: 20px;
-          /* Ensures heading starts exactly at the container edge */
-          padding-left: 0; 
+          padding-left: 0;
         }
 
         .members-right-text {
-          font-size: 16px;
           line-height: 1.6;
           color: #333;
-          /* Aligns paragraph top with heading top */
-          margin-top: 5px; 
-          max-width: 100%; 
+          margin-top: 5px;
+          max-width: 100%;
         }
 
         .members-intro-section {
@@ -159,29 +474,18 @@ const OurMembers = () => {
           margin-bottom: 40px;
         }
 
+        /* --- BRAND GRID STYLING --- */
+        .brand-box {
+          width: 100%;
+          margin-bottom: 80px;
+          display: block;
+        }
+
         .brand-table {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           border: 1px solid #e1e1e1;
-          /* Match this width to the Bootstrap container width for perfect alignment */
-          width: 100%; 
-          max-width: 1320px; 
-          margin: 0 auto;
-        }
-
-        @media (max-width: 1400px) {
-          .brand-table { max-width: 1140px; }
-        }
-
-        @media (max-width: 1200px) {
-          .brand-table { max-width: 960px; }
-        }
-
-        @media (max-width: 992px) {
-          .brand-table { 
-            max-width: 720px;
-            grid-template-columns: repeat(2, 1fr); 
-          }
+          width: 100%;
         }
 
         .brand-item {
@@ -194,174 +498,49 @@ const OurMembers = () => {
         }
 
         .brand-item img {
-          width: 120px;
+          width: 140px;
+          max-width: 100%;
           height: auto;
           object-fit: contain;
         }
 
-        .brand-box {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          padding: 0 15px; /* Matches standard container gutter */
-          margin-bottom: 80px;
+        /* --- RESPONSIVE / MOBILE STYLING (UNTOLDED) --- */
+        @media (max-width: 992px) {
+          .brand-table {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .brand-item {
+            padding: 40px;
+          }
+          .brand-item img {
+            width: 120px;
+          }
         }
-          .brand-box {
-  /* container jaisa behavior */
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
 
-  /* flex centering hata dein taake left edge container ke sath align ho */
-  display: block;
-
-  margin-bottom: 80px;
-}
-
-.brand-table {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border: 1px solid #e1e1e1;
-
-  /* EXACT bootstrap container widths */
-  width: 100%;
-  max-width: 1320px;
-  margin: 0 auto; /* container ke center, but edges same rahengi */
-}
-
-@media (max-width: 1400px) {
-  .brand-table { max-width: 1140px; }
-}
-
-@media (max-width: 1200px) {
-  .brand-table { max-width: 960px; }
-}
-
-@media (max-width: 992px) {
-  .brand-table {
-    max-width: 720px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-    @media (max-width: 1400px) {
-  .brand-table { max-width: 1140px; }
-}
-
-@media (max-width: 1200px) {
-  .brand-table { max-width: 960px; }
-}
-
-@media (max-width: 992px) {
-  .brand-table {
-    max-width: 720px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-  @media (max-width: 992px) {
-.brand-item img {
-          width: 120px;
-          height: auto;
-          object-fit: contain;
+        @media (max-width: 768px) {
+          .box-view-container {
+            max-width: 100% !important;
+          }
+          .brand-item {
+            padding: 28px;
+          }
+          .brand-item img {
+            width: 95px;
+          }
+          .members-intro-section {
+            margin-top: 30px;
+            padding-bottom: 40px !important;
+          }
         }
-          /* ===== Brand Logo Responsive Fix ===== */
 
-.brand-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px;
-}
-
-.brand-item img {
-  width: 140px;        /* desktop default */
-  max-width: 100%;    /* never overflow */
-  height: auto;
-  object-fit: contain;
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-  .brand-item {
-    padding: 40px;
-  }
-
-  .brand-item img {
-    width: 120px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .brand-item {
-    padding: 28px;
-  }
-
-  .brand-item img {
-    width: 95px;
-  }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-  .brand-item {
-    padding: 24px;
-  }
-
-  .brand-item img {
-    width: 110px; /* thora bada taake empty feel na ho */
-  }
-}
-
-/* ===== Brand Logo Responsive Fix ===== */
-
-.brand-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px;
-}
-
-.brand-item img {
-  width: 140px;        /* desktop default */
-  max-width: 100%;    /* never overflow */
-  height: auto;
-  object-fit: contain;
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-  .brand-item {
-    padding: 40px;
-  }
-
-  .brand-item img {
-    width: 120px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .brand-item {
-    padding: 28px;
-  }
-
-  .brand-item img {
-    width: 95px;
-  }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-  .brand-item {
-    padding: 24px;
-  }
-
-  .brand-item img {
-    width: 110px; /* thora bada taake empty feel na ho */
-  }
-}
-
+        @media (max-width: 480px) {
+          .brand-item {
+            padding: 24px;
+          }
+          .brand-item img {
+            width: 110px;
+          }
+        }
       `}</style>
     </>
   );
