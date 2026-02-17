@@ -267,13 +267,13 @@ export default function Header() {
                                                 {mainNav.map((item, i) => renderNavItem(item, i))}
                                             </ul>
                                         </div> */}
-{/* Desktop Menu   Gap Created  Between Sections*/}
-<div className="nav-area d-none d-lg-block">
-    {/* I added style={{ gap: '30px' }} below */}
-    <ul className="d-flex align-items-center" style={{ gap: '50px' }}>
-        {mainNav.map((item, i) => renderNavItem(item, i))}
-    </ul>
-</div>
+                                        {/* Desktop Menu   Gap Created  Between Sections*/}
+                                        <div className="nav-area d-none d-lg-block">
+                                            {/* I added style={{ gap: '30px' }} below */}
+                                            <ul className="d-flex align-items-center" style={{ gap: '50px' }}>
+                                                {mainNav.map((item, i) => renderNavItem(item, i))}
+                                            </ul>
+                                        </div>
 
                                         {/* Mobile Menu Button */}
                                         <div className="button-area d-lg-none">
